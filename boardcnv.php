@@ -8,7 +8,7 @@ Usage:    Place boardcnv.php in the root of your fuukaba-basic installation, and
 Requires: PHP 5.3+
 Config:
 */
-define('CONV_TIMEZONE', 'Pacific/Auckland');
+define('CONV_TIMEZONE', 'America/Boise');
 define('TINYIB_BOARD',  'b');
 define('TINYIB_DBPOSTS', /*TINYIB_BOARD . "_*/"posts");
 /*
