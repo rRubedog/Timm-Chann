@@ -4,7 +4,7 @@
 // ``````````````
 
 // Display
-define('TINYIB_PAGETITLE', 'TinyIB');
+define('TINYIB_PAGETITLE', 'TimmChan');
 define('TINYIB_LOGO', @file_get_contents("inc/header.html"));
 
 // Thread management
