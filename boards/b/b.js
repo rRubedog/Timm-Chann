@@ -101,8 +101,8 @@ function getColor() {
 
 
 const DOM = {
-  membersCount: document.querySelector('aside').querySelector('.members-count'),
-  membersList: document.querySelector('aside').querySelector('.members-list'),
+  membersCount: document.querySelector('.sidebar').querySelector('.members-count'),
+  membersList: document.querySelector('.sidebar').querySelector('.members-list'),
   messages: document.querySelector('.messages'),
   input: document.querySelector('.message-form__input'),
   form: document.querySelector('.message-form'),
