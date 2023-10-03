@@ -23,6 +23,9 @@ drone.on('open', error => {
       return console.error(error);
     }
     console.log('Successfully joined room');
+    const historyCountDOM = document.createElement('div');
+    historyCountDOM.appendChild(codument.createTextNode("Message count save limit:" + historyCount));
+    document.body.appendChild(historyCountDOM);
   });
   room.on('history_message', message => addHistory(message));
 

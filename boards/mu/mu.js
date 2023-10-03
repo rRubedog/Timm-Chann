@@ -16,13 +16,16 @@ drone.on('open', error => {
   console.log('Successfully connected to Scaledrone');
 
   const room = drone.subscribe('observable-room', {
-    historyCount: 20
+    historyCount: 5
   });
   room.on('open', error => {
     if (error) {
       return console.error(error);
     }
     console.log('Successfully joined room');
+    const historyCountDOM = document.createElement('div');
+    historyCountDOM.appendChild(codument.createTextNode("Message count save limit:" + historyCount));
+    document.body.appendChild(historyCountDOM);
   });
   room.on('history_message', message => addHistory(message));
 
