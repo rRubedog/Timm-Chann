@@ -19,7 +19,7 @@ drone.on('open', error => {
   console.log('Successfully connected to Scaledrone');
 
   const room = drone.subscribe('observable-room', {
-    historyCount: 20 // ask for the 5 most recent messages from the room's history
+    historyCount: 20
   });
   room.on('open', error => {
     if (error) {
@@ -30,16 +30,21 @@ drone.on('open', error => {
   room.on('history_message', message => addHistory(message));
 
   function addHistory(message){
+    const le = DOM.messages;
     const hdata = message.data;
     const name = 'Anonymous';
     const color = '#295523';
-    const el = document.createElement('div');
-    el.appendChild(document.createTextNode(hdata));
-    el.className = 'member';
-    el.style.color = color;
-    const le = DOM.messages;
+    // member element
+    const pastMember = document.createElement('div');
+    pastMember.appendChild(document.createTextNode(name));
+    pastMember.className = 'member';
+    pastMember.style.color = color;
+    // message element
+    const pastMessage = document.createTextNode(hdata);
+    
     const wasTop = le.scrollTop === le.scrollHeight - le.clientHeight;
-    le.appendChild(el);
+    le.appendChild(pastMember);
+    le.appendChild(pastMessage);
     if (wasTop) {
         le.scrollTop = le.scrollHeight - le.clientHeight;
     }
