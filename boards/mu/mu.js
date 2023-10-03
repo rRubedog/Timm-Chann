@@ -49,10 +49,6 @@ drone.on('open', error => {
     if (wasTop) {
         le.scrollTop = le.scrollHeight - le.clientHeight;
     }
-
-    const historyCountDOM = document.createElement('div');
-    historyCountDOM.appendChild(codument.createTextNode("Message count save limit:" + historyCount));
-    document.body.appendChild(historyCountDOM);
   }
 
   room.on('members', m => {
