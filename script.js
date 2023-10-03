@@ -30,9 +30,19 @@ drone.on('open', error => {
   room.on('history_message', message => addHistory(message));
 
   function addHistory(message){
-    const hname = message.clientData.name;
     const hdata = message.data;
-    createMessageElement(hdata, hname);
+    const name = 'Anonymous';
+    const color = '#295523';
+    const el = document.createElement('div');
+    el.appendChild(document.createTextNode(hdata));
+    el.className = 'member';
+    el.style.color = color;
+    const le = DOM.messages;
+    const wasTop = le.scrollTop === le.scrollHeight - le.clientHeight;
+    le.appendChild(el);
+    if (wasTop) {
+        le.scrollTop = le.scrollHeight - le.clientHeight;
+    }
   }
 
   room.on('members', m => {
