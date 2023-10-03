@@ -24,6 +24,10 @@ drone.on('open', error => {
       return console.error(error);
     }
     console.log('Successfully joined room');
+    const room = drone.subscribe('observable-room', {
+        historyCount: 5 // ask for the 5 most recent messages from the room's history
+      });
+      room.on('history_message', message => console.log(message));
   });
 
   room.on('members', m => {
@@ -80,13 +84,6 @@ const DOM = {
   input: document.querySelector('.message-form__input'),
   form: document.querySelector('.message-form'),
 };
-
-function loadHistory(){
-    const room = drone.subscribe('awesome-historical-room', {
-        historyCount: 5 // ask for the 5 most recent messages from the room's history
-      });
-      room.on('history_message', message => console.log(message));
-}
 
 DOM.form.addEventListener('submit', sendMessage);
 
