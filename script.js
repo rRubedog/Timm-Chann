@@ -27,8 +27,14 @@ drone.on('open', error => {
     const room = drone.subscribe('observable-room', {
         historyCount: 5 // ask for the 5 most recent messages from the room's history
       });
-      room.on('history_message', message => console.log(message));
+      room.on('history_message', message => addHistory(message));
   });
+
+  function addHistory(message){
+    const hname = message.clientData.name;
+    const hdata = message.data;
+    createMessageElement(hdata, hname);
+  }
 
   room.on('members', m => {
     members = m;
