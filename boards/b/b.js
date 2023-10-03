@@ -14,6 +14,9 @@ drone.on('open', error => {
     return console.error(error);
   }
   console.log('Successfully connected to Scaledrone');
+  const historyCountDOM = document.createElement('div');
+  historyCountDOM.appendChild(codument.createTextNode("Message count save limit:" + historyCount));
+  document.body.appendChild(historyCountDOM);
 
   const room = drone.subscribe('observable-room', {
     historyCount: 20
@@ -23,9 +26,6 @@ drone.on('open', error => {
       return console.error(error);
     }
     console.log('Successfully joined room');
-    const historyCountDOM = document.createElement('div');
-    historyCountDOM.appendChild(codument.createTextNode("Message count save limit:" + historyCount));
-    document.body.appendChild(historyCountDOM);
   });
   room.on('history_message', message => addHistory(message));
 
