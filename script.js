@@ -6,7 +6,7 @@ const CLIENT_ID = 'uqTyASJn6WnbK8wJ';
 const drone = new ScaleDrone(CLIENT_ID, {
   data: { // Will be sent out as clientData via events
     name: getName(),
-    color: getRandomColor(),
+    color: getColor(),
   },
 });
 
@@ -60,15 +60,15 @@ drone.on('error', error => {
 });
 
 function getName() {
-  const username = prompt('What is your username? ');
+  const username = 'Anonymous'
   return (
     username
   );
   updateMembersDOM();
 }
 
-function getRandomColor() {
-  return '#' + Math.floor(Math.random() * 0xFFFFFF).toString(16);
+function getColor() {
+  return '#295523';
 }
 
 //------------- DOM STUFF
