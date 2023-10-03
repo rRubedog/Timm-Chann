@@ -98,9 +98,11 @@ function getColor() {
 
 //------------- DOM STUFF
 
+
+
 const DOM = {
-  membersCount: document.querySelector('.members-count'),
-  membersList: document.querySelector('.members-list'),
+  membersCount: document.querySelector('aside').querySelector('.members-count'),
+  membersList: document.querySelector('aside').querySelector('.members-list'),
   messages: document.querySelector('.messages'),
   input: document.querySelector('.message-form__input'),
   form: document.querySelector('.message-form'),
