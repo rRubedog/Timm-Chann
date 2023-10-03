@@ -81,6 +81,13 @@ const DOM = {
   form: document.querySelector('.message-form'),
 };
 
+function loadHistory(){
+    const room = drone.subscribe('awesome-historical-room', {
+        historyCount: 5 // ask for the 5 most recent messages from the room's history
+      });
+      room.on('history_message', message => console.log(message));
+}
+
 DOM.form.addEventListener('submit', sendMessage);
 
 function sendMessage() {
