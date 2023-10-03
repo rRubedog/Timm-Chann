@@ -1,52 +1,140 @@
-body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 13px;
-    display: flex;
-    flex-direction: column;
-    max-height: 100vh;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    }
-    
-    .main-area{
-        font-size: 120%;
-    }
-    
-    .members-count,
-    .members-list,
-    .messages {
-    border: 1px solid #e4e4e4;
-    padding: 15px;
-    margin-bottom: 15px;
-    }
-    
-    .messages {
-    flex-shrink: 1;
-    overflow: auto;
-    }
-    
-    .message {
-    padding: 5px 0;
-    }
-    .message .member {
-    display: inline-block;
-    }
-    
-    .member {
-    padding-right: 10px;
+html {
+    background-color: #869960;
+}
+
+body{
+    font-family: Tahoma, sans-serif;
+    font-size: 87%;
+}
+
+.timm-forum{
+    width: 400px;
+    height: 300px;
+    margin-bottom: -54px;
+    left: -94px;
+    top: -30px;
     position: relative;
-    }
-    
-    .message-form {
-    display: flex;
-    flex-shrink: 0;
-    }
-    .message-form__input {
-    flex-grow: 1;
-    border: 1px solid #dfdfdf;
-    padding: 10px 15px;
-    font-size: 16px;
-    }
-    .message-form__button {
-    margin: 10px;
-    }
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+/* Banner Overlay */
+.image-banner img{
+    display: block;
+}
+
+.banner-description{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    color: #FFF;
+    background-color: rgba(0, 0, 0, .65);
+    padding: 15px 25px;
+}
+
+.container {
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFF;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+
+header {
+    padding-top: 20px;
+    color: #607140;
+}
+
+header h1 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 165%;
+}
+
+header p {
+    margin: 0;
+}
+
+/* Site Navigation */
+.site-nav {
+    margin-top: 20px;
+}
+
+.site-nav ul{
+    margin: 0;
+    padding: 0;
+}
+
+.site-nav li{
+    list-style: none;
+    float:left;
+    margin-right: 5px;
+}
+
+.site-nav a {
+    display: block;
+    color: #617140;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 3px solid #e5e9dc;
+}
+
+.site-nav a:hover{
+    background-color: #e5e9dc;
+}
+
+.content-area{
+    border-top: 3px solid #e5e9dc;
+    border-bottom: 3px solid #e5e9dc;
+}
+
+.main-area{
+    width: 66%;
+    float: left;
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+
+.sidebar{
+    width: 34%;
+    float: left;
+    background-color: #e5e9dc;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    font-size: 85%;
+}
+
+footer {
+    text-align: center;
+    font-size: 85%;
+    color: #999;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.fix {
+    clear: both;
+}
+
+.group:before, .group:after {
+    content: "";
+    display: table;
+}
+
+.group:after{
+    clear: both;
+}
+
+.group {
+    zoom: 1;
+}
