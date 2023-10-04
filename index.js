@@ -19,27 +19,27 @@ bRoom.on('open', error => {
 bRoom.on('history_message', message => addHistory(message));
 
 function addHistory(message){
-    const le = document.querySelector('.b-chats');
-    const hdata = message.data;
-    const name = 'Anonymous';
-    const color = '#295523';
+    const be = document.querySelector('.b-chats');
+    const bdata = message.data;
+    const bname = 'Anonymous';
+    const bcolor = '#295523';
     // member element
-    const pastMember = document.createElement('div');
-    pastMember.appendChild(document.createTextNode(name));
-    pastMember.className = 'member';
-    pastMember.style.color = color;
+    const bpastMember = document.createElement('div');
+    bpastMember.appendChild(document.createTextNode(bname));
+    bpastMember.className = 'member';
+    bpastMember.style.color = bcolor;
     // message text element
-    const pastMessageData = document.createTextNode(hdata);
+    const bpastMessageData = document.createTextNode(bdata);
     // full message element
-    const pastMessage = document.createElement('div');
-    pastMessage.appendChild(pastMember);
-    pastMessage.appendChild(pastMessageData);
-    pastMessage.className = 'message';
+    const bpastMessage = document.createElement('div');
+    bpastMessage.appendChild(bpastMember);
+    bpastMessage.appendChild(bpastMessageData);
+    bpastMessage.className = 'message';
     // append
-    const wasTop = le.scrollTop === le.scrollHeight - le.clientHeight;
-    le.appendChild(pastMessage);
+    const wasTop = be.scrollTop === be.scrollHeight - be.clientHeight;
+    be.appendChild(bpastMessage);
     if (wasTop) {
-        le.scrollTop = le.scrollHeight - le.clientHeight;
+        be.scrollTop = be.scrollHeight - be.clientHeight;
     }
 }
 });
