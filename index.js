@@ -19,7 +19,7 @@ bRoom.on('open', error => {
 bRoom.on('history_message', message => addHistory(message));
 
 function addHistory(message){
-    const le = document.querySelector('.all-chats');
+    const le = document.querySelector('.b-chats');
     const hdata = message.data;
     const name = 'Anonymous';
     const color = '#295523';
@@ -62,7 +62,7 @@ muBoardID.on('open', error => {
     muRoom.on('history_message', message => addHistory(message));
     
     function addHistory(message){
-        const le = document.querySelector('.all-chats');
+        const le = document.querySelector('.mu-chats');
         const hdata = message.data;
         const name = 'Anonymous';
         const color = '#295523';
