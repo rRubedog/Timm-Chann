@@ -1,2 +1,2 @@
-const client = filestack.init(YOUR_API_KEY);
+const client = filestack.init('ARuRd9zG9T7ereeYBgQmTz');
 client.picker().open();
