@@ -42,6 +42,16 @@ function baddHistory(message){
         be.scrollTop = be.scrollHeight - be.clientHeight;
     }
 }
+
+bRoom.on('members', m => {
+    members = m;
+    document.querySelector('.user-in-b').innerText = `${members.length} users in /b/`;
+  });
+
+  bRoom.on('member_join', member => {
+    members.push(member);
+    document.querySelector('.user-in-b').innerText = `${members.length} users in /b/`;
+  });
 });
 
 muBoardID.on('open', error => {
@@ -85,4 +95,14 @@ muBoardID.on('open', error => {
             le.scrollTop = le.scrollHeight - le.clientHeight;
         }
     }
+
+    muRoom.on('members', m => {
+        members = m;
+        document.querySelector('.user-in-mu').innerText = `${members.length} users in /mu/`;
+      });
+    
+      muRoom.on('member_join', member => {
+        members.push(member);
+        document.querySelector('.user-in-mu').innerText = `${members.length} users in /mu/`;
+      });
     });
