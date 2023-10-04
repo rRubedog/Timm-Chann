@@ -6,6 +6,7 @@
 
 .sidebar{
     width: 60%;
+    float: left;
 }
 
 table, tr, th, td{
