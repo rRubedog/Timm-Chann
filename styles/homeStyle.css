@@ -7,6 +7,7 @@
 .sidebar{
     width: 60%;
 }
+
 table, tr, th, td{
     /* display: flex; */
     flex-direction: row;
@@ -14,4 +15,5 @@ table, tr, th, td{
     align-items: center;
     border: solid black 1px;
     text-align: center;
+    font-size: 110%;
 }
