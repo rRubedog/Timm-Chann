@@ -50,7 +50,7 @@ muBoardID.on('open', error => {
     }
     console.log('Successfully connected to /mu/');
     
-    const muRoom = bBoardID.subscribe('observable-room', {
+    const muRoom = muBoardID.subscribe('observable-room', {
         historyCount: 20
     });
     muRoom.on('open', error => {
