@@ -23,7 +23,7 @@ function baddHistory(message){
     const bdata = message.data;
     const bname = 'Anonymous';
     const bcolor = '#295523';
-    // member element
+    // member element 
     const bpastMember = document.createElement('div');
     bpastMember.appendChild(document.createTextNode(bname));
     bpastMember.className = 'member';
