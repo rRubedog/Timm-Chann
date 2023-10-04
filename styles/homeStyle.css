@@ -1,4 +1,4 @@
-table{
+table, tr{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
