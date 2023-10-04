@@ -14,7 +14,7 @@ drone.on('open', error => {
     return console.error(error);
   }
   console.log('Successfully connected to Scaledrone');
-
+ 
   const room = drone.subscribe('observable-room', {
     historyCount: 100
   });
