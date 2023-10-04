@@ -101,7 +101,6 @@ function getColor() {
 
 
 const DOM = {
-  asideMembersCount: document.querySelector('.aside-members-count'),
   membersCount: document.querySelector('.members-count'),
   membersList: document.querySelector('.members-list'),
   messages: document.querySelector('.messages'),
@@ -135,9 +134,6 @@ function createMemberElement(member) {
 function updateMembersDOM() {
   DOM.membersCount.innerText = `${members.length} users in room:`;
   // DOM.membersList.innerHTML = '';
-  // aside
-  DOM.asideMembersCount.innerText = `${members.length} users in room:`;
-  // DOM.asideMembersList.innerHTML = '';
   // members.forEach(member =>
   //   DOM.membersList.appendChild(createMemberElement(member))
   // );

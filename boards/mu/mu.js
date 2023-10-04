@@ -16,7 +16,7 @@ drone.on('open', error => {
   console.log('Successfully connected to Scaledrone');
 
   const room = drone.subscribe('observable-room', {
-    historyCount: 5
+    historyCount: 20
   });
   room.on('open', error => {
     if (error) {
@@ -98,6 +98,8 @@ function getColor() {
 
 //------------- DOM STUFF
 
+
+
 const DOM = {
   membersCount: document.querySelector('.members-count'),
   membersList: document.querySelector('.members-list'),
@@ -131,10 +133,10 @@ function createMemberElement(member) {
 
 function updateMembersDOM() {
   DOM.membersCount.innerText = `${members.length} users in room:`;
-  DOM.membersList.innerHTML = '';
-  members.forEach(member =>
-    DOM.membersList.appendChild(createMemberElement(member))
-  );
+  // DOM.membersList.innerHTML = '';
+  // members.forEach(member =>
+  //   DOM.membersList.appendChild(createMemberElement(member))
+  // );
 }
 
 function createMessageElement(text, member) {
