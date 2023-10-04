@@ -19,7 +19,7 @@ bRoom.on('open', error => {
 bRoom.on('history_message', message => addHistory(message));
 
 function addHistory(message){
-    const le = const le = document.querySelector('.all-chats');
+    const le = document.querySelector('.all-chats');
     const hdata = message.data;
     const name = 'Anonymous';
     const color = '#295523';
