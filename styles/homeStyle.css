@@ -3,6 +3,10 @@
     justify-content: center;
 
 }
+
+.sidebar{
+    width: 60%;
+}
 table, tr, th, td{
     /* display: flex; */
     flex-direction: row;
