@@ -42,14 +42,6 @@ function baddHistory(message){
         be.scrollTop = be.scrollHeight - be.clientHeight;
     }
 }
-
-bRoom.on('data', (text, member) => {
-    if (member) {
-      baddHistory(message);
-    } else {
-      // Message is from server
-    }
-  });
 });
 
 muBoardID.on('open', error => {
@@ -93,12 +85,4 @@ muBoardID.on('open', error => {
             le.scrollTop = le.scrollHeight - le.clientHeight;
         }
     }
-
-    muRoom.on('data', (text, member) => {
-        if (member) {
-          addHistory(message);
-        } else {
-          // Message is from server
-        }
-      });
     });
