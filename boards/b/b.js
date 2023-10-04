@@ -17,7 +17,7 @@ drone.on('open', error => {
  
   const room = drone.subscribe('observable-room', {
     historyCount: 40
-  });
+  }); 
   room.on('open', error => {
     if (error) {
       return console.error(error);
