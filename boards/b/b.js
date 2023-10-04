@@ -133,7 +133,7 @@ function createMemberElement(member) {
 
 function updateMembersDOM() {
   DOM.membersCount.innerText = `${members.length} users in room`;
-  document.querySelector('side-count').innerHTML = DOM.membersCount.innerText;
+  document.querySelector('side-count').innerText = DOM.membersCount.innerText;
   // DOM.membersList.innerHTML = '';
   // members.forEach(member =>
   //   DOM.membersList.appendChild(createMemberElement(member))
