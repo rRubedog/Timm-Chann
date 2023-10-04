@@ -52,6 +52,12 @@ bRoom.on('members', m => {
     members.push(member);
     document.querySelector('.user-in-b').innerText = `${members.length} users in /b/`;
   });
+
+  bRoom.on('member_leave', ({id}) => {
+    const index = members.findIndex(member => member.id === id);
+    members.splice(index, 1);
+    document.querySelector('.user-in-b').innerText = `${members.length} users in /b/`;
+  });
 });
 
 muBoardID.on('open', error => {
@@ -103,6 +109,12 @@ muBoardID.on('open', error => {
     
       muRoom.on('member_join', member => {
         members.push(member);
+        document.querySelector('.user-in-mu').innerText = `${members.length} users in /mu/`;
+      });
+
+      muRoom.on('member_leave', ({id}) => {
+        const index = members.findIndex(member => member.id === id);
+        members.splice(index, 1);
         document.querySelector('.user-in-mu').innerText = `${members.length} users in /mu/`;
       });
     });
