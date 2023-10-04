@@ -106,7 +106,7 @@ header p {
 }
 
 .sidebar{
-    max-width: 34%;
+    width: 34%;
     float: left;
     background-color: #e5e9dc;
     padding: 20px 40px;
