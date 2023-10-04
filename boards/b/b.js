@@ -38,12 +38,12 @@ drone.on('open', error => {
     pastMember.style.color = color;
     // message text element
     const pastMessageData = document.createTextNode(hdata);
-
+    // full message element
     const pastMessage = document.createElement('div');
     pastMessage.appendChild(pastMember);
     pastMessage.appendChild(pastMessageData);
     pastMessage.className = 'message';
-    
+    // append
     const wasTop = le.scrollTop === le.scrollHeight - le.clientHeight;
     le.appendChild(pastMessage);
     if (wasTop) {
