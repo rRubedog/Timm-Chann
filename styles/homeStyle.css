@@ -1,5 +1,6 @@
 .sidebar{
     font-size: 100%;
+    width: fit-content;
 }
 
 table, tr, th, td{
