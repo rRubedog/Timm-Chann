@@ -132,7 +132,7 @@ function createMemberElement(member) {
 }
 
 function updateMembersDOM() {
-  DOM.membersCount.innerText = `${members.length} users in room:`;
+  DOM.membersCount.innerText = `${members.length} users in room`;
   // DOM.membersList.innerHTML = '';
   // members.forEach(member =>
   //   DOM.membersList.appendChild(createMemberElement(member))
