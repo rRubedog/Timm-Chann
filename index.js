@@ -8,7 +8,7 @@ if (error) {
 console.log('Successfully connected to /b/');
 
 const bRoom = bBoardID.subscribe('observable-room', {
-    historyCount: 20
+    historyCount: 10
 });
 bRoom.on('open', error => {
     if (error) {
@@ -16,9 +16,9 @@ bRoom.on('open', error => {
     }
     console.log('Successfully joined /b/');
 });
-bRoom.on('history_message', message => addHistory(message));
+bRoom.on('history_message', message => baddHistory(message));
 
-function addHistory(message){
+function baddHistory(message){
     const be = document.querySelector('.b-chats');
     const bdata = message.data;
     const bname = 'Anonymous';
@@ -51,7 +51,7 @@ muBoardID.on('open', error => {
     console.log('Successfully connected to /mu/');
     
     const muRoom = muBoardID.subscribe('observable-room', {
-        historyCount: 20
+        historyCount: 10
     });
     muRoom.on('open', error => {
         if (error) {
