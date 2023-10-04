@@ -53,18 +53,18 @@ drone.on('open', error => {
 
   room.on('members', m => {
     members = m;
-    updateMembersDOM();
+    // updateMembersDOM();
   });
 
   room.on('member_join', member => {
     members.push(member);
-    updateMembersDOM();
+    // updateMembersDOM();
   });
 
   room.on('member_leave', ({id}) => {
     const index = members.findIndex(member => member.id === id);
     members.splice(index, 1);
-    updateMembersDOM();
+    // updateMembersDOM();
   });
 
   room.on('data', (text, member) => {
@@ -89,7 +89,7 @@ function getName() {
   return (
     username
   );
-  updateMembersDOM();
+  // updateMembersDOM();
 }
 
 function getColor() {
@@ -102,7 +102,6 @@ function getColor() {
 
 const DOM = {
   asideMembersCount: document.querySelector('.aside-members-count'),
-  asideMembersList: document.querySelector('.aside-members-list'),
   membersCount: document.querySelector('.members-count'),
   membersList: document.querySelector('.members-list'),
   messages: document.querySelector('.messages'),
@@ -133,17 +132,16 @@ function createMemberElement(member) {
   return el;
 }
 
-function updateMembersDOM() {
-  DOM.membersCount.innerText = `${members.length} users in room:`;
-  DOM.membersList.innerHTML = '';
-  // aside
-  DOM.asideMembersCount.innerText = `${members.length} users in room:`;
-  DOM.asideMembersList.innerHTML = '';
-  members.forEach(member =>
-    DOM.membersList.appendChild(createMemberElement(member)),
-    DOM.asideMembersList.appendChild(createMemberElement(member))
-  );
-}
+// function updateMembersDOM() {
+//   DOM.membersCount.innerText = `${members.length} users in room:`;
+//   DOM.membersList.innerHTML = '';
+//   // aside
+//   DOM.asideMembersCount.innerText = `${members.length} users in room:`;
+//   DOM.asideMembersList.innerHTML = '';
+//   members.forEach(member =>
+//     DOM.membersList.appendChild(createMemberElement(member))
+//   );
+// }
 
 function createMessageElement(text, member) {
   const el = document.createElement('div');
