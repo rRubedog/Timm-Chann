@@ -1,16 +1,9 @@
-/* .main-area{
-    display: flex;
-    justify-content: center;
-
-}
-
 .sidebar{
-    width: 60%;
-    float: left;
+    font-size: 100%;
 }
 
 table, tr, th, td{
     border: solid black 1px;
     text-align: center;
     font-size: 110%;
-} */
+} 
