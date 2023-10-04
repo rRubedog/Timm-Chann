@@ -38,12 +38,12 @@ drone.on('open', error => {
     pastMember.style.color = color;
     // message text element
     const pastMessageData = document.createTextNode(hdata);
-
+    // full message element
     const pastMessage = document.createElement('div');
     pastMessage.appendChild(pastMember);
     pastMessage.appendChild(pastMessageData);
     pastMessage.className = 'message';
-    
+    // append
     const wasTop = le.scrollTop === le.scrollHeight - le.clientHeight;
     le.appendChild(pastMessage);
     if (wasTop) {
@@ -101,7 +101,7 @@ function getColor() {
 
 
 const DOM = {
-  membersCount: document.querySelector('.members-count'),
+  // membersCount: document.querySelector('.members-count'),
   membersList: document.querySelector('.members-list'),
   messages: document.querySelector('.messages'),
   input: document.querySelector('.message-form__input'),
@@ -132,7 +132,8 @@ function createMemberElement(member) {
 }
 
 function updateMembersDOM() {
-  DOM.membersCount.innerText = `${members.length} users in room:`;
+  // DOM.membersCount.innerText = `${members.length} users in room`;
+  document.querySelector('.side-count').innerText = `${members.length} users in room`;
   // DOM.membersList.innerHTML = '';
   // members.forEach(member =>
   //   DOM.membersList.appendChild(createMemberElement(member))
