@@ -163,18 +163,18 @@ cBoardID.on('open', error => {
   }
   
   cRoom.on('members', m => {
-      members = m;
-      document.querySelector('.user-in-c').innerText = `${members.length} users in /c/`;
-    });
-  
-    cRoom.on('member_join', member => {
-      members.push(member);
-      document.querySelector('.user-in-c').innerText = `${members.length} users in /c/`;
-    });
-  
-    cRoom.on('member_leave', ({id}) => {
-      const index = members.findIndex(member => member.id === id);
-      members.splice(index, 1);
-      document.querySelector('.user-in-c').innerText = `${members.length} users in /c/`;
-    });
+    members = m;
+    document.querySelector('.user-in-c').innerText = `${members.length} users in /c/`;
   });
+
+  cRoom.on('member_join', member => {
+    members.push(member);
+    document.querySelector('.user-in-c').innerText = `${members.length} users in /c/`;
+  });
+
+  cRoom.on('member_leave', ({id}) => {
+    const index = members.findIndex(member => member.id === id);
+    members.splice(index, 1);
+    document.querySelector('.user-in-c').innerText = `${members.length} users in /c/`;
+  });
+});
