@@ -9,7 +9,7 @@ if (error) {
 console.log('Successfully connected to /b/');
 
 const bRoom = bBoardID.subscribe('observable-room', {
-    historyCount: 10
+    historyCount: 5
 });
 bRoom.on('open', error => {
     if (error) {
@@ -68,7 +68,7 @@ if (error) {
 console.log('Successfully connected to /mu/');
 
 const muRoom = muBoardID.subscribe('observable-room', {
-    historyCount: 10
+    historyCount: 5
 });
 muRoom.on('open', error => {
     if (error) {
@@ -127,7 +127,7 @@ cBoardID.on('open', error => {
   console.log('Successfully connected to /c/');
   
   const cRoom = cBoardID.subscribe('observable-room', {
-      historyCount: 10
+      historyCount: 5
   });
   cRoom.on('open', error => {
       if (error) {
