@@ -124,7 +124,7 @@ cBoardID.on('open', error => {
   if (error) {
       return console.error(error);
   }
-  console.log('Successfully connected to /b/');
+  console.log('Successfully connected to /c/');
   
   const cRoom = cBoardID.subscribe('observable-room', {
       historyCount: 10
@@ -133,12 +133,12 @@ cBoardID.on('open', error => {
       if (error) {
       return console.error(error);
       }
-      console.log('Successfully joined /b/');
+      console.log('Successfully joined /c/');
   });
   cRoom.on('history_message', message => baddHistory(message));
   
   function baddHistory(message){
-      const ce = document.querySelector('.b-chats');
+      const ce = document.querySelector('.c-chats');
       const cdata = message.data;
       const cname = 'Anonymous';
       const ccolor = '#295523';
