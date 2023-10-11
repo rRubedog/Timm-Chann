@@ -90,7 +90,6 @@ boardID.on('open', error => {
     membersCount -= 1;
     document.querySelector('.user').innerText = membersCount + ' total users online';
   });
-  b.close();
 
   // /mu/
   mu.on('members', m => {
@@ -111,7 +110,6 @@ boardID.on('open', error => {
     membersCount -= 1;
     document.querySelector('.user').innerText = membersCount + ' total users online';
   });
-  mu.close();
 
   // /c/
   c.on('members', m => {
@@ -132,9 +130,9 @@ boardID.on('open', error => {
     membersCount -= 1;
     document.querySelector('.user').innerText = membersCount + ' total users online';
   });
-  c.close();
 });
 
 boardID.on('close', event => {
   console.log('Connection was closed', event);
 });
+boardID.close();
