@@ -110,22 +110,23 @@ boardID.on('open', error => {
   c.on('member_join', member => {
     members.push(member);
     membersCount += 1;
-    document.querySelector('.user').innerText = membersCount + ' users online';
+    document.querySelector('.user').innerText = membersCount + ' total users online';
   });
 
   c.on('member_leave', ({id}) => {
     const index = members.findIndex(member => member.id === id);
     members.splice(index, 1);
     membersCount -= 1;
-    document.querySelector('.user').innerText = membersCount + ' users online';
+    document.querySelector('.user').innerText = membersCount + ' total users online';
   });
 
-  b.unsubscribe();
-  mu.unsubscribe();
-  c.unsubscribe();
-  // membersCount -= 3;
-  document.querySelector('.user').innerText = membersCount + ' users online';
 });
+
+b.unsubscribe();
+mu.unsubscribe();
+c.unsubscribe();
+
+document.querySelector('.user').innerText = membersCount + ' total users online';
 
 boardID.on('close', event => {
   console.log('Connection was closed', event);
