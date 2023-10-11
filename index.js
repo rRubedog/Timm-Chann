@@ -48,7 +48,7 @@ boardID.on('open', error => {
     const data = message.data;
     const name = 'Anonymous';
     const color = '#295523';
-    for(let i = 0; i<msgList; i++){
+    for(let i = 0; i < msgList; i++){
       // member element 
       const pastMember = document.createElement('div');
       pastMember.appendChild(document.createTextNode(name));
