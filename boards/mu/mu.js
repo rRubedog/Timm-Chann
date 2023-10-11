@@ -1,4 +1,4 @@
-const CLIENT_ID = 'eod9jEwBJN8RbLSs';
+const CLIENT_ID = 'RKfsdDmmQWAB060u';
 
 const drone = new ScaleDrone(CLIENT_ID, {
   data: { // Will be sent out as clientData via events
@@ -14,11 +14,10 @@ drone.on('open', error => {
     return console.error(error);
   }
   console.log('Successfully connected to Scaledrone');
-
-  const room = drone.subscribe('observable-room', {
+ 
+  const room = drone.subscribe('observable-mu', {
     historyCount: 15
-    
-  });
+  }); 
   room.on('open', error => {
     if (error) {
       return console.error(error);
@@ -118,7 +117,7 @@ function sendMessage() {
   }
   DOM.input.value = '';
   drone.publish({
-    room: 'observable-room',
+    room: 'observable-mu',
     message: value,
   });
 }
