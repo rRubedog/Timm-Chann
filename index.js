@@ -67,7 +67,6 @@ boardID.on('open', error => {
       el.scrollTop = el.scrollHeight - el.clientHeight;
     }
     board.unsubscribe();
-    board.close();
   }
 
   let membersCount = 0;
@@ -91,6 +90,7 @@ boardID.on('open', error => {
     membersCount -= 1;
     document.querySelector('.user').innerText = membersCount + ' total users online';
   });
+  b.close();
 
   // /mu/
   mu.on('members', m => {
@@ -111,6 +111,7 @@ boardID.on('open', error => {
     membersCount -= 1;
     document.querySelector('.user').innerText = membersCount + ' total users online';
   });
+  mu.close();
 
   // /c/
   c.on('members', m => {
@@ -131,6 +132,7 @@ boardID.on('open', error => {
     membersCount -= 1;
     document.querySelector('.user').innerText = membersCount + ' total users online';
   });
+  c.close();
 });
 
 boardID.on('close', event => {
