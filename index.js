@@ -15,8 +15,9 @@ boardID.on('open', error => {
     }
     console.log('Successfully joined /b/');
   });
+  let bpast = history.messages.length;
   const bl = document.querySelector('.b-chats');
-  b.on('history_message', message => addHistory(message, bl, b, history.length));
+  b.on('history_message', message => addHistory(message, bl, b, bpast));
 
   // /mu/
   const mu = boardID.subscribe('observable-mu', {
@@ -28,8 +29,9 @@ boardID.on('open', error => {
     }
     console.log('Successfully joined /mu/');
   });
+  let mupast = history.messages.length;
   const mul = document.querySelector('.mu-chats');
-  mu.on('history_message', message => addHistory(message, mul, mu, history.length));
+  mu.on('history_message', message => addHistory(message, mul, mu, mupast));
 
   // /c/
   const c = boardID.subscribe('observable-c', {
@@ -41,8 +43,9 @@ boardID.on('open', error => {
     }
     console.log('Successfully joined /c/');
   });
+  let cpast = history.messages.length;
   const cl = document.querySelector('.c-chats');
-  c.on('history_message', message => addHistory(message, cl, c, history.length));
+  c.on('history_message', message => addHistory(message, cl, c, cpast));
 
   function addHistory(message, el, board, msgList){
     const data = message.data;
