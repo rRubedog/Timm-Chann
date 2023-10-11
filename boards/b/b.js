@@ -28,7 +28,7 @@ drone.on('open', error => {
 
   function addHistory(message){
     const le = DOM.messages;
-    const hdata = message.data;
+    const data = message.data;
     const name = 'Anonymous';
     const color = '#295523';
     // member element
@@ -37,7 +37,7 @@ drone.on('open', error => {
     pastMember.className = 'member';
     pastMember.style.color = color;
     // message text element
-    const pastMessageData = document.createTextNode(hdata);
+    const pastMessageData = document.createTextNode(data);
     // full message element
     const pastMessage = document.createElement('div');
     pastMessage.appendChild(pastMember);
