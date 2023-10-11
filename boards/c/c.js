@@ -13,7 +13,7 @@ drone.on('open', error => {
   if (error) {
     return console.error(error);
   }
-  console.log('Successfully connected to Scaledrone');
+  console.log('Successfully connected to /c/');
  
   const room = drone.subscribe('observable-c', {
     historyCount: 100
@@ -22,7 +22,7 @@ drone.on('open', error => {
     if (error) {
       return console.error(error);
     }
-    console.log('Successfully joined room');
+    console.log('Successfully joined /c/');
   });
   room.on('history_message', message => addHistory(message));
 
