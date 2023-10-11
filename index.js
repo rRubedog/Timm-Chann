@@ -42,30 +42,33 @@ boardID.on('open', error => {
     console.log('Successfully joined /c/');
   });
   const cl = document.querySelector('.c-chats');
-  c.on('history_message', message => addHistory(message, cl, c));
+  c.on('history_message', message => addHistory(message, cl, c, message.length));
 
-  function addHistory(message, el, board){
+  function addHistory(message, el, board, msgList){
     const data = message.data;
     const name = 'Anonymous';
     const color = '#295523';
-    // member element 
-    const pastMember = document.createElement('div');
-    pastMember.appendChild(document.createTextNode(name));
-    pastMember.className = 'member';
-    pastMember.style.color = color;
-    // message text element
-    const pastMessageData = document.createTextNode(data);
-    // full message element
-    const pastMessage = document.createElement('div');
-    pastMessage.appendChild(pastMember);
-    pastMessage.appendChild(pastMessageData);
-    pastMessage.className = 'message';
-    // append
-    const wasTop = el.scrollTop === el.scrollHeight - el.clientHeight;
-    el.appendChild(pastMessage);
-    if (wasTop) {
-      el.scrollTop = el.scrollHeight - el.clientHeight;
+    for(let i = 0; i<msgList){
+      // member element 
+      const pastMember = document.createElement('div');
+      pastMember.appendChild(document.createTextNode(name));
+      pastMember.className = 'member';
+      pastMember.style.color = color;
+      // message text element
+      const pastMessageData = document.createTextNode(data);
+      // full message element
+      const pastMessage = document.createElement('div');
+      pastMessage.appendChild(pastMember);
+      pastMessage.appendChild(pastMessageData);
+      pastMessage.className = 'message';
+      // append
+      const wasTop = el.scrollTop === el.scrollHeight - el.clientHeight;
+      el.appendChild(pastMessage);
+      if (wasTop) {
+        el.scrollTop = el.scrollHeight - el.clientHeight;
+      }
     }
+    
     board.unsubscribe();
     closeNow += 1;
     membersCount -= 1;
