@@ -9,12 +9,6 @@ boardID.on('open', error => {
   const b = boardID.subscribe('observable-b', {
     historyCount: 5
   });
-  // b.on('open', error => {
-  //   if (error) {
-  //     return console.error(error);
-  //   }
-  //   console.log('Successfully joined /b/');
-  // });
   const bl = document.querySelector('.b-chats');
   b.on('history_message', message => addHistory(message, bl, b));
 
