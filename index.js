@@ -44,29 +44,29 @@ c.on('history_message', message => baddHistory(message, "c"));
 
 
 function addHistory(message, board){
-    const el = document.querySelector('.'+board+'-chats');
-    const data = message.data;
-    const name = 'Anonymous';
-    const color = '#295523';
-    // member element 
-    const pastMember = document.createElement('div');
-    pastMember.appendChild(document.createTextNode(name));
-    pastMember.className = 'member';
-    pastMember.style.color = color;
-    // message text element
-    const pastMessageData = document.createTextNode(data);
-    // full message element
-    const pastMessage = document.createElement('div');
-    pastMessage.appendChild(pastMember);
-    pastMessage.appendChild(pastMessageData);
-    pastMessage.className = 'message';
-    // append
-    const wasTop = el.scrollTop === el.scrollHeight - el.clientHeight;
-    el.appendChild(pastMessage);
-    if (wasTop) {
-        el.scrollTop = el.scrollHeight - el.clientHeight;
-    }
+  const el = document.querySelector('.'+board+'-chats');
+  const data = message.data;
+  const name = 'Anonymous';
+  const color = '#295523';
+  // member element 
+  const pastMember = document.createElement('div');
+  pastMember.appendChild(document.createTextNode(name));
+  pastMember.className = 'member';
+  pastMember.style.color = color;
+  // message text element
+  const pastMessageData = document.createTextNode(data);
+  // full message element
+  const pastMessage = document.createElement('div');
+  pastMessage.appendChild(pastMember);
+  pastMessage.appendChild(pastMessageData);
+  pastMessage.className = 'message';
+  // append
+  const wasTop = el.scrollTop === el.scrollHeight - el.clientHeight;
+  el.appendChild(pastMessage);
+  if (wasTop) {
+    el.scrollTop = el.scrollHeight - el.clientHeight;
   }
+}
 
 // /b/
   b.on('members', m => {
