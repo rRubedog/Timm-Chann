@@ -68,7 +68,12 @@ boardID.on('open', error => {
       el.scrollTop = el.scrollHeight - el.clientHeight;
     }
     unsub += 1;
-    closeOrUnsub(board);
+    if(unsub == 5){
+      board.unsubscribe();
+      unsub = 0;
+      closeNow += 1;
+      membersCount -= 1;
+    }
     
     document.querySelector('.user').innerText = membersCount + ' total users online';
   }
@@ -140,17 +145,6 @@ boardID.on('close', event => {
   console.log('Connection was closed', event);
 });
 
-function closeOrUnsub(board){
-  if(unsub == 5){
-    board.unsubscribe();
-    membersCount -= 1;
-    unsub = 0;
-    if(closeNow == 3){
-      boardID.close();
-    }else{
-      closeNow += 1;
-    }
-  }
+if(closeNow == 3){
+  boardID.close();
 }
-
-
