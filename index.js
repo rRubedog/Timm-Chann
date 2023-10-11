@@ -22,12 +22,6 @@ boardID.on('open', error => {
   const mu = boardID.subscribe('observable-mu', {
     historyCount: 5
   });
-  // mu.on('open', error => {
-  //   if (error) {
-  //     return console.error(error);
-  //   }
-  //   console.log('Successfully joined /mu/');
-  // });
   const mul = document.querySelector('.mu-chats');
   mu.on('history_message', message => addHistory(message, mul));
 
@@ -35,12 +29,6 @@ boardID.on('open', error => {
   const c = boardID.subscribe('observable-c', {
     historyCount: 5
   });
-  // c.on('open', error => {
-  //   if (error) {
-  //     return console.error(error);
-  //   }
-  //   console.log('Successfully joined /c/');
-  // });
   const cl = document.querySelector('.c-chats');
   c.on('history_message', message => addHistory(message, cl));
 
@@ -75,7 +63,7 @@ boardID.on('open', error => {
   // /b/
   b.on('members', m => {
     members = m;
-    membersCount += 1;
+    membersCount += members.length;
     document.querySelector('.user').innerText = membersCount + ' users online';
   });
 
@@ -93,7 +81,7 @@ boardID.on('open', error => {
   // /mu/
   mu.on('members', m => {
     members = m;
-    membersCount += 1;
+    membersCount += members.length;
     document.querySelector('.user').innerText = membersCount + ' users online';
   });
 
@@ -111,7 +99,7 @@ boardID.on('open', error => {
   // /c/
   c.on('members', m => {
     members = m;
-    membersCount += 1;
+    membersCount += members.length;
     document.querySelector('.user').innerText = membersCount + ' users online';
   });
 
@@ -125,4 +113,8 @@ boardID.on('open', error => {
   //   members.splice(index, 1);
   //   document.querySelector('.user-in-c').innerText = `${members.length} users in /c/`;
   // });
+});
+
+drone.on('close', event => {
+  console.log('Connection was closed', event);
 });
