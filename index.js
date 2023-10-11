@@ -11,7 +11,7 @@ boardID.on('open', error => {
   });
   b.on('open', error => {
     if (error) {
-    return console.error(error);
+      return console.error(error);
     }
     console.log('Successfully joined /b/');
   });
@@ -24,7 +24,7 @@ boardID.on('open', error => {
   });
   mu.on('open', error => {
     if (error) {
-    return console.error(error);
+      return console.error(error);
     }
     console.log('Successfully joined /mu/');
   });
