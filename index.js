@@ -16,27 +16,23 @@ boardID.on('open', error => {
   //   console.log('Successfully joined /b/');
   // });
   const bl = document.querySelector('.b-chats');
-  b.on('history_message', message => addHistory(message, bl));
-  b.unsubscribe();
+  b.on('history_message', message => addHistory(message, bl, b));
 
   // /mu/
   const mu = boardID.subscribe('observable-mu', {
     historyCount: 5
   });
   const mul = document.querySelector('.mu-chats');
-  mu.on('history_message', message => addHistory(message, mul));
-  mu.unsubscribe();
+  mu.on('history_message', message => addHistory(message, mul, mu));
 
   // /c/
   const c = boardID.subscribe('observable-c', {
     historyCount: 5
   });
   const cl = document.querySelector('.c-chats');
-  c.on('history_message', message => addHistory(message, cl));
-  c.unsubscribe();
+  c.on('history_message', message => addHistory(message, cl, c));
 
-
-  function addHistory(message, el){
+  function addHistory(message, el, board){
     const data = message.data;
     const name = 'Anonymous';
     const color = '#295523';
@@ -58,6 +54,7 @@ boardID.on('open', error => {
     if (wasTop) {
       el.scrollTop = el.scrollHeight - el.clientHeight;
     }
+    board.unsubscribe();
   }
 
   let membersCount = 0;
