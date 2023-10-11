@@ -56,6 +56,9 @@ boardID.on('open', error => {
     if (wasTop) {
       el.scrollTop = el.scrollHeight - el.clientHeight;
     }
+    b.unsubscribe();
+    mu.unsubscribe();
+    c.unsubscribe();
   }
 
   let membersCount = 0;
@@ -119,13 +122,6 @@ boardID.on('open', error => {
     membersCount -= 1;
     document.querySelector('.user').innerText = membersCount + ' total users online';
   });
-
-
-  b.unsubscribe();
-  mu.unsubscribe();
-  c.unsubscribe();
-
-  document.querySelector('.user').innerText = membersCount + ' total users online';
 });
 
 boardID.on('close', event => {
