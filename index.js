@@ -123,7 +123,7 @@ boardID.on('open', error => {
   b.unsubscribe();
   mu.unsubscribe();
   c.unsubscribe();
-  membersCount -= 3;
+  // membersCount -= 3;
   document.querySelector('.user').innerText = membersCount + ' users online';
 });
 
