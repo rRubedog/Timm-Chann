@@ -68,6 +68,8 @@ boardID.on('open', error => {
     }
     board.unsubscribe();
     closeNow += 1;
+    membersCount -= 1;
+    document.querySelector('.user').innerText = membersCount + ' total users online';
   }
 
   let membersCount = 0;
@@ -79,18 +81,18 @@ boardID.on('open', error => {
     document.querySelector('.user').innerText = membersCount + ' total users online';
   });
 
-  b.on('member_join', member => {
-    members.push(member);
-    membersCount += 1;
-    document.querySelector('.user').innerText = membersCount + ' total users online';
-  });
+  // b.on('member_join', member => {
+  //   members.push(member);
+  //   membersCount += 1;
+  //   document.querySelector('.user').innerText = membersCount + ' total users online';
+  // });
 
-  b.on('member_leave', ({id}) => {
-    const index = members.findIndex(member => member.id === id);
-    members.splice(index, 1);
-    membersCount -= 1;
-    document.querySelector('.user').innerText = membersCount + ' total users online';
-  });
+  // b.on('member_leave', ({id}) => {
+  //   const index = members.findIndex(member => member.id === id);
+  //   members.splice(index, 1);
+  //   membersCount -= 1;
+  //   document.querySelector('.user').innerText = membersCount + ' total users online';
+  // });
 
   // /mu/
   mu.on('members', m => {
@@ -99,18 +101,18 @@ boardID.on('open', error => {
     document.querySelector('.user').innerText = membersCount + ' total users online';
   });
 
-  mu.on('member_join', member => {
-    members.push(member);
-    membersCount += 1;
-    document.querySelector('.user').innerText = membersCount + ' total users online';
-  });
+  // mu.on('member_join', member => {
+  //   members.push(member);
+  //   membersCount += 1;
+  //   document.querySelector('.user').innerText = membersCount + ' total users online';
+  // });
 
-  mu.on('member_leave', ({id}) => {
-    const index = members.findIndex(member => member.id === id);
-    members.splice(index, 1);
-    membersCount -= 1;
-    document.querySelector('.user').innerText = membersCount + ' total users online';
-  });
+  // mu.on('member_leave', ({id}) => {
+  //   const index = members.findIndex(member => member.id === id);
+  //   members.splice(index, 1);
+  //   membersCount -= 1;
+  //   document.querySelector('.user').innerText = membersCount + ' total users online';
+  // });
 
   // /c/
   c.on('members', m => {
@@ -119,18 +121,18 @@ boardID.on('open', error => {
     document.querySelector('.user').innerText = membersCount + ' total users online';
   });
 
-  c.on('member_join', member => {
-    members.push(member);
-    membersCount += 1;
-    document.querySelector('.user').innerText = membersCount + ' total users online';
-  });
+  // c.on('member_join', member => {
+  //   members.push(member);
+  //   membersCount += 1;
+  //   document.querySelector('.user').innerText = membersCount + ' total users online';
+  // });
 
-  c.on('member_leave', ({id}) => {
-    const index = members.findIndex(member => member.id === id);
-    members.splice(index, 1);
-    membersCount -= 1;
-    document.querySelector('.user').innerText = membersCount + ' total users online';
-  });
+  // c.on('member_leave', ({id}) => {
+  //   const index = members.findIndex(member => member.id === id);
+  //   members.splice(index, 1);
+  //   membersCount -= 1;
+  //   document.querySelector('.user').innerText = membersCount + ' total users online';
+  // });
 });
 
 boardID.on('close', event => {
