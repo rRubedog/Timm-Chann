@@ -1,5 +1,5 @@
 const boardID = new Scaledrone('RKfsdDmmQWAB060u');
-
+let closeNow = 0;
 boardID.on('open', error => {
   if (error) {
     return console.error(error);
@@ -67,6 +67,7 @@ boardID.on('open', error => {
       el.scrollTop = el.scrollHeight - el.clientHeight;
     }
     board.unsubscribe();
+    closeNow += 1;
   }
 
   let membersCount = 0;
@@ -135,4 +136,7 @@ boardID.on('open', error => {
 boardID.on('close', event => {
   console.log('Connection was closed', event);
 });
-boardID.close();
+
+if(closeNow == 3){
+  boardID.close();
+}
