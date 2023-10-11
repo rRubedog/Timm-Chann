@@ -4,7 +4,7 @@ boardID.on('open', error => {
   if (error) {
     return console.error(error);
   }
-  console.log('Successfully connected to /b/');
+  console.log('Successfully connected to ScaleDrone');
   // /b/
   const b = boardID.subscribe('observable-b', {
     historyCount: 5
