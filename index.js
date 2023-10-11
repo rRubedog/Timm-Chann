@@ -64,47 +64,47 @@ boardID.on('open', error => {
   b.on('members', m => {
     members = m;
     membersCount += members.length;
-    document.querySelector('.user').innerText = membersCount + ' users online';
+    document.querySelector('.user').innerText = membersCount + ' total users online';
   });
 
   b.on('member_join', member => {
     members.push(member);
     membersCount += 1;
-    document.querySelector('.user').innerText = membersCount + ' users online';
+    document.querySelector('.user').innerText = membersCount + ' total users online';
   });
 
   b.on('member_leave', ({id}) => {
     const index = members.findIndex(member => member.id === id);
     members.splice(index, 1);
     membersCount -= 1;
-    document.querySelector('.user').innerText = membersCount + ' users online';
+    document.querySelector('.user').innerText = membersCount + ' total users online';
   });
 
   // /mu/
   mu.on('members', m => {
     members = m;
     membersCount += members.length;
-    document.querySelector('.user').innerText = membersCount + ' users online';
+    document.querySelector('.user').innerText = membersCount + ' total users online';
   });
 
   mu.on('member_join', member => {
     members.push(member);
     membersCount += 1;
-    document.querySelector('.user').innerText = membersCount + ' users online';
+    document.querySelector('.user').innerText = membersCount + ' total users online';
   });
 
   mu.on('member_leave', ({id}) => {
     const index = members.findIndex(member => member.id === id);
     members.splice(index, 1);
     membersCount -= 1;
-    document.querySelector('.user').innerText = membersCount + ' users online';
+    document.querySelector('.user').innerText = membersCount + ' total users online';
   });
 
   // /c/
   c.on('members', m => {
     members = m;
     membersCount += members.length;
-    document.querySelector('.user').innerText = membersCount + ' users online';
+    document.querySelector('.user').innerText = membersCount + ' total users online';
   });
 
   c.on('member_join', member => {
