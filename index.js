@@ -58,6 +58,10 @@ boardID.on('open', error => {
     }
   }
 
+  b.unsubscribe();
+  mu.unsubscribe();
+  c.unsubscribe();
+
   let membersCount = 0;
 
   // /b/
