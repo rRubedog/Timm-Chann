@@ -9,6 +9,12 @@ boardID.on('open', error => {
   const b = boardID.subscribe('observable-b', {
     historyCount: 5
   });
+  b.on('open', error => {
+    if (error) {
+      return console.error(error);
+    }
+    console.log('Successfully joined /b/');
+  });
   const bl = document.querySelector('.b-chats');
   b.on('history_message', message => addHistory(message, bl, b));
 
@@ -16,12 +22,24 @@ boardID.on('open', error => {
   const mu = boardID.subscribe('observable-mu', {
     historyCount: 5
   });
+  mu.on('open', error => {
+    if (error) {
+      return console.error(error);
+    }
+    console.log('Successfully joined /mu/');
+  });
   const mul = document.querySelector('.mu-chats');
   mu.on('history_message', message => addHistory(message, mul, mu));
 
   // /c/
   const c = boardID.subscribe('observable-c', {
     historyCount: 5
+  });
+  c.on('open', error => {
+    if (error) {
+      return console.error(error);
+    }
+    console.log('Successfully joined /c/');
   });
   const cl = document.querySelector('.c-chats');
   c.on('history_message', message => addHistory(message, cl, c));
