@@ -17,6 +17,7 @@ boardID.on('open', error => {
   // });
   const bl = document.querySelector('.b-chats');
   b.on('history_message', message => addHistory(message, bl));
+  b.unsubscribe();
 
   // /mu/
   const mu = boardID.subscribe('observable-mu', {
@@ -24,6 +25,7 @@ boardID.on('open', error => {
   });
   const mul = document.querySelector('.mu-chats');
   mu.on('history_message', message => addHistory(message, mul));
+  mu.unsubscribe();
 
   // /c/
   const c = boardID.subscribe('observable-c', {
@@ -31,7 +33,7 @@ boardID.on('open', error => {
   });
   const cl = document.querySelector('.c-chats');
   c.on('history_message', message => addHistory(message, cl));
-
+  c.unsubscribe();
 
 
   function addHistory(message, el){
@@ -56,9 +58,6 @@ boardID.on('open', error => {
     if (wasTop) {
       el.scrollTop = el.scrollHeight - el.clientHeight;
     }
-    b.unsubscribe();
-    mu.unsubscribe();
-    c.unsubscribe();
   }
 
   let membersCount = 0;
