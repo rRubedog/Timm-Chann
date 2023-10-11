@@ -15,7 +15,8 @@ b.on('open', error => {
     }
     console.log('Successfully joined /b/');
 });
-b.on('history_message', message => baddHistory(message, 'b'));
+const bl = document.querySelector('.b-chats');
+b.on('history_message', message => baddHistory(message, bl));
 
 // /mu/
 const mu = boardID.subscribe('observable-mu', {
@@ -27,7 +28,8 @@ mu.on('open', error => {
   }
   console.log('Successfully joined /mu/');
 });
-mu.on('history_message', message => baddHistory(message, 'mu'));
+const mul = document.querySelector('.mu-chats');
+mu.on('history_message', message => baddHistory(message, mul));
 
 // /c/
 const c = boardID.subscribe('observable-c', {
@@ -39,12 +41,12 @@ c.on('open', error => {
   }
   console.log('Successfully joined /c/');
 });
-c.on('history_message', message => baddHistory(message, 'c'));
+const cl = document.querySelector('.c-chats');
+c.on('history_message', message => baddHistory(message, cl));
 
 
 
-function addHistory(message, board){
-  const el = document.querySelector('.'+board+'-chats');
+function addHistory(message, el){
   const data = message.data;
   const name = 'Anonymous';
   const color = '#295523';
