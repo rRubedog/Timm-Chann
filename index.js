@@ -15,9 +15,8 @@ boardID.on('open', error => {
     }
     console.log('Successfully joined /b/');
   });
-  let bpast = boardID.b.history.messages.length;
   const bl = document.querySelector('.b-chats');
-  b.on('history_message', message => addHistory(message, bl, b, bpast));
+  b.on('history_message', message => addHistory(message, bl, b));
 
   // /mu/
   const mu = boardID.subscribe('observable-mu', {
@@ -29,9 +28,8 @@ boardID.on('open', error => {
     }
     console.log('Successfully joined /mu/');
   });
-  let mupast = boardID.mu.history.messages.length;
   const mul = document.querySelector('.mu-chats');
-  mu.on('history_message', message => addHistory(message, mul, mu, mupast));
+  mu.on('history_message', message => addHistory(message, mul, mu));
 
   // /c/
   const c = boardID.subscribe('observable-c', {
@@ -43,15 +41,14 @@ boardID.on('open', error => {
     }
     console.log('Successfully joined /c/');
   });
-  let cpast = boardID.c.history.messages.length;
   const cl = document.querySelector('.c-chats');
-  c.on('history_message', message => addHistory(message, cl, c, cpast));
+  c.on('history_message', message => addHistory(message, cl, c));
 
-  function addHistory(message, el, board, msgList){
+  function addHistory(message, el, board){
     const data = message.data;
     const name = 'Anonymous';
     const color = '#295523';
-    for(let i = 0; i < msgList; i++){
+    for(let i = 0; i < 5; i++){
       // member element 
       const pastMember = document.createElement('div');
       pastMember.appendChild(document.createTextNode(name));
