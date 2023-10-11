@@ -1,5 +1,6 @@
 const boardID = new Scaledrone('RKfsdDmmQWAB060u');
 let closeNow = 0;
+let unsub = 0;
 boardID.on('open', error => {
   if (error) {
     return console.error(error);
@@ -48,28 +49,30 @@ boardID.on('open', error => {
     const data = message.data;
     const name = 'Anonymous';
     const color = '#295523';
-    for(let i = 0; i < 5; i++){
-      // member element 
-      const pastMember = document.createElement('div');
-      pastMember.appendChild(document.createTextNode(name));
-      pastMember.className = 'member';
-      pastMember.style.color = color;
-      // message text element
-      const pastMessageData = document.createTextNode(data);
-      // full message element
-      const pastMessage = document.createElement('div');
-      pastMessage.appendChild(pastMember);
-      pastMessage.appendChild(pastMessageData);
-      pastMessage.className = 'message';
-      // append
-      const wasTop = el.scrollTop === el.scrollHeight - el.clientHeight;
-      el.appendChild(pastMessage);
-      if (wasTop) {
-        el.scrollTop = el.scrollHeight - el.clientHeight;
-      }
+    // member element 
+    const pastMember = document.createElement('div');
+    pastMember.appendChild(document.createTextNode(name));
+    pastMember.className = 'member';
+    pastMember.style.color = color;
+    // message text element
+    const pastMessageData = document.createTextNode(data);
+    // full message element
+    const pastMessage = document.createElement('div');
+    pastMessage.appendChild(pastMember);
+    pastMessage.appendChild(pastMessageData);
+    pastMessage.className = 'message';
+    // append
+    const wasTop = el.scrollTop === el.scrollHeight - el.clientHeight;
+    el.appendChild(pastMessage);
+    if (wasTop) {
+      el.scrollTop = el.scrollHeight - el.clientHeight;
+    }
+    unsub += 1;
+    if(unsub == 5){
+      board.unsubscribe();
+      unsub = 0;
     }
     
-    board.unsubscribe();
     closeNow += 1;
     membersCount -= 1;
     document.querySelector('.user').innerText = membersCount + ' total users online';
