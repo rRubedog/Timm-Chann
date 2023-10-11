@@ -15,7 +15,7 @@ boardID.on('open', error => {
     }
     console.log('Successfully joined /b/');
   });
-  let bpast = b.history.length;
+  let bpast = boardID.b.history.messages.length;
   const bl = document.querySelector('.b-chats');
   b.on('history_message', message => addHistory(message, bl, b, bpast));
 
@@ -29,7 +29,7 @@ boardID.on('open', error => {
     }
     console.log('Successfully joined /mu/');
   });
-  let mupast = mu.history.length;
+  let mupast = boardID.mu.history.messages.length;
   const mul = document.querySelector('.mu-chats');
   mu.on('history_message', message => addHistory(message, mul, mu, mupast));
 
@@ -43,7 +43,7 @@ boardID.on('open', error => {
     }
     console.log('Successfully joined /c/');
   });
-  let cpast = c.history.length;
+  let cpast = boardID.c.history.messages.length;
   const cl = document.querySelector('.c-chats');
   c.on('history_message', message => addHistory(message, cl, c, cpast));
 
