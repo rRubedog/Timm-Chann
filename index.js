@@ -121,6 +121,6 @@ boardID.on('open', error => {
   });
 });
 
-drone.on('close', event => {
+boardID.on('close', event => {
   console.log('Connection was closed', event);
 });
