@@ -72,8 +72,9 @@ boardID.on('open', error => {
       board.unsubscribe();
       unsub = 0;
       closeNow += 1;
+      membersCount -= 1;
     }
-    membersCount -= 1;
+    
     document.querySelector('.user').innerText = membersCount + ' total users online';
   }
 
