@@ -49,6 +49,7 @@ boardID.on('open', error => {
       el.scrollTop = el.scrollHeight - el.clientHeight;
     }
     board.unsubscribe();
+    board.close();
   }
 
   let membersCount = 0;
