@@ -120,13 +120,13 @@ boardID.on('open', error => {
     document.querySelector('.user').innerText = membersCount + ' total users online';
   });
 
+
+  b.unsubscribe();
+  mu.unsubscribe();
+  c.unsubscribe();
+
+  document.querySelector('.user').innerText = membersCount + ' total users online';
 });
-
-b.unsubscribe();
-mu.unsubscribe();
-c.unsubscribe();
-
-document.querySelector('.user').innerText = membersCount + ' total users online';
 
 boardID.on('close', event => {
   console.log('Connection was closed', event);
