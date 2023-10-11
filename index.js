@@ -15,7 +15,7 @@ b.on('open', error => {
     }
     console.log('Successfully joined /b/');
 });
-b.on('history_message', message => baddHistory(message, "b"));
+b.on('history_message', message => baddHistory(message, 'b'));
 
 // /mu/
 const mu = boardID.subscribe('observable-mu', {
@@ -27,7 +27,7 @@ mu.on('open', error => {
   }
   console.log('Successfully joined /mu/');
 });
-mu.on('history_message', message => baddHistory(message, "mu"));
+mu.on('history_message', message => baddHistory(message, 'mu'));
 
 // /c/
 const c = boardID.subscribe('observable-c', {
@@ -39,7 +39,7 @@ c.on('open', error => {
   }
   console.log('Successfully joined /c/');
 });
-c.on('history_message', message => baddHistory(message, "c"));
+c.on('history_message', message => baddHistory(message, 'c'));
 
 
 
