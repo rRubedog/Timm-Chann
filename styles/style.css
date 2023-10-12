@@ -19,7 +19,7 @@ body{
     height: 350px;
     overflow-x: hidden;
     overflow-y: auto;
-    text-align: center;
+    /* text-align: center; */
     padding: 20px;
     background-color: lightgray;
     font-size: 100%;
