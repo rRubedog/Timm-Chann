@@ -7,6 +7,10 @@ body{
     font-size: 87%;
 }
 
+.sidebar > .changelog{
+    font-size: 100%;
+}
+
 /* .title, .board{
     text-align: center;
 } */
