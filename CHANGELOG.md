@@ -1,4 +1,14 @@
+## 0.0.9 (2023-10-12)
 
+## added (1 change)
+
+- New 'recent messages' row in the boards information table on the main page
+
+
+### fixed (2 changes)
+
+- Put recent messages in the 'recent messages' row in the boards table
+- Put the changelog information in the sidebar instead of below the boards information table on the main page
 
 ## 0.0.6 (2023-10-11)
 
