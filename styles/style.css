@@ -7,6 +7,22 @@ body{
     font-size: 87%;
 }
 
+/* .title, .board{
+    text-align: center;
+} */
+
+.c{
+    color: rgb(195, 0, 0);
+}
+
+.b{
+    color: green;
+}
+
+.mu{
+    color: purple;
+}
+
 .timm-forum{
     width: 400px;
     height: 300px;
