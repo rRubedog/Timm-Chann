@@ -1,11 +1,11 @@
+## 0.0.6 (2023-10-11)
 
-
-## 0.0.4 (2023-10-11)
-
-### added (2 changes)
+### added (4 changes)
 
 - Added indivisual colors to each board and to the names in the chat
 - Added CHANGELOG.md
+- Put CHANGELOG inside of homepage as vertically scrollable box
+- Put CHANGELOG on the sidebar of each board
 
 ### fixed (2 changes)
 
