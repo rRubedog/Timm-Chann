@@ -48,7 +48,7 @@ boardID.on('open', error => {
   function addHistory(message, el, board, boardC){
     const data = message.data;
     const name = 'Anonymous';
-    const boardC = "#" + boardC;
+    const color = "#" + boardC;
     // member element 
     const pastMember = document.createElement('div');
     pastMember.appendChild(document.createTextNode(name));
