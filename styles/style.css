@@ -15,14 +15,18 @@ body{
     border-bottom: 1px solid darkslategrey;
 }
 
-.main-area .changelog{
+.main-area .changelog.scroll {
+    height: 150px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+    padding: 20px;
     background-color: lightgray;
     font-size: 100%;
-    padding: 10px;
     margin: 5px;
     max-width: fit-content;
     border-top: 1px black solid;
-}
+  }
 
 /* .title, .board{
     text-align: center;
