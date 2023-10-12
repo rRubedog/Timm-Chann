@@ -20,7 +20,8 @@ body{
     font-size: 100%;
     padding: 10px;
     margin: 5px;
-    width: fit-content;
+    max-width: fit-content;
+    
     border-top: 1px black solid;
 }
 
