@@ -16,7 +16,7 @@ body{
 }
 
 .main-area .changelog {
-    height: 150px;
+    height: 350px;
     overflow-x: hidden;
     overflow-y: auto;
     text-align: center;
