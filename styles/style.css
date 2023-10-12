@@ -18,6 +18,8 @@ body{
 .main-area .changelog{
     background-color: lightgray;
     font-size: 100%;
+    padding: 10px;
+    margin: 5px;
 }
 
 /* .title, .board{
