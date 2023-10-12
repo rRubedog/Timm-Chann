@@ -28,15 +28,20 @@ body{
     border-top: 1px black solid;
   }
   .chats{
-    height: 350px;
+    height: 55px;
     overflow-x: hidden;
     overflow-y: auto;
-    /* text-align: center; */
-    padding: 10px 5px;
+    text-align: start;
+    /* padding: 10px 5px; */
     /* background-color: lightgray; */
     font-size: 60%;
     /* margin: 5px; */
     max-width: fit-content;
+  }
+
+  table a {
+    border: white 0px solid;
+    padding: 0px;
   }
 
 .timm-forum{
