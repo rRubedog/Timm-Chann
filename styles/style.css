@@ -93,15 +93,15 @@ header p {
     border: 3px solid #e5e9dc;
 }
 
-.group > .c{
+.group > .c, .c{
     color: rgb(195, 0, 0);
 }
 
-.group > .b{
+.group > .b, .b{
     color: rgb(18, 87, 18);
 }
 
-.group > .mu{
+.group > .mu, .mu{
     color: purple;
 }
 
