@@ -33,7 +33,7 @@ body{
   }
 
   .chats{
-    height: 55px;
+    height: 40px;
     overflow-x: hidden;
     overflow-y: auto;
     text-align: start;
