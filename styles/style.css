@@ -15,7 +15,7 @@ body{
     border-bottom: 1px solid darkslategrey;
 }
 
-.main-area .changelog {
+.changelog {
     height: 350px;
     overflow-x: hidden;
     overflow-y: auto;
