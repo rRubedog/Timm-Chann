@@ -93,15 +93,15 @@ header p {
     border: 3px solid #e5e9dc;
 }
 
-.site-nav a .c{
+.group > .c{
     color: rgb(195, 0, 0);
 }
 
-.site-nav a .b{
+.group > .b{
     color: green;
 }
 
-.site-nav a .mu{
+.group > .mu{
     color: purple;
 }
 
