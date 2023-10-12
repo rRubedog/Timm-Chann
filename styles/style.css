@@ -15,7 +15,7 @@ body{
     border-bottom: 1px solid darkslategrey;
 }
 
-.main-area .changelog.scroll {
+.main-area .changelog {
     height: 150px;
     overflow-x: hidden;
     overflow-y: auto;
@@ -27,10 +27,6 @@ body{
     max-width: fit-content;
     border-top: 1px black solid;
   }
-
-/* .title, .board{
-    text-align: center;
-} */
 
 .timm-forum{
     width: 400px;
