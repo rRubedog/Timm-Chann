@@ -27,6 +27,11 @@ body{
     max-width: fit-content;
     border-top: 1px black solid;
   }
+
+  .changelog::-webkit-scrollbar {
+    display: none;
+  }
+
   .chats{
     height: 55px;
     overflow-x: hidden;
