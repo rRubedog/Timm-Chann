@@ -1,0 +1,11 @@
+## 0.0.4 (2023-10-11)
+
+### added (2 changes)
+
+- Added indivisual colors to each board
+- Added CHANGELOG.md
+
+### fixed (2 change)
+
+- Made colors distinguishable from one another
+- Made colors change in the homepage on the sidebar based on the board the history messages are coming from
