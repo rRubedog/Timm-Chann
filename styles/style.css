@@ -11,6 +11,10 @@ body{
     font-size: 80%;
 }
 
+.changelog h2{
+    border-bottom: 1px solid darkslategrey;
+}
+
 /* .title, .board{
     text-align: center;
 } */
