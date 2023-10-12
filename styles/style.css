@@ -99,27 +99,27 @@ header p {
 }
 
 .group .c{
-    color: rgb(255, 30, 0);
+    color: coral;
 }
 
 .c{
-    color: rgb(255, 30, 0);
+    color: coral;
 }
 
 .group .b{
-    color: rgb(0, 60, 157);
+    color: blue;
 }
 
 .b{
-    color: rgb(0, 60, 157);
+    color: blue;
 }
 
 .group .mu{
-    color: purple;
+    color: mediumvioletred;
 }
 
 .mu{
-    color: purple;
+    color: mediumvioletred;
 }
 
 .site-nav a:hover{
