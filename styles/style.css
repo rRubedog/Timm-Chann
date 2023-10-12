@@ -27,6 +27,17 @@ body{
     max-width: fit-content;
     border-top: 1px black solid;
   }
+  .chats{
+    height: 350px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* text-align: center; */
+    padding: 10px 5px;
+    /* background-color: lightgray; */
+    font-size: 60%;
+    /* margin: 5px; */
+    max-width: fit-content;
+  }
 
 .timm-forum{
     width: 400px;
