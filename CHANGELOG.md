@@ -2,7 +2,7 @@
 
 ### added (2 changes)
 
-- Added indivisual colors to each board
+- Added indivisual colors to each board and to the names in the chat
 - Added CHANGELOG.md
 
 ### fixed (2 changes)
