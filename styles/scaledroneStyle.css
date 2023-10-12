@@ -21,6 +21,7 @@ body {
     .members-count{
     border: 1px solid #e4e4e4;
     margin-bottom: 15px;
+    padding: 10px;
     }
     
     .messages {
