@@ -5,7 +5,7 @@
 - Added indivisual colors to each board
 - Added CHANGELOG.md
 
-### fixed (2 change)
+### fixed (2 changes)
 
 - Made colors distinguishable from one another
 - Made colors change in the homepage on the sidebar based on the board the history messages are coming from
