@@ -85,7 +85,7 @@ header p {
     margin-right: 5px;
 }
 
-.site-nav a {
+.group a {
     display: block;
     color: #617140;
     text-decoration: none;
@@ -93,15 +93,15 @@ header p {
     border: 3px solid #e5e9dc;
 }
 
-.site-nav > .group li a .c, .c{
+.group a .c, .c{
     color: rgb(195, 0, 0);
 }
 
-.site-nav > .group li a .b, .b{
+.group a .b, .b{
     color: rgb(18, 87, 18);
 }
 
-.site-nav > .group li a .mu, .mu{
+.group a .mu, .mu{
     color: purple;
 }
 
