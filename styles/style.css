@@ -93,6 +93,11 @@ header p {
     border: 3px solid #e5e9dc;
 }
 
+.sidebar a{
+    padding: 0px;
+    border: 0px solid white;
+}
+
 .group .c{
     color: rgb(195, 0, 0);
 }
