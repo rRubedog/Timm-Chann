@@ -35,6 +35,10 @@ body{
     font-size: 60%;
   }
 
+  .chats::-webkit-scrollbar {
+    display: none;
+  }
+
   table a {
     border: white 0px solid;
     padding: 0px;
