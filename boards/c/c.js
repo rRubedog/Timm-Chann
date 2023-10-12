@@ -93,7 +93,7 @@ function getName() {
 }
 
 function getColor() {
-  return '#295523';
+  return '#ff7f50';
 }
 
 //------------- DOM STUFF

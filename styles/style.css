@@ -99,27 +99,27 @@ header p {
 }
 
 .group .c{
-    color: coral;
+    color: #ff7f50;
 }
 
 .c{
-    color: coral;
+    color: #ff7f50;
 }
 
 .group .b{
-    color: blue;
+    color: #0000ff;
 }
 
 .b{
-    color: blue;
+    color: #0000ff;
 }
 
 .group .mu{
-    color: mediumvioletred;
+    color: #c71585;
 }
 
 .mu{
-    color: mediumvioletred;
+    color: #c71585;
 }
 
 .site-nav a:hover{
