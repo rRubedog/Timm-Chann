@@ -11,18 +11,6 @@ body{
     text-align: center;
 } */
 
-.c{
-    color: rgb(195, 0, 0);
-}
-
-.b{
-    color: green;
-}
-
-.mu{
-    color: purple;
-}
-
 .timm-forum{
     width: 400px;
     height: 300px;
@@ -103,6 +91,18 @@ header p {
     text-decoration: none;
     padding: 10px 20px;
     border: 3px solid #e5e9dc;
+}
+
+.site-nav a .c{
+    color: rgb(195, 0, 0);
+}
+
+.site-nav a .b{
+    color: green;
+}
+
+.site-nav a .mu{
+    color: purple;
 }
 
 .site-nav a:hover{
