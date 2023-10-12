@@ -11,6 +11,14 @@
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/scaledroneStyle.css">
   <link rel="stylesheet" href="styles/homeStyle.css">
+
+  <style>
+    .boards-info{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
 </head>
   <body> 
 
@@ -31,32 +39,34 @@
 
       <div class="content-area group">
         <div class="main-area">
-          <table>
-              <tr>
-                  <th>Board</th>
-                  <th>Discription</th>
-                  <th>Color</th>
-                  <th>Recent Messages</th>
-              </tr>
-              <tr>
-                  <td><a class="b" href="boards/b/random.html">/b/</a></td>
-                  <td>Random</td>
-                  <td class="b">Blue</td>
-                  <td><div class="b-chats chats"></div></td>
-              </tr>
-              <tr>
-                  <td><a class="mu" href="boards/mu/music.html">/mu/</a></td>
-                  <td>Music</td>
-                  <td class="mu">Purple</td>
-                  <td><div class="mu-chats chats"></div></td>
-              </tr>
-              <tr>
-                <td><a class="c" href="boards/c/code.html">/c/</a></td>
-                <td>Code</td>
-                <td class="c">Crimson</td>
-                <td><div class="c-chats chats"></div></td>
-              </tr>
-          </table>
+          <div class="boards-info flex">
+            <table>
+                <tr>
+                    <th>Board</th>
+                    <th>Discription</th>
+                    <th>Color</th>
+                    <th>Recent Messages</th>
+                </tr>
+                <tr>
+                    <td><a class="b" href="boards/b/random.html">/b/</a></td>
+                    <td>Random</td>
+                    <td class="b">Blue</td>
+                    <td><div class="b-chats chats"></div></td>
+                </tr>
+                <tr>
+                    <td><a class="mu" href="boards/mu/music.html">/mu/</a></td>
+                    <td>Music</td>
+                    <td class="mu">Purple</td>
+                    <td><div class="mu-chats chats"></div></td>
+                </tr>
+                <tr>
+                  <td><a class="c" href="boards/c/code.html">/c/</a></td>
+                  <td>Code</td>
+                  <td class="c">Crimson</td>
+                  <td><div class="c-chats chats"></div></td>
+                </tr>
+            </table>
+          </div>
         </div>
 
           <aside class="sidebar">
