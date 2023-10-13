@@ -2,8 +2,8 @@ let songs = new Array("communism.mp3", "happy-2021.mp3", "happy-2022.mp3", "jack
 
 let radio = docuemnt.getElementById('radio-src');
 
-radio.src = songs[1];
+radio.src = songs[0];
 
 radio.onended = (event) => {
-    radio.src = "music-files/" + songs[2];
+    radio.src = "music-files/" + songs[1];
 };
