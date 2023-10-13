@@ -6,4 +6,6 @@ radio.src = songs[0];
 
 radio.onended = (event) => {
     radio.src = "music-files/" + songs[1];
+    radio.load();
+    radio.start();
 };
