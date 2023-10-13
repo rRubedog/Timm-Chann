@@ -3,6 +3,15 @@
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+.members-count {
+  margin: 0px;
+}
+
+.radio{
+  text-align: center;
+  
+}
+
 /* Dropdown CSS */
 .dropdown {
     display: inline-block;
