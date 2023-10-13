@@ -34,6 +34,9 @@
   .dropdown:hover .dropdown-options {
     display: block;
   }
+  .dropdown:hover .dropdown-options::-webkit-scrollbar {
+    display: none;
+  }
   
   .dropdown-options a {
     display: block;
