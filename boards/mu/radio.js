@@ -5,5 +5,5 @@ let radio = docuemnt.getElementById('radio-src');
 radio.src = songs[1];
 
 radio.onended = (event) => {
-    radio.src = songs[2];
+    radio.src = "music-files/" + songs[2];
 };
