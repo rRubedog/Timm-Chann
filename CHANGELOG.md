@@ -4,7 +4,7 @@
 
 - Added new 'radio' in the /mu/ board page
 
-## fixed (2 change)
+## fixed (2 changes)
 
 - fixed music list padding and margin to make it feel more natural
 - removed audio controlls also to make it feel more natural
