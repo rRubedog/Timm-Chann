@@ -47,10 +47,21 @@
 
             <div class="radio">
               <h2>Radio</h2>
-              <audio controls id="radio-player">
-                  <source id="radio-src" src="music-files/communism.mp3" type="audio/mpeg">
+              <ul style="list-style: none">
+                <li>Choose a song to play
+                  <ul id="list">
+                    <li><a href="#" data-value="music-files/communism.mp3">Communism</a></li>
+                    <li><a href="#" data-value="music-files/happy-2021.mp3">Happy new year 2021</a></li>
+                    <li><a href="#" data-value="music-files/happy-2022.mp3">Happy new year 2022</a></li>
+                    <li><a href="#" data-value="music-files/jacket-the-cat.mp3">Jacket The Cat</a></li>
+                  </ul>
+                </li>
+              </ul>
+              
+              <audio id="audio" controls="controls">
+                <source id="audioSource" src=""></source>
+                Your browser does not support the audio format.
               </audio>
-                <br><br>
               <script src="radio.js"></script>
             </div>
 

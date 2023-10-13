@@ -1,11 +1,12 @@
-let songs = new Array("communism.mp3", "happy-2021.mp3", "happy-2022.mp3", "jacket-the-cat.mp3", "kill-it.mp3");
-
-let radio = docuemnt.querySelector('#radio-src');
-
-radio.src = songs[0];
-
-radio.onended = (event) => {
-    radio.src = "music-files/" + songs[1];
-    radio.load();
-    radio.start();
-};
+list.onclick = function(e) {
+    e.preventDefault();
+  
+    var elm = e.target;
+    var audio = document.getElementById('audio');
+  
+    var source = document.getElementById('audioSource');
+    source.src = elm.getAttribute('data-value');
+  
+    audio.load(); //call this to just preload the audio without playing
+    audio.play(); //call this to play the song right away
+  };
