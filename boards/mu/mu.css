@@ -12,7 +12,7 @@
   button{
     border:none;
     border-radius:5px;
-    padding:15px 30px;
+    padding:10px 30px;
     font-size:18px;
     cursor:pointer;
   }
@@ -41,10 +41,10 @@
   
   .dropdown-options a {
     display: block;
-    color: #000000;
-    padding: 5px;
+    /* color: #000000; */
+    /* padding: 5px; */
     text-decoration: none;
-    padding:20px 40px;
+    padding:10px 10px;
   }
   
   .dropdown-options a:hover {
