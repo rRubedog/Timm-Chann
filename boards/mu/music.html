@@ -46,7 +46,11 @@
             <div class="members-count side-count">-</div>
 
             <div class="radio" style="padding: 10px">
-              <h2>Radio</h2>
+              <h2 style="margin: 0px;">Radio</h2>
+              <audio style="width: 278px;" id="audio" controls="controls">
+                <source id="audioSource" src=""></source>
+                Your browser does not support the audio format.
+              </audio>
               <ul style="list-style: none;">
                 <li>Choose a song to play
                   <ul id="list" style="list-style: none">
@@ -59,11 +63,7 @@
                   </ul>
                 </li>
               </ul>
-              
-              <audio style="width: 278px;" id="audio" controls="controls">
-                <source id="audioSource" src=""></source>
-                Your browser does not support the audio format.
-              </audio>
+  
               <script src="radio.js"></script>
             </div>
 
