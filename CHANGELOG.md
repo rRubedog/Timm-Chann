@@ -1,8 +1,13 @@
-## 0.0.0 (2023-10-13)
+## 0.1.3 (2023-10-13)
 
 ## added (1 change)
 
 - Added new 'radio' in the /mu/ board page
+
+## fixed (2 change)
+
+- fixed music list padding and margin to make it feel more natural
+- removed audio controlls also to make it feel more natural
 
 ## 0.1.0 (2023-10-12)
 
