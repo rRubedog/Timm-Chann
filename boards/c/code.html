@@ -45,68 +45,12 @@
           <aside class="sidebar">
             <div class="members-count side-count">-</div>
             <div class="changelog">
+              <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+              <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
+
               CHANGELOG
 
-              <!-- 0.1.7 -->
-              <h2> 0.1.7 (2023-10-13)</h2>
-
-              <h3>Added (2 changes)</h3>
-
-              <ul>
-                <li>Added new 'radio' in the /mu/ board page</li>
-                <li>Added list of songs to chose from to play in the radio</li>
-              </ul>
-
-              <h3>Fixed (2 changes)</h3>
-
-              <ul>
-                <li>Fixed music list padding and margin to make it feel more natural</li>
-                <li>Removed audio controlls also to make it feel more natural</li>
-              </ul>
-
-              <h3>Fixed in /mu/ (3 changes)</h3>
-
-              <ul>
-                <li>Removed the download and playback speed button on the audio tag</li>
-                <li>Removed the current time and time left indicator on the audio tag</li>
-                <li>Added color to the audio tag</li>
-              </ul>
-
-              <!-- 0.1.0 -->
-              <h2>0.1.0 (2023-10-12)</h2>
-
-              <h3>Added (1 change)</h3>
-
-              <ul>
-                <li>New 'recent messages' row in the boards information table on the main page</li>
-              </ul>
-
-              <h3>Fixed (3 changes)</h3>
-
-              <ul>
-                <li>Put recent messages in the 'recent messages' row in the boards table</li>
-                <li>Put the changelog information in the sidebar instead of below the boards information table on the main page</li>
-                <li>Fixed padding on 'user count' on front page</li>
-              </ul>
-
-              <!-- 0.0.6 -->
-              <h2>0.0.6 (2023-10-11)</h2>
-  
-              <h3>added (4 changes)</h3>
-  
-              <ul>
-                <li>Added indivisual colors to each board and to the names in the chat</li>
-                <li>Added CHANGELOG.md</li>
-                <li>Put CHANGELOG inside of homepage as vertically scrollable box</li>
-                <li>Put CHANGELOG on the sidebar of each board</li>
-              </ul>
-  
-              <h3>fixed (2 changes)</h3>
-  
-              <ul>
-                <li>Made colors distinguishable from one another</li>
-                <li>Made colors change in the homepage on the sidebar based on the board the history messages are coming from</li>
-              </ul>
+              <zero-md id="changelog-md" src="../../CHANGELOG.md"></zero-md>
             </div>
           </aside>
       </div>
