@@ -61,7 +61,7 @@ button:hover{
 }
 
 .dropdown-options a:hover {
-  color: lightgreen;
+  color: green;
   background-color: darkgrey;
   border-radius:5px;
 }
