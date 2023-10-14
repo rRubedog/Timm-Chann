@@ -44,53 +44,53 @@
             <div class="members-count side-count">-</div>
   
             <div class="radio" style="padding-bottom: 10px; font-size: 80%;">
-              <div class="mu-flex">
-                <a href="#radio-md">
-                  <h2 style="padding: 10px; padding-top: 0px; margin: 0px">
-                    /mu/ Radio
-                  </h2>
-                </a>
-                <div class="dropdown">
-                  <button style="color: white;">Songs</button>
-                  <div id="list"  class="dropdown-options">
-                    <p style="border-bottom: white 1px solid;">Not by me:</p>
-                    <a href="#" data-value="music-files/chiptune/not-by-me/communism.mp3">
-                      Communism
-                    </a>
-                    <a href="#" data-value="music-files/chiptune/not-by-me/happy-2021.mp3">
-                      Happy New Year 2021
-                    </a>
-                    <a href="#" data-value="music-files/chiptune/not-by-me/happy-2022.mp3">
-                      Happy New Year 2022
-                    </a>
-                    <a href="#" data-value="music-files/chiptune/not-by-me/jacket-the-cat.mp3">
-                      Jacket The Cat
-                    </a>
-                    <a href="#" data-value="music-files/chiptune/not-by-me/kill-it.mp3">
-                      Kill It!
-                    </a>
-                    <a href="#" data-value="music-files/chiptune/not-by-me/party-chips.mp3">
-                      Party Chips
-                    </a>
-                    <a href="#" data-value="music-files/chiptune/not-by-me/breakout.mp3">
-                      Breakout
-                    </a>
-                    <a href="#" data-value="music-files/chiptune/not-by-me/pixel-rain.mp3">
-                      Pixel Rain
-                    </a>
-                    <p style="border-bottom: white 1px solid;">
-                      Songs by me:
-                    </p>
-                    <a href="#" data-value="music-files/chiptune/by-me/jovi.mp3">
-                      Jovi
-                    </a>
-                  </div>
+              <a href="#radio-md">
+                <h2 style="padding: 10px; padding-top: 0px; margin: 0px">
+                  /mu/ Radio
+                </h2>
+              </a>
+
+              <audio style="padding-top: 10px; padding-bottom: 10px; width: 278px; height: 30px;" id="audio" controls="controls" controlsList="nodownload noplaybackrate" loop>
+                <source id="audioSource" src=""></source>
+                Your browser does not support the audio format.
+              </audio>
+
+              <div class="dropdown">
+                <button style="color: white;">Songs</button>
+                <div id="list"  class="dropdown-options">
+                  <p style="border-bottom: white 1px solid;">Not by me:</p>
+                  <a href="#" data-value="music-files/chiptune/not-by-me/communism.mp3">
+                    Communism
+                  </a>
+                  <a href="#" data-value="music-files/chiptune/not-by-me/happy-2021.mp3">
+                    Happy New Year 2021
+                  </a>
+                  <a href="#" data-value="music-files/chiptune/not-by-me/happy-2022.mp3">
+                    Happy New Year 2022
+                  </a>
+                  <a href="#" data-value="music-files/chiptune/not-by-me/jacket-the-cat.mp3">
+                    Jacket The Cat
+                  </a>
+                  <a href="#" data-value="music-files/chiptune/not-by-me/kill-it.mp3">
+                    Kill It!
+                  </a>
+                  <a href="#" data-value="music-files/chiptune/not-by-me/party-chips.mp3">
+                    Party Chips
+                  </a>
+                  <a href="#" data-value="music-files/chiptune/not-by-me/breakout.mp3">
+                    Breakout
+                  </a>
+                  <a href="#" data-value="music-files/chiptune/not-by-me/pixel-rain.mp3">
+                    Pixel Rain
+                  </a>
+                  <p style="border-bottom: white 1px solid;">
+                    Songs by me:
+                  </p>
+                  <a href="#" data-value="music-files/chiptune/by-me/jovi.mp3">
+                    Jovi
+                  </a>
                 </div>
               </div>
-                <audio style="padding-top: 10px; padding-bottom: 10px; width: 278px; height: 30px;" id="audio" controls="controls" controlsList="nodownload noplaybackrate" loop>
-                  <source id="audioSource" src=""></source>
-                  Your browser does not support the audio format.
-                </audio>
               <script src="radio.js"></script>
             </div>
 
