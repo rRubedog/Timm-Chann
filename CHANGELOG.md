@@ -1,16 +1,28 @@
+## 0.1.11 (2023-10-14)
+
+### Added (2 changes)
+
+- Added TimmBlog 
+- Added Test blog post
+
+### Fixed (2 changes)
+
+- Made observable-room code interchangeable for each blog post
+- Fixed blog image formatting (may need to work a lot more on this in the future)
+
 ## 0.1.7 (2023-10-13)
 
-## added (2 changes)
+### Added (2 changes)
 
 - Added new 'radio' in the /mu/ board page
 - Added list of songs to chose from to play in the radio
 
-## fixed (2 changes)
+### Fixed (2 changes)
 
 - fixed music list padding and margin to make it feel more natural
 - removed audio controlls also to make it feel more natural
 
-## fixed in /mu/ (3 changes)
+### Fixed in /mu/ (3 changes)
 
 - removed the download and playback speed button on the audio tag
 - removed the current time and time left indicator on the audio tag
@@ -18,12 +30,12 @@
 
 ## 0.1.0 (2023-10-12)
 
-## added (1 change)
+### Added (1 change)
 
 - New 'recent messages' row in the boards information table on the main page
 
 
-### fixed (3 changes)
+### Fixed (3 changes)
 
 - Put recent messages in the 'recent messages' row in the boards table
 - Put the changelog information in the sidebar instead of below the boards information table on the main page
@@ -31,14 +43,14 @@
 
 ## 0.0.6 (2023-10-11)
 
-### added (4 changes)
+### Added (4 changes)
 
 - Added indivisual colors to each board and to the names in the chat
 - Added CHANGELOG.md
 - Put CHANGELOG inside of homepage as vertically scrollable box
 - Put CHANGELOG on the sidebar of each board
 
-### fixed (2 changes)
+### Fixed (2 changes)
 
 - Made colors distinguishable from one another
 - Made colors change in the homepage on the sidebar based on the board the history messages are coming from
