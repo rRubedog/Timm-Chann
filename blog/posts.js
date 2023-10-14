@@ -30,7 +30,7 @@ drone.on('open', error => {
     const le = DOM.messages;
     const hdata = message.data;
     const name = 'Anonymous';
-    const color = '#0000ff';
+    const color = '#617140';
     // member element
     const pastMember = document.createElement('div');
     pastMember.appendChild(document.createTextNode(name));
@@ -93,7 +93,7 @@ function getName() {
 }
 
 function getColor() {
-  return '#0000ff';
+  return '#617140';
 }
 // #295523
 //------------- DOM STUFF
