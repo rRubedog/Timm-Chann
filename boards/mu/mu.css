@@ -96,3 +96,7 @@ audio::-webkit-media-controls-enclosure {
   border-radius: 5px;
   background-color: #800080;
 }
+
+audio::-webkit-media-controls-volume-slider{
+  background-color: white;
+}
