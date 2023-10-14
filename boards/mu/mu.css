@@ -68,3 +68,19 @@
     justify-content: center;
     align-items: center;
   }
+
+
+audio::-webkit-media-controls-mute-button {
+  display: none !important;
+  }
+  
+  audio::-webkit-media-controls-volume-slider {
+  display: none !important;
+  }
+  
+  audio::-webkit-media-controls-volume-control-container.closed {
+  display: none !important;
+  }
+  audio::-webkit-media-controls-volume-control-container{
+  display: none !important;
+  }
