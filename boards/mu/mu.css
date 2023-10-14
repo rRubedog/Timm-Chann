@@ -97,6 +97,12 @@ audio::-webkit-media-controls-enclosure {
   background-color: #800080;
 }
 
+audio::-webkit-media-controls-volume-slider-container{
+  padding: 0px;
+  margin: 0px;
+}
+
 audio::-webkit-media-controls-volume-slider{
   background-color: white;
+  
 }
