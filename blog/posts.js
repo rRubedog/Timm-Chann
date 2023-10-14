@@ -14,8 +14,8 @@ drone.on('open', error => {
     return console.error(error);
   }
   console.log('Successfully connected to posts');
- 
-  const room = drone.subscribe('observable-', {
+  
+  const room = drone.subscribe('observable-' + window.location.pathname, {
     historyCount: 10
   }); 
   room.on('open', error => {
