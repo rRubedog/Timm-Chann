@@ -88,3 +88,7 @@ audio::-webkit-media-controls-mute-button {
   audio::-webkit-media-controls-current-time-display {
     display: none !important;
   }
+
+  audio::-webkit-media-controls-time-remaining-display{
+    display: none !important;
+  }
