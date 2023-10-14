@@ -1,6 +1,6 @@
 .sidebar{
-    font-size: 120%;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 120%;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .members-count {
@@ -9,86 +9,90 @@
 
 .radio{
   text-align: center;
-
 }
 
 /* Dropdown CSS */
 .dropdown {
-    display: inline-block;
-    position: relative;
-  }
-  
-  button{
-    border:none;
-    border-radius:5px;
-    padding:10px 30px;
-    font-size:18px;
-    cursor:pointer;
-  }
-  
-  button:hover{
-    background-color:#ddd;
-  }
-  
-  .dropdown-options {
-    display: none;
-    position: absolute;
-    overflow-x: hidden;
-    overflow-y: auto;
-    height: 150px;
-    background-color:#fff;
-    border-radius:5px;
-    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
-  }
-  
-  .dropdown:hover .dropdown-options {
-    display: block;
-  }
-  .dropdown:hover .dropdown-options::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .dropdown-options a {
-    display: block;
-    /* color: #000000; */
-    /* padding: 5px; */
-    text-decoration: none;
-    padding:10px 10px;
-  }
-  
-  .dropdown-options a:hover {
-    color: #0a0a23;
-    background-color: #ddd;
-    border-radius:5px;
-  }
+  display: inline-block;
+  position: relative;
+}
 
-  .mu-flex{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
+button{
+  border:none;
+  border-radius:5px;
+  padding:10px 30px;
+  font-size:18px;
+  cursor:pointer;
+}
+
+button:hover{
+  background-color:#ddd;
+}
+
+.dropdown-options {
+  display: none;
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 150px;
+  background-color:#fff;
+  border-radius:5px;
+  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+
+.dropdown:hover .dropdown-options {
+  display: block;
+}
+.dropdown:hover .dropdown-options::-webkit-scrollbar {
+  display: none;
+}
+
+.dropdown-options a {
+  display: block;
+  /* color: #000000; */
+  /* padding: 5px; */
+  text-decoration: none;
+  padding:10px 10px;
+}
+
+.dropdown-options a:hover {
+  color: #0a0a23;
+  background-color: #ddd;
+  border-radius:5px;
+}
+
+.mu-flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 
 
 audio::-webkit-media-controls-mute-button {
-  display: none !important;
-  }
-  
-  audio::-webkit-media-controls-volume-slider {
-  display: none !important;
-  }
-  
-  audio::-webkit-media-controls-volume-control-container.closed {
-  display: none !important;
-  }
-  audio::-webkit-media-controls-volume-control-container{
-  display: none !important;
-  }
+display: none !important;
+}
 
-  audio::-webkit-media-controls-current-time-display {
-    display: none !important;
-  }
+audio::-webkit-media-controls-volume-slider {
+display: none !important;
+}
 
-  audio::-webkit-media-controls-time-remaining-display{
-    display: none !important;
-  }
+audio::-webkit-media-controls-volume-control-container.closed {
+display: none !important;
+}
+audio::-webkit-media-controls-volume-control-container{
+display: none !important;
+}
+
+audio::-webkit-media-controls-current-time-display {
+  display: none !important;
+}
+
+audio::-webkit-media-controls-time-remaining-display{
+  display: none !important;
+}
+
+audio::-webkit-media-controls-enclosure {
+  border-radius: 5px;
+  background-color: green;
+}
