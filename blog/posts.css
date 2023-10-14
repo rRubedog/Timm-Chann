@@ -7,3 +7,7 @@ img {
     width: 100%;
     height: auto;
 }
+
+.banner-description{
+    text-align: justify;
+}
