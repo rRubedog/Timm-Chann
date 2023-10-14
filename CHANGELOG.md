@@ -3,6 +3,7 @@
 ## added (1 change)
 
 - Added new 'radio' in the /mu/ board page
+- Added list of songs to chose from to play in the radio
 
 ## fixed (2 changes)
 
