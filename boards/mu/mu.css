@@ -57,11 +57,12 @@ button:hover{
   /* padding: 5px; */
   text-decoration: none;
   padding:10px 10px;
+  color: white;
 }
 
 .dropdown-options a:hover {
-  color: #0a0a23;
-  background-color: #ddd;
+  color: lightgreen;
+  background-color: darkgrey;
   border-radius:5px;
 }
 
