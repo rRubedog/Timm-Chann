@@ -117,7 +117,7 @@ function sendMessage() {
   }
   DOM.input.value = '';
   drone.publish({
-    room: 'observable-b',
+    room: 'observable-' + window.location.pathname,
     message: value,
   });
 }
