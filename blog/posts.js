@@ -22,7 +22,7 @@ drone.on('open', error => {
     if (error) {
       return console.error(error);
     }
-    console.log('Successfully joined /b/');
+    console.log('Successfully joined posts');
   });
   room.on('history_message', message => addHistory(message));
 
