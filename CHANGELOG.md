@@ -1,15 +1,16 @@
-## 0.2.1 (2023-10-14)
+## 0.2.3 (2023-10-14)
 
-### Added (2 changes)
+### Added (3 changes)
 
 - Added TimmBlog 
 - Added Test blog post
 - Added Solar Eclipse post
 
-### Fixed (2 changes)
+### Fixed (3 changes)
 
 - Made observable-room code interchangeable for each blog post
 - Fixed blog image formatting (may need to work a lot more on this in the future)
+- Fixed styling in posts.css to make post info more clean (may change back)
 
 ## 0.1.7 (2023-10-13)
 
