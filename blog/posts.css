@@ -4,14 +4,14 @@
 }
 
 img {
-    width: 60%;
+    /* width: 60%; */
     height: auto;
-    float: left;
-    padding: 5px;
+    /* float: left; */
+    /* padding: 5px; */
 }
 
 .banner-description{
-    text-align: justify;
+    /* text-align: justify; */
     padding: 5px;
 }
 
