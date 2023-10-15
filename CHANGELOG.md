@@ -4,6 +4,7 @@
 
 - Added TimmBlog 
 - Added Test blog post
+- Added Solar Eclipse post
 
 ### Fixed (2 changes)
 
