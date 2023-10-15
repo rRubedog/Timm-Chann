@@ -3,6 +3,10 @@
     margin: 0px;
 }
 
+*::-webkit-scrollbar {
+    display: none;
+  }
+
 html{
     background-color: #869960;
 }
