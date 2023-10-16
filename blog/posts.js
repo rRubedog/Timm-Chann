@@ -13,7 +13,7 @@ drone.on('open', error => {
   if (error) {
     return console.error(error);
   }
-  console.log('Successfully connected to posts');
+  console.log('Successfully connected to ' + window.location.pathname);
   
   const room = drone.subscribe('observable-' + window.location.pathname, {
     historyCount: 10
@@ -22,7 +22,7 @@ drone.on('open', error => {
     if (error) {
       return console.error(error);
     }
-    console.log('Successfully joined posts');
+    console.log('Successfully joined ' + window.location.pathname);
   });
   room.on('history_message', message => addHistory(message));
 
