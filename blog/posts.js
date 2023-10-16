@@ -44,11 +44,11 @@ drone.on('open', error => {
     pastMessage.appendChild(pastMessageData);
     pastMessage.className = 'message';
     // append
-    // const wasTop = le.scrollTop === le.scrollHeight - le.clientHeight;
+    const wasTop = le.scrollTop === le.scrollHeight - le.clientHeight;
     le.appendChild(pastMessage);
-    // if (wasTop) {
-    //     le.scrollTop = le.scrollHeight - le.clientHeight;
-    // }
+    if (wasTop) {
+        le.scrollTop = le.scrollHeight - le.clientHeight;
+    }
   }
 
   room.on('members', m => {
