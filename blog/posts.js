@@ -16,7 +16,7 @@ drone.on('open', error => {
   console.log('Successfully connected to ' + window.location.pathname);
   
   const room = drone.subscribe('observable-' + window.location.pathname, {
-    historyCount: 10
+    historyCount: 100
   }); 
   room.on('open', error => {
     if (error) {
