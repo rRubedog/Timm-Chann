@@ -1,3 +1,9 @@
+## 0.2.4 (2023-10-16)
+
+### Added (1 change)
+
+- Added solar eclipse photo album for the solar eclipse blog post
+
 ## 0.2.3 (2023-10-14)
 
 ### Added (3 changes)
