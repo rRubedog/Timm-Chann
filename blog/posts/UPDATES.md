@@ -1,5 +1,7 @@
 # UPDATES
 
+### Latest Update Info
+
 - Version: refer to the CHANGELOG.md (on sidebar)
 - Latest Change: refer to the CHANGELOG.md (next to version number)
 
