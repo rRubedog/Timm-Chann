@@ -143,6 +143,7 @@ header p {
 
 .sidebar a{
     padding: 0px;
+    text-decoration: underline;
     border: 0px solid white;
 }
 
