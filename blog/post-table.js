@@ -1,7 +1,7 @@
-const boardID = new Scaledrone('RKfsdDmmQWAB060u');
+const blogID = new Scaledrone('RKfsdDmmQWAB060u');
 let closeNow = 0;
 let unsub = 0;
-boardID.on('open', error => {
+blogID.on('open', error => {
   if (error) {
     return console.error(error);
   }
