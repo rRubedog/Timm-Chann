@@ -1,8 +1,12 @@
-## 0.2.4 (2023-10-16)
+## 0.2.6 (2023-10-16)
 
-### Added (1 change)
+### Added (2 change)
 
 - Added solar eclipse photo album for the solar eclipse blog post
+- Added /m/ Meta board for discussing website troubleshooting in a way
+
+### Fixed (1 change)
+- Fixed /m/ links and colors
 
 ## 0.2.3 (2023-10-14)
 
