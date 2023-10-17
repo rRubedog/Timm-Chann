@@ -1,6 +1,6 @@
 const blogID = new Scaledrone('RKfsdDmmQWAB060u');
 let closePostNow = 0;
-let unsub = 0;
+let unsubPost = 0;
 blogID.on('open', error => {
   if (error) {
     return console.error(error);
@@ -54,10 +54,10 @@ blogID.on('open', error => {
     if (wasTop) {
       el.scrollTop = el.scrollHeight - el.clientHeight;
     }
-    unsub += 1;
-    if(unsub == 5){
-      board.unsubscribe();
-      unsub = 0;
+    unsubPost += 1;
+    if(unsubPost == 5){
+      board.unsubPostscribe();
+      unsubPost = 0;
       closePostNow += 1;
       membersCount -= 1;
     }
