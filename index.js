@@ -45,6 +45,19 @@ boardID.on('open', error => {
   const cl = document.querySelector('.c-chats');
   c.on('history_message', message => addHistory(message, cl, c, 'dc143c'));
 
+  // /m/
+  const m = boardID.subscribe('observable-m', {
+    historyCount: 5
+  });
+  m.on('open', error => {
+    if (error) {
+      return console.error(error);
+    }
+    console.log('Successfully joined /m/');
+  });
+  const ml = document.querySelector('.m-chats');
+  m.on('history_message', message => addHistory(message, ml, m, '008080'));
+
   function addHistory(message, el, board, boardC){
     const data = message.data;
     const name = 'Anonymous';
@@ -96,6 +109,13 @@ boardID.on('open', error => {
 
   // /c/
   c.on('members', m => {
+    members = m;
+    membersCount += members.length;
+    document.querySelector('.user').innerText = membersCount + ' users online';
+  });
+
+  // /m/
+  m.on('members', m => {
     members = m;
     membersCount += members.length;
     document.querySelector('.user').innerText = membersCount + ' users online';
