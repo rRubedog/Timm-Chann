@@ -58,6 +58,45 @@ boardID.on('open', error => {
   const ml = document.querySelector('.m-chats');
   m.on('history_message', message => addHistory(message, ml, m, '008080'));
 
+  // two
+  const two = boardID.subscribe('observable-/blog/posts/first-blog-post', {
+    historyCount: 5
+  });
+  two.on('open', error => {
+    if (error) {
+      return console.error(error);
+    }
+    console.log('Successfully joined two');
+  });
+  const tl = document.querySelector('.two-chats');
+  two.on('history_message', message => addHistory(message, tl, two));
+
+  // one
+  const one = boardID.subscribe('observable-/blog/posts/solar-eclipse', {
+    historyCount: 5
+  });
+  one.on('open', error => {
+    if (error) {
+      return console.error(error);
+    }
+    console.log('Successfully joined one');
+  });
+  const ol = document.querySelector('.one-chats');
+  one.on('history_message', message => addHistory(message, ol, one));
+
+  // three
+  const three = boardID.subscribe('observable-/blog/posts/timmweb-board-updates', {
+    historyCount: 5
+  });
+  one.on('open', error => {
+    if (error) {
+      return console.error(error);
+    }
+    console.log('Successfully joined three');
+  });
+  const trl = document.querySelector('.three-chats');
+  three.on('history_message', message => addHistory(message, trl, three));
+
   function addHistory(message, el, board, boardC){
     const data = message.data;
     const name = 'Anonymous';
@@ -116,6 +155,27 @@ boardID.on('open', error => {
 
   // /m/
   m.on('members', m => {
+    members = m;
+    membersCount += members.length;
+    document.querySelector('.user').innerText = membersCount + ' users online';
+  });
+
+  // two
+  two.on('members', m => {
+    members = m;
+    membersCount += members.length;
+    document.querySelector('.user').innerText = membersCount + ' users online';
+  });
+
+  // one
+  one.on('members', m => {
+    members = m;
+    membersCount += members.length;
+    document.querySelector('.user').innerText = membersCount + ' users online';
+  });
+
+  // three
+  three.on('members', m => {
     members = m;
     membersCount += members.length;
     document.querySelector('.user').innerText = membersCount + ' users online';
