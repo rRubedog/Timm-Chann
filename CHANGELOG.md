@@ -1,3 +1,18 @@
+## 0.3.3 (2023-10-17)
+
+### Added (2 changes)
+
+- Added new Blog Post
+- Added UPDATES.md
+
+### Fixed (5 changes)
+
+- Removed blog table from blog page
+- Added blog table to Home page
+- Renamed homepage from timmboard to home in links
+- Made getting to blogs much faster
+- Fixed online user count in main page
+
 ## 0.2.6 (2023-10-16)
 
 ### Added (2 change)
