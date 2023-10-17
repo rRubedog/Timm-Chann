@@ -20,7 +20,7 @@ body{
 
 .changelog a:hover {
     color:#617140;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .sidebar .changelog{
