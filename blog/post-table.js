@@ -87,5 +87,5 @@ boardID.on('close', event => {
 });
 
 if(closeNow == 3){
-  boardID.close();
+  blogID.close();
 }
