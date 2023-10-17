@@ -4,6 +4,7 @@
 
 tr, th, td{
     border: solid black 1px;
+    border-radius: 10px;
     text-align: center;
     font-size: 110%;
 } 
