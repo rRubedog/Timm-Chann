@@ -7,7 +7,7 @@ boardID.on('open', error => {
   }
   console.log('Successfully connected to ScaleDrone');
   // two
-  const two = boardID.subscribe('observable-two', {
+  const two = boardID.subscribe('observable-/blog/posts/first-blog-post', {
     historyCount: 5
   });
   two.on('open', error => {
@@ -20,7 +20,7 @@ boardID.on('open', error => {
   two.on('history_message', message => addHistory(message, tl, two, 'dc143c'));
 
   // one
-  const one = boardID.subscribe('observable-one', {
+  const one = boardID.subscribe('observable-/blog/posts/solar-eclipse', {
     historyCount: 5
   });
   one.on('open', error => {
