@@ -11,6 +11,12 @@ body{
     font-size: 87%;
 }
 
+.changelink {
+    background-color: black;
+    text-decoration: underline;
+    font-size: 120%;
+}
+
 .sidebar .changelog{
     font-size: 80%;
 }
