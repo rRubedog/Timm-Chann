@@ -17,7 +17,7 @@ boardID.on('open', error => {
     console.log('Successfully joined two');
   });
   const tl = document.querySelector('.two-chats');
-  two.on('history_message', message => addHistory(message, tl, two, 'dc143c'));
+  two.on('history_message', message => addHistory(message, tl, two));
 
   // one
   const one = boardID.subscribe('observable-/blog/posts/solar-eclipse', {
@@ -30,12 +30,12 @@ boardID.on('open', error => {
     console.log('Successfully joined one');
   });
   const ol = document.querySelector('.one-chats');
-  one.on('history_message', message => addHistory(message, ol, one, '008080'));
+  one.on('history_message', message => addHistory(message, ol, one));
 
-  function addHistory(message, el, board, boardC){
+  function addHistory(message, el, board){
     const data = message.data;
     const name = 'Anonymous';
-    const color = "#" + boardC;
+    const color = "#617140";
     // member element 
     const pastMember = document.createElement('div');
     pastMember.appendChild(document.createTextNode(name));
