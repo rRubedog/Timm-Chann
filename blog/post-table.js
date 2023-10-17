@@ -56,7 +56,7 @@ blogID.on('open', error => {
     }
     unsubPost += 1;
     if(unsubPost == 5){
-      board.unsubPostscribe();
+      board.unsubscribe();
       unsubPost = 0;
       closePostNow += 1;
       membersCount -= 1;
