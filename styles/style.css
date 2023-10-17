@@ -32,7 +32,7 @@ body{
 }
 
 .changelog {
-    height: 350px;
+    height: 90vh;
     overflow-x: hidden;
     overflow-y: auto;
     /* text-align: center; */
