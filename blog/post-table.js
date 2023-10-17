@@ -82,7 +82,7 @@ blogID.on('open', error => {
   });
 });
 
-boardID.on('close', event => {
+blogID.on('close', event => {
   console.log('Connection was closed', event);
 });
 
