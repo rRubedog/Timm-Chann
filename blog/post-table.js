@@ -32,6 +32,19 @@ blogID.on('open', error => {
   const ol = document.querySelector('.one-chats');
   one.on('history_message', message => addHistory(message, ol, one));
 
+  // three
+  const three = boardID.subscribe('observable-/blog/posts/solar-eclipse', {
+    historyCount: 5
+  });
+  one.on('open', error => {
+    if (error) {
+      return console.error(error);
+    }
+    console.log('Successfully joined three');
+  });
+  const trl = document.querySelector('.three-chats');
+  three.on('history_message', message => addHistory(message, trl, three));
+
   function addHistory(message, el, board){
     const data = message.data;
     const name = 'Anonymous';
@@ -76,6 +89,13 @@ blogID.on('open', error => {
 
   // one
   one.on('members', m => {
+    members = m;
+    membersCount += members.length;
+    document.querySelector('.user').innerText = membersCount + ' users online';
+  });
+
+  // three
+  three.on('members', m => {
     members = m;
     membersCount += members.length;
     document.querySelector('.user').innerText = membersCount + ' users online';
