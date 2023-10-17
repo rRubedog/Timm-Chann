@@ -1,5 +1,5 @@
 const blogID = new Scaledrone('RKfsdDmmQWAB060u');
-let closeNow = 0;
+let closePostNow = 0;
 let unsub = 0;
 blogID.on('open', error => {
   if (error) {
@@ -58,7 +58,7 @@ blogID.on('open', error => {
     if(unsub == 5){
       board.unsubscribe();
       unsub = 0;
-      closeNow += 1;
+      closePostNow += 1;
       membersCount -= 1;
     }
     
@@ -86,6 +86,6 @@ blogID.on('close', event => {
   console.log('Connection was closed', event);
 });
 
-if(closeNow == 3){
+if(closePostNow == 3){
   blogID.close();
 }
