@@ -2,8 +2,13 @@
     font-size: 100%;
 }
 
-table, tr, th, td{
+tr, th, td{
     border: solid black 1px;
     text-align: center;
     font-size: 110%;
 } 
+
+table {
+    padding: 6px;
+    border: 0px;
+}
