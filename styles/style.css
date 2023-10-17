@@ -13,8 +13,14 @@ body{
 
 .changelog a{
     /* background-color: black; */
-    text-decoration: underline;
+    text-decoration: none;
     font-size: 120%;
+    color:#334907;
+}
+
+.changelog a:hover {
+    color:#617140;
+    text-decoration: none;
 }
 
 .sidebar .changelog{
