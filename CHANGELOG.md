@@ -1,3 +1,15 @@
+## 0.3.7 (2023-10-18)
+
+### Added (1 change)
+
+- Added links dropdown to each board so that links don't get crouded
+
+### Fixed (3 changes)
+
+- Removed changelog from boards
+- Removed board links from top bar of the page
+- Fixed name of updates blog page
+
 ## 0.3.3 (2023-10-17)
 
 ### Added (2 changes)
