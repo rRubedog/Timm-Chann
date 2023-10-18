@@ -31,9 +31,11 @@ body {
     
     .message {
     padding: 5px 0;
+    font-family: 'Alumni Sans Collegiate One', sans-serif;
     }
     .message .member {
     display: inline-block;
+    font-family: sans-serif;
     }
     
     .member {
