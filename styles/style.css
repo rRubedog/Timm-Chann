@@ -155,34 +155,42 @@ header p {
 
 .group .c{
     color: #dc143c;
+    font-family: 'M PLUS 1p', sans-serif;
 }
 
 .c{
     color: #dc143c;
+    font-family: 'M PLUS 1p', sans-serif;
 }
 
 .group .b{
     color: #0000ff;
+    font-family: 'M PLUS 1p', sans-serif;
 }
 
 .b{
     color: #0000ff;
+    font-family: 'M PLUS 1p', sans-serif;
 }
 
 .group .mu{
     color: #800080;
+    font-family: 'M PLUS 1p', sans-serif;
 }
 
 .mu{
     color: #800080;
+    font-family: 'M PLUS 1p', sans-serif;
 }
 
 .group .m{
     color:#008080 ;
+    font-family: 'M PLUS 1p', sans-serif;
 }
 
 .m{
     color:#008080 ;
+    font-family: 'M PLUS 1p', sans-serif;
 }
 
 .site-nav a:hover{
@@ -199,7 +207,6 @@ header p {
     float: left;
     padding-right: 40px;
     box-sizing: border-box;
-    font-family: 'M PLUS 1p', sans-serif;
 }
 
 .sidebar{
