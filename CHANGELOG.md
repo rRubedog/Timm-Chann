@@ -1,3 +1,14 @@
+## 0.3.9 (2023-10-23)
+
+### Added (1 change)
+
+- Added new blog post about the new loki episode and victor timely
+
+### Fixed (2 changes)
+
+- Fixed styling on victor timely image because of how thin it is.
+- Made victor timely image go to wikipedia for more info on the charicter
+
 ## 0.3.7 (2023-10-18)
 
 ### Added (1 change)
