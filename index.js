@@ -88,7 +88,7 @@ boardID.on('open', error => {
   const three = boardID.subscribe('observable-/blog/posts/timmweb-board-updates', {
     historyCount: 5
   });
-  one.on('open', error => {
+  three.on('open', error => {
     if (error) {
       return console.error(error);
     }
@@ -96,6 +96,19 @@ boardID.on('open', error => {
   });
   const trl = document.querySelector('.three-chats');
   three.on('history_message', message => addHistory(message, trl, three, '617140'));
+
+  // four
+  const four = boardID.subscribe('observable-/blog/posts/loki-season2-eopisode3', {
+    historyCount: 5
+  });
+  four.on('open', error => {
+    if (error) {
+      return console.error(error);
+    }
+    console.log('Successfully joined four');
+  });
+  const fl = document.querySelector('.four-chats');
+  four.on('history_message', message => addHistory(message, fl, four, '617140'));
 
   function addHistory(message, el, board, boardC){
     const data = message.data;
@@ -176,6 +189,13 @@ boardID.on('open', error => {
 
   // three
   three.on('members', m => {
+    members = m;
+    membersCount += members.length;
+    document.querySelector('.user').innerText = membersCount + ' users online';
+  });
+
+  // four
+  four.on('members', m => {
     members = m;
     membersCount += members.length;
     document.querySelector('.user').innerText = membersCount + ' users online';
