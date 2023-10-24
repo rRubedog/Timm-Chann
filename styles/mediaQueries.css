@@ -8,6 +8,10 @@
        font-size: 16px; 
     }
 
+    .main-area{
+        width: auto;
+    }
+
     .sidebar{
         display: none;
     }
@@ -37,6 +41,9 @@
     }
 
     .container{
+        width: auto;
+    }
+    .main-area{
         width: auto;
     }
 }
