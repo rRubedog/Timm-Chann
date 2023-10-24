@@ -31,6 +31,10 @@
     .sidebar{
         display: none;
     }
+
+    .container{
+        width: auto;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
