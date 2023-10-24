@@ -133,5 +133,15 @@
           <p>&copy; 2023 - Timm in cooperation with Scaledrone</p>
       </footer>
     </div>
+    <script>
+      function getCurrentURL () {
+        return window.location.href;
+      }
+
+      const url = getCurrentURL();
+      if(url == 'https://timmchan.vercel.app'){
+        window.location.replace("http://timmboard.netlify.app");
+      }
+    </script>
   </body>
 </html>
