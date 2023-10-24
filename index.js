@@ -153,73 +153,19 @@ boardID.on('open', error => {
       membersCount -= 1;
     }
     
-    document.querySelector('.user').innerText = membersCount + ' users online';
+    realMemberCount(board);
   }
 
   let membersCount = 0;
 
-  // /b/
-  b.on('members', m => {
-    members = m;
-    membersCount += members.length;
-    document.querySelector('.user').innerText = membersCount + ' users online';
-  });
+  function realMemberCount(board){
+		board.on('members', m => {
+			members = m;
+			membersCount += members.length;
+			document.querySelector('.user').innerText = membersCount + ' users online';
+		});
+	}
 
-  // /mu/
-  mu.on('members', m => {
-    members = m;
-    membersCount += members.length;
-    document.querySelector('.user').innerText = membersCount + ' users online';
-  });
-
-  // /c/
-  c.on('members', m => {
-    members = m;
-    membersCount += members.length;
-    document.querySelector('.user').innerText = membersCount + ' users online';
-  });
-
-  // /m/
-  m.on('members', m => {
-    members = m;
-    membersCount += members.length;
-    document.querySelector('.user').innerText = membersCount + ' users online';
-  });
-
-  // two
-  two.on('members', m => {
-    members = m;
-    membersCount += members.length;
-    document.querySelector('.user').innerText = membersCount + ' users online';
-  });
-
-  // one
-  one.on('members', m => {
-    members = m;
-    membersCount += members.length;
-    document.querySelector('.user').innerText = membersCount + ' users online';
-  });
-
-  // three
-  three.on('members', m => {
-    members = m;
-    membersCount += members.length;
-    document.querySelector('.user').innerText = membersCount + ' users online';
-  });
-
-  // four
-  four.on('members', m => {
-    members = m;
-    membersCount += members.length;
-    document.querySelector('.user').innerText = membersCount + ' users online';
-  });
-
-  // five
-  five.on('members', m => {
-    members = m;
-    membersCount += members.length;
-    document.querySelector('.user').innerText = membersCount + ' users online';
-  });
 });
 
 boardID.on('close', event => {
