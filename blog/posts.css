@@ -18,3 +18,9 @@ img {
 p{
     margin: 0px;
 }
+
+.messages{
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 200px;
+}
