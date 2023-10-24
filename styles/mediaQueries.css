@@ -7,6 +7,22 @@
     body{
        font-size: 50px; 
     }
+
+    .sidebar{
+        display: none;
+    }
+
+    .changelog{
+        display: none;
+    }
+
+    header{
+        border-bottom: 3px solid #e5e9dc;
+    }
+
+    .container{
+        width: auto;
+    }
     
 }
 
