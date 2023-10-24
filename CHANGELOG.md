@@ -1,3 +1,16 @@
+## 0.4.6 (2023-10-14)
+
+### Added (3 changes)
+
+- Added media queries for Mobile
+- Added media queries for medium size devices: laptop, iPad, ect.
+- Added media queries for large screen devices like PC
+
+### Fixed (2 changes)
+
+- Fixed width problems in .main-area media queries
+- Fixed media queries for blog pages
+
 ## 0.4.4 (2023-10-23)
 
 ### Added (2 changes)
