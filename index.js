@@ -59,7 +59,7 @@ boardID.on('open', error => {
   m.on('history_message', message => addHistory(message, ml, m, '008080'));
 
   // two
-  const one = boardID.subscribe('observable-/blog/posts/1', {
+  const one = boardID.subscribe('observable-/blog/posts/one', {
     historyCount: 5
   });
   one.on('open', error => {
@@ -72,7 +72,7 @@ boardID.on('open', error => {
   one.on('history_message', message => addHistory(message, ol, one, '617140'));
 
   // one
-  const two = boardID.subscribe('observable-/blog/posts/2', {
+  const two = boardID.subscribe('observable-/blog/posts/two', {
     historyCount: 5
   });
   two.on('open', error => {
@@ -85,7 +85,7 @@ boardID.on('open', error => {
 	two.on('history_message', message => addHistory(message, tl, two, '617140'));
 
   // three
-  const three = boardID.subscribe('observable-/blog/posts/3', {
+  const three = boardID.subscribe('observable-/blog/posts/three', {
     historyCount: 5
   });
   three.on('open', error => {
@@ -98,7 +98,7 @@ boardID.on('open', error => {
   three.on('history_message', message => addHistory(message, trl, three, '617140'));
 
   // four
-  const four = boardID.subscribe('observable-/blog/posts/4', {
+  const four = boardID.subscribe('observable-/blog/posts/four', {
     historyCount: 5
   });
   four.on('open', error => {
@@ -111,7 +111,7 @@ boardID.on('open', error => {
   four.on('history_message', message => addHistory(message, fl, four, '617140'));
 
   // five
-  const five = boardID.subscribe('observable-/blog/posts/5', {
+  const five = boardID.subscribe('observable-/blog/posts/five', {
     historyCount: 5
   });
   five.on('open', error => {
