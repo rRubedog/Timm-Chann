@@ -59,7 +59,20 @@ boardID.on('open', error => {
   m.on('history_message', message => addHistory(message, ml, m, '008080'));
 
   // two
-  const two = boardID.subscribe('observable-/blog/posts/first-blog-post', {
+  const one = boardID.subscribe('observable-/blog/posts/1', {
+    historyCount: 5
+  });
+  one.on('open', error => {
+    if (error) {
+      return console.error(error);
+    }
+    console.log('Successfully joined two');
+  });
+  const ol = document.querySelector('.one-chats');
+  one.on('history_message', message => addHistory(message, ol, one, '617140'));
+
+  // one
+  const two = boardID.subscribe('observable-/blog/posts/2', {
     historyCount: 5
   });
   two.on('open', error => {
@@ -69,23 +82,10 @@ boardID.on('open', error => {
     console.log('Successfully joined two');
   });
   const tl = document.querySelector('.two-chats');
-  two.on('history_message', message => addHistory(message, tl, two, '617140'));
-
-  // one
-  const one = boardID.subscribe('observable-/blog/posts/solar-eclipse', {
-    historyCount: 5
-  });
-  one.on('open', error => {
-    if (error) {
-      return console.error(error);
-    }
-    console.log('Successfully joined one');
-  });
-  const ol = document.querySelector('.one-chats');
-  one.on('history_message', message => addHistory(message, ol, one, '617140'));
+	two.on('history_message', message => addHistory(message, tl, two, '617140'));
 
   // three
-  const three = boardID.subscribe('observable-/blog/posts/timmweb-board-updates', {
+  const three = boardID.subscribe('observable-/blog/posts/3', {
     historyCount: 5
   });
   three.on('open', error => {
@@ -98,7 +98,7 @@ boardID.on('open', error => {
   three.on('history_message', message => addHistory(message, trl, three, '617140'));
 
   // four
-  const four = boardID.subscribe('observable-/blog/posts/loki-season2-eopisode3', {
+  const four = boardID.subscribe('observable-/blog/posts/4', {
     historyCount: 5
   });
   four.on('open', error => {
@@ -111,7 +111,7 @@ boardID.on('open', error => {
   four.on('history_message', message => addHistory(message, fl, four, '617140'));
 
   // five
-  const five = boardID.subscribe('observable-/blog/posts/morality-vs-bigpicture', {
+  const five = boardID.subscribe('observable-/blog/posts/5', {
     historyCount: 5
   });
   five.on('open', error => {
