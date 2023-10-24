@@ -110,6 +110,19 @@ boardID.on('open', error => {
   const fl = document.querySelector('.four-chats');
   four.on('history_message', message => addHistory(message, fl, four, '617140'));
 
+  // five
+  const five = boardID.subscribe('observable-/blog/posts/morality-vs-bigpicture', {
+    historyCount: 5
+  });
+  five.on('open', error => {
+    if (error) {
+      return console.error(error);
+    }
+    console.log('Successfully joined five');
+  });
+  const fil = document.querySelector('.five-chats');
+  five.on('history_message', message => addHistory(message, fil, five, '617140'));
+
   function addHistory(message, el, board, boardC){
     const data = message.data;
     const name = 'Anonymous';
