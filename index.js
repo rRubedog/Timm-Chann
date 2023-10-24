@@ -58,7 +58,8 @@ boardID.on('open', error => {
   const ml = document.querySelector('.m-chats');
   m.on('history_message', message => addHistory(message, ml, m, '008080'));
 
-  // two
+  // BLOG POSTS START------------------
+  // one
   const one = boardID.subscribe('observable-/blog/posts/one', {
     historyCount: 5
   });
@@ -71,7 +72,7 @@ boardID.on('open', error => {
   const ol = document.querySelector('.one-chats');
   one.on('history_message', message => addHistory(message, ol, one, '617140'));
 
-  // one
+  // two
   const two = boardID.subscribe('observable-/blog/posts/two', {
     historyCount: 5
   });
@@ -122,6 +123,8 @@ boardID.on('open', error => {
   });
   const fil = document.querySelector('.five-chats');
   five.on('history_message', message => addHistory(message, fil, five, '617140'));
+
+  // BLOG POSTS END--------------------
 
   function addHistory(message, el, board, boardC){
     const data = message.data;
