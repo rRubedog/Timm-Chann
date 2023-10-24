@@ -1,13 +1,17 @@
-## 0.3.9 (2023-10-23)
+## 0.4.4 (2023-10-23)
 
-### Added (1 change)
+### Added (2 changes)
 
 - Added new blog post about the new loki episode and victor timely
+- Added new blog post about morality and the bigger picture
 
-### Fixed (2 changes)
+### Fixed (5 changes)
 
 - Fixed styling on victor timely image because of how thin it is.
 - Made victor timely image go to wikipedia for more info on the charicter
+- Fixed recent chats on the main page
+- Made Ouroboros go to wikipedia page
+- Made new blog post a draft everywhere it is listed
 
 ## 0.3.7 (2023-10-18)
 
