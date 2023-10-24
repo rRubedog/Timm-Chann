@@ -213,6 +213,13 @@ boardID.on('open', error => {
     membersCount += members.length;
     document.querySelector('.user').innerText = membersCount + ' users online';
   });
+
+  // five
+  five.on('members', m => {
+    members = m;
+    membersCount += members.length;
+    document.querySelector('.user').innerText = membersCount + ' users online';
+  });
 });
 
 boardID.on('close', event => {
