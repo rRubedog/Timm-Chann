@@ -6,6 +6,7 @@
 img {
     width: 60%;
     height: auto;
+    float: left;
     /* float: left; */
     /* padding: 5px; */
 }
