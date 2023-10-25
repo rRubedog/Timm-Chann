@@ -40,12 +40,8 @@
         width: auto;
     }
 
-    .dropdown button{
+    .dropdown{
         display: none;
-    }
-
-    .dropdown .dropdown-options{
-        display: block;
     }
 
     .small-link{
@@ -71,6 +67,9 @@
     .small-link{
         display: block;
     }
+    .dropdown{
+        display: none;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -90,6 +89,9 @@
     }
     .small-link{
         display: none;
+    }
+    .dropdown{
+        display: block;
     }
 
 }
