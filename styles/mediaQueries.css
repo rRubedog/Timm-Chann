@@ -8,6 +8,9 @@
        font-size: 16px; 
        text-align: center;
     }
+    .banner-description{
+        text-align: left;
+    }
 
     .messages{
         text-align: left;
