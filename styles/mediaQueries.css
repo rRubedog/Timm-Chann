@@ -80,7 +80,7 @@
     }
 }
 
-/* Medium devices (landscape tablets, 960px and up) */
+/*960px and up */
 @media only screen and (min-width: 960px) {
     .container{
         width: 940px;
