@@ -46,6 +46,10 @@
 
     .small-link{
         display: block;
+        
+    }
+
+    .small-link a{
         padding: 8px 20px;
     }
     
@@ -71,6 +75,9 @@
     }
     .dropdown{
         display: none;
+    }
+    .small-link a{
+        padding: 8px 20px;
     }
 }
 
