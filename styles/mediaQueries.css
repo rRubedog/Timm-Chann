@@ -40,6 +40,14 @@
         width: auto;
     }
     
+    .dropdown button{
+        display: none;
+    }
+
+    .dropdown .dropdown-options{
+        display: block;
+    }
+    
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
