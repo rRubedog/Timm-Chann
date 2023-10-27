@@ -29,6 +29,7 @@ body {
     max-height: 60vh;
     overflow-x: hidden;
     overflow-y: auto;
+    width: auto;
     }
     
     .message {
