@@ -35,10 +35,6 @@
         border-bottom: 3px solid #e5e9dc;
     }
 
-    .container{
-        width: auto;
-    }
-
     .content-area{
         width: auto;
     }
@@ -63,7 +59,7 @@
     .sidebar{
         display: none;
     }
-    
+
     .main-area{
         width: auto;
         float: none;
