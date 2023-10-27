@@ -51,6 +51,11 @@
     .small-link a{
         padding: 8px 20px;
     }
+
+    .members-count-media{
+        display: block;
+        float: right;
+    }
     
 }
 
@@ -74,12 +79,19 @@
     .small-link a{
         padding: 8px 20px;
     }
+    .members-count-media{
+        display: block;
+        float: right;
+    }
 }
 
 /*960px and down */
 @media only screen and (max-width: 960px) {
     .container{
         width: auto;
+    }
+    .members-count-media{
+        display: none;
     }
 }
 
@@ -98,6 +110,9 @@
     }
     .dropdown{
         display: inline-block;
+    }
+    .members-count-media{
+        display: none;
     }
 
 }
