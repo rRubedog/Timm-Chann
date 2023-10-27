@@ -13,7 +13,7 @@ body{
 
 .members-count-media{
     font-size: 20px;
-    float: right;
+    /* float: right; */
     border: 4px solid #e5e9dc;
     border-radius: 1px;
 
@@ -142,11 +142,11 @@ header p {
 } */
 
 .site-nav .group{
-    float:left;
+    /* float:left; */
     margin-right: 5px;
     overflow: auto;
     white-space: nowrap;
-    max-width: 200px;
+    max-width: 400px;
 }
 
 .site-nav .group a, .site-nav .group .members-count-media{
