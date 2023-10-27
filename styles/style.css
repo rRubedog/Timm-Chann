@@ -13,7 +13,7 @@ body{
 
 .members-count-media{
     font-size: 20px;
-    /* float: right; */
+    float: right;
     border: 4px solid #e5e9dc;
     border-radius: 1px;
 
