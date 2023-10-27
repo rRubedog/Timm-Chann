@@ -1,6 +1,6 @@
 *::-webkit-scrollbar {
     display: none;
-  }
+}
 
 html{
     background-color: #869960;
@@ -9,6 +9,11 @@ html{
 body{
     font-family: Tahoma, sans-serif;
     font-size: 87%;
+}
+
+.members-count-media{
+    font-size: 20px;
+    float: right;
 }
 
 .changelog a{
