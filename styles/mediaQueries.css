@@ -93,6 +93,9 @@
         display: block;
         float: right;
     } */
+    .container{
+        width: auto;
+    }
 }
 
 /*960px and up */
