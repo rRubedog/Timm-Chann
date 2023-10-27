@@ -52,10 +52,10 @@
         padding: 8px 20px;
     }
 
-    .members-count-media{
+    /* .members-count-media{
         display: block;
         float: right;
-    }
+    } */
     
 }
 
@@ -79,10 +79,10 @@
     .small-link a{
         padding: 8px 20px;
     }
-    .members-count-media{
+    /* .members-count-media{
         display: block;
         float: right;
-    }
+    } */
 }
 
 /*960px and down */
@@ -90,9 +90,9 @@
     .container{
         width: auto;
     }
-    .members-count-media{
+    /* .members-count-media{
         display: none;
-    }
+    } */
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
