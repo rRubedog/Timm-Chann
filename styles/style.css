@@ -146,7 +146,7 @@ header p {
     margin-right: 5px;
     overflow: auto;
     white-space: nowrap;
-    max-width: 100%;
+    max-width: 200px;
 }
 
 .site-nav .group a, .site-nav .group div{
