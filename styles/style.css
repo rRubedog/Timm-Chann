@@ -141,7 +141,7 @@ header p {
     padding: 0;
 }
 
-.site-nav li{
+.site-nav .small-link{
     list-style: none;
     float:left;
     margin-right: 5px;
