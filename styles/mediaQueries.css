@@ -97,7 +97,7 @@
         display: none;
     }
     .dropdown{
-        display: block;
+        display: inline-block;
     }
 
 }
