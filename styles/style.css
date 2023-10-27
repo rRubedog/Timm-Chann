@@ -149,7 +149,7 @@ header p {
     max-width: 200px;
 }
 
-.site-nav .group a, .site-nav .group div{
+.site-nav .group a, .site-nav .group .members-count-media{
     display: inline-block;
 }
 
