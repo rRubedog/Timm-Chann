@@ -63,7 +63,10 @@
 
     .container{
         width: 100%;
-
+        padding-top: 20px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
     }
     
 }
@@ -94,7 +97,7 @@
     } */
 }
 
-/*960px and down */
+/*960px and up */
 @media only screen and (min-width: 602px) {
     .container{
         width: auto;
