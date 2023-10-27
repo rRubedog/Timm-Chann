@@ -149,7 +149,7 @@ header p {
     width: 100%;
 }
 
-.site-nav .group a, .site-nav .group .members-count-media{
+.site-nav > .group a, .site-nav > .group > .members-count-media{
     display: inline-block;
 }
 
