@@ -63,10 +63,7 @@
     .sidebar{
         display: none;
     }
-
-    .container{
-        width: auto;
-    }
+    
     .main-area{
         width: auto;
         float: none;
@@ -86,7 +83,7 @@
 /*960px and down */
 @media only screen and (max-width: 960px) {
     .container{
-        width: 940px;
+        width: auto;
     }
 }
 
