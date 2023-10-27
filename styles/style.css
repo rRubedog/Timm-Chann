@@ -144,6 +144,8 @@ header p {
 .site-nav .group{
     float:left;
     margin-right: 5px;
+    overflow: auto;
+    white-space: nowrap;
 }
 
 .site-nav .group a, .site-nav .group div{
@@ -252,6 +254,5 @@ footer {
 
 .group {
     zoom: 1;
-    overflow: auto;
-    white-space: nowrap;
+    
 }
