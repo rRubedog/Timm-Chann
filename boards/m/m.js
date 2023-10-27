@@ -133,6 +133,7 @@ function createMemberElement(member) {
 
 function updateMembersDOM() {
   document.querySelector('.side-count').innerText = `${members.length} users in room`;
+  document.querySelector('.side-count2').innerText = `${members.length} users in room`;
 }
 
 function createMessageElement(text, member) {
