@@ -4,11 +4,11 @@
         display: none;
         
     }
-    html{
-        padding: 0px;
-        margin: 0px;
-    }
     body{
+        padding-top: 20px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
        font-size: 16px; 
        text-align: center;
     }
@@ -63,10 +63,6 @@
 
     .container{
         width: 100%;
-        padding-top: 20px;
-        padding-left: 0px;
-        padding-right: 0px;
-        padding-bottom: 0px;
     }
     
 }
