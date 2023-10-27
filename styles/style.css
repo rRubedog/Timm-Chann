@@ -136,10 +136,10 @@ header p {
     margin-top: 20px;
 }
 
-.site-nav ul{
+/* .site-nav .{
     margin: 0;
     padding: 0;
-}
+} */
 
 .site-nav .group{
     float:left;
