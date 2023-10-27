@@ -50,28 +50,28 @@ body{
     /* margin: 5px; */
     max-width: fit-content;
     border-top: 1px black solid;
-  }
+}
 
-  .changelog::-webkit-scrollbar {
+.changelog::-webkit-scrollbar {
     display: none;
-  }
+}
 
-  .chats{
+.chats{
     height: 40px;
     overflow-x: hidden;
     overflow-y: auto;
     text-align: start;
     font-size: 60%;
-  }
+}
 
-  .chats::-webkit-scrollbar {
+.chats::-webkit-scrollbar {
     display: none;
-  }
+}
 
-  table a {
+table a {
     border: white 0px solid;
     padding: 0px;
-  }
+}
 
 .timm-forum{
     width: 400px;
