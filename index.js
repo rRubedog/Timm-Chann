@@ -2,6 +2,8 @@ const boardID = new Scaledrone('RKfsdDmmQWAB060u');
 let closeNow = 0;
 let unsub = 0;
 let membersCount = 0;
+document.querySelector('.side-count').innerText = membersCount + ' users online';
+
 boardID.on('open', error => {
   if (error) {
     return console.error(error);
@@ -157,6 +159,8 @@ boardID.on('open', error => {
       closeNow += 1;
       membersCount -= 1;
     }
+    document.querySelector('.side-count').innerText = membersCount + ' users online';
+
     
     board.on('members', m => {
 			members = m;
@@ -175,3 +179,6 @@ boardID.on('close', event => {
 if(closeNow == 3){
   boardID.close();
 }
+
+document.querySelector('.side-count').innerText = membersCount + ' users online';
+
