@@ -154,27 +154,17 @@ boardID.on('open', error => {
       board.unsubscribe();
       unsub = 0;
       closeNow += 1;
-      if(membersCount < 1){
-        membersCount = 0;
-      }else{
-        membersCount -= 1;
-      }
-      
     }
-    
   }
-
 });
 
-// document.querySelector('.side-count').innerText = `${membersCount} users in room`;
-// document.querySelector('.members-count-media').innerText = `${membersCount} users in room`;
 boardID.on('members', m => {
   members = m;
-  // membersCount += members.length;
   document.querySelector('.side-count').innerText = `${members.length} users in room`;
   document.querySelector('.members-count-media').innerText = `${members.length} users in room`;
   
 });
+
 boardID.on('close', event => {
   console.log('Connection was closed', event);
 });
