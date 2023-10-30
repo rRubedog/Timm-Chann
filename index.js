@@ -1,6 +1,7 @@
 const boardID = new Scaledrone('RKfsdDmmQWAB060u');
 let closeNow = 0;
 let unsub = 0;
+let membersCount = 0;
 boardID.on('open', error => {
   if (error) {
     return console.error(error);
@@ -162,8 +163,9 @@ boardID.on('open', error => {
   function realMemberCount(board){
 		board.on('members', m => {
 			members = m;
-			document.querySelector('.side-count').innerText = `${members.length} users in room`;
-      document.querySelector('.members-count-media').innerText = `${members.length} users in room`;
+			membersCount += members.length;
+			document.querySelector('.side-count').innerText = `${membersCount} users in room`;
+      document.querySelector('.members-count-media').innerText = `${membersCount} users in room`;
       
 		});
 	}
