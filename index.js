@@ -162,26 +162,19 @@ boardID.on('open', error => {
       
     }
     
-    realMemberCount();
   }
-
-  function realMemberCount(){
-		boardID.on('members', m => {
-			members = m;
-			// membersCount += members.length;
-			document.querySelector('.side-count').innerText = `${members.length} users in room`;
-      document.querySelector('.members-count-media').innerText = `${members.length} users in room`;
-      
-		});
-    // document.querySelector('.side-count').innerText = `${membersCount} users in room`;
-    // document.querySelector('.members-count-media').innerText = `${membersCount} users in room`;
-	}
 
 });
 
 // document.querySelector('.side-count').innerText = `${membersCount} users in room`;
 // document.querySelector('.members-count-media').innerText = `${membersCount} users in room`;
-
+boardID.on('members', m => {
+  members = m;
+  // membersCount += members.length;
+  document.querySelector('.side-count').innerText = `${members.length} users in room`;
+  document.querySelector('.members-count-media').innerText = `${members.length} users in room`;
+  
+});
 boardID.on('close', event => {
   console.log('Connection was closed', event);
 });
