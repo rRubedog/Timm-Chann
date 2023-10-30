@@ -2,10 +2,10 @@
     display: none;
 }
 
-*{
+/* *{
     padding: 0px;
     margin: 0px;
-}
+} */
 
 html{
     background-color: #869960;
@@ -19,7 +19,7 @@ body{
 .members-count-media{
     font-size: 20px;
     /* float: right; */
-    border: 4px solid #e5e9dc;
+    border: 3px solid #e5e9dc;
     border-radius: 1px;
 
 }
