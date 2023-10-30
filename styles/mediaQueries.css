@@ -93,7 +93,7 @@
         float: right;
     } */
     .container{
-        width: auto;
+        width: 100%;
         padding-left: 10px;
         padding-right: 10px;
     }
@@ -102,7 +102,7 @@
 /*960px and up */
 @media only screen and (min-width: 602px) {
     .container{
-        width: auto;
+        width: 100%;
         padding-left: 10px;
         padding-right: 10px;
     }
@@ -126,6 +126,11 @@
     }
     .dropdown{
         display: inline-block;
+    }
+    .container{
+        width: 940px;
+        padding-left: 40px;
+        padding-right: 40px;
     }
     /* .members-count-media{
         display: none;
