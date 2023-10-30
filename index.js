@@ -154,7 +154,12 @@ boardID.on('open', error => {
       board.unsubscribe();
       unsub = 0;
       closeNow += 1;
-      membersCount -= 1;
+      if(membersCount < 0){
+        membersCount = 0;
+      }else{
+        membersCount -= 1;
+      }
+      
     }
     
     realMemberCount(board);
