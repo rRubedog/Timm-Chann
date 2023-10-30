@@ -18,7 +18,7 @@ body{
 
 .members-count-media{
     font-size: 20px;
-    /* float: right; */
+    float: right;
     border: 3px solid #e5e9dc;
     border-radius: 1px;
 
