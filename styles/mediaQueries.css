@@ -95,6 +95,8 @@
     } */
     .container{
         width: auto;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
@@ -102,6 +104,8 @@
 @media only screen and (min-width: 602px) {
     .container{
         width: auto;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     /* .members-count-media{
         display: none;
