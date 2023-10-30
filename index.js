@@ -1,7 +1,6 @@
 const boardID = new Scaledrone('RKfsdDmmQWAB060u');
 let closeNow = 0;
 let unsub = 0;
-let membersCount = 0;
 boardID.on('open', error => {
   if (error) {
     return console.error(error);
@@ -154,19 +153,24 @@ boardID.on('open', error => {
       board.unsubscribe();
       unsub = 0;
       closeNow += 1;
+      membersCount -= 1;
     }
+    
+    realMemberCount(board);
   }
-});
 
-boardID.on('members', m => {
-  members = m;
-  document.querySelector('.side-count').innerText = `${members.length} users in room`;
-  document.querySelector('.members-count-media').innerText = `${members.length} users in room`;
-  
-});
+  let membersCount = 0;
 
-document.querySelector('.side-count').innerText = `${members.length} users in room`;
-document.querySelector('.members-count-media').innerText = `${members.length} users in room`;
+  function realMemberCount(board){
+		board.on('members', m => {
+			members = m;
+			membersCount += members.length;
+			document.querySelector('.side-count').innerText = `${members.length} users in room`;
+      
+		});
+	}
+
+});
 
 boardID.on('close', event => {
   console.log('Connection was closed', event);
