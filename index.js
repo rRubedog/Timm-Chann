@@ -161,14 +161,65 @@ boardID.on('open', error => {
     }
     document.querySelector('.side-count').innerText = membersCount + ' users online';
 
-    
-    board.on('members', m => {
-			members = m;
-			membersCount += members.length;
-			document.querySelector('.side-count').innerText = membersCount + ' users in online';
-      
-		});
   }
+
+  // Members
+
+  b.on('members', m => {
+    members = m;
+    membersCount += members.length;
+    document.querySelector('.side-count').innerText = membersCount + ' users in online';
+    
+  });
+  mu.on('members', m => {
+    members = m;
+    membersCount += members.length;
+    document.querySelector('.side-count').innerText = membersCount + ' users in online';
+    
+  });
+  m.on('members', m => {
+    members = m;
+    membersCount += members.length;
+    document.querySelector('.side-count').innerText = membersCount + ' users in online';
+    
+  });
+  c.on('members', m => {
+    members = m;
+    membersCount += members.length;
+    document.querySelector('.side-count').innerText = membersCount + ' users in online';
+    
+  });
+
+  one.on('members', m => {
+    members = m;
+    membersCount += members.length;
+    document.querySelector('.side-count').innerText = membersCount + ' users in online';
+    
+  });
+  two.on('members', m => {
+    members = m;
+    membersCount += members.length;
+    document.querySelector('.side-count').innerText = membersCount + ' users in online';
+    
+  });
+  three.on('members', m => {
+    members = m;
+    membersCount += members.length;
+    document.querySelector('.side-count').innerText = membersCount + ' users in online';
+    
+  });
+  four.on('members', m => {
+    members = m;
+    membersCount += members.length;
+    document.querySelector('.side-count').innerText = membersCount + ' users in online';
+    
+  });
+  five.on('members', m => {
+    members = m;
+    membersCount += members.length;
+    document.querySelector('.side-count').innerText = membersCount + ' users in online';
+    
+  });
 
 });
 
