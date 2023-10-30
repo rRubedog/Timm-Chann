@@ -127,6 +127,7 @@ boardID.on('open', error => {
   // BLOG POSTS END--------------------
 
   function addHistory(message, el, board, boardC){
+    let membersCount = 0;
     console.log("Hello world");
     const data = message.data;
     const name = 'Anonymous';
@@ -156,8 +157,6 @@ boardID.on('open', error => {
       closeNow += 1;
       membersCount -= 1;
     }
-
-    let membersCount = 0;
     
     board.on('members', m => {
 			members = m;
