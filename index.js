@@ -127,6 +127,7 @@ boardID.on('open', error => {
   // BLOG POSTS END--------------------
 
   function addHistory(message, el, board, boardC){
+    console.log("Hello world");
     const data = message.data;
     const name = 'Anonymous';
     const color = "#" + boardC;
