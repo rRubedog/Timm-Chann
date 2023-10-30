@@ -155,20 +155,16 @@ boardID.on('open', error => {
       closeNow += 1;
       membersCount -= 1;
     }
+
+    let membersCount = 0;
     
-    realMemberCount(board);
-  }
-
-  let membersCount = 0;
-
-  function realMemberCount(boards){
-		boards.on('members', m => {
+    board.on('members', m => {
 			members = m;
 			membersCount += members.length;
 			document.querySelector('.side-count').innerText = membersCount + ' users in online';
       
 		});
-	}
+  }
 
 });
 
