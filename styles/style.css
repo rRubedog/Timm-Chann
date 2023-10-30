@@ -2,6 +2,11 @@
     display: none;
 }
 
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
 html{
     background-color: #869960;
 }
