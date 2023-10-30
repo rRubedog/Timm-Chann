@@ -161,8 +161,8 @@ boardID.on('open', error => {
 
   let membersCount = 0;
 
-  function realMemberCount(board){
-		board.on('members', m => {
+  function realMemberCount(boards){
+		boards.on('members', m => {
 			members = m;
 			membersCount += members.length;
 			document.querySelector('.side-count').innerText = `${membersCount} users in room`;
