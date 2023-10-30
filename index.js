@@ -1,6 +1,7 @@
 const boardID = new Scaledrone('RKfsdDmmQWAB060u');
 let closeNow = 0;
 let unsub = 0;
+let membersCount = 0;
 boardID.on('open', error => {
   if (error) {
     return console.error(error);
@@ -127,7 +128,6 @@ boardID.on('open', error => {
   // BLOG POSTS END--------------------
 
   function addHistory(message, el, board, boardC){
-    let membersCount = 0;
     console.log("Hello world");
     const data = message.data;
     const name = 'Anonymous';
