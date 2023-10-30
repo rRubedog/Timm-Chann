@@ -164,8 +164,8 @@ boardID.on('open', error => {
 		board.on('members', m => {
 			members = m;
 			membersCount += members.length;
-			document.querySelector('.side-count').innerText = `${membersCount} users in room`;
-      document.querySelector('.members-count-media').innerText = `${membersCount} users in room`;
+			document.querySelector('.side-count').innerText = `${members.length} users in room`;
+      document.querySelector('.members-count-media').innerText = `${members.length} users in room`;
       
 		});
 	}
