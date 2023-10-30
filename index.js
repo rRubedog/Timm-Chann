@@ -168,12 +168,14 @@ boardID.on('open', error => {
       // document.querySelector('.members-count-media').innerText = `${membersCount} users in room`;
       
 		});
+    document.querySelector('.side-count').innerText = `${membersCount} users in room`;
+    document.querySelector('.members-count-media').innerText = `${membersCount} users in room`;
 	}
 
 });
 
-document.querySelector('.side-count').innerText = `${membersCount} users in room`;
-document.querySelector('.members-count-media').innerText = `${membersCount} users in room`;
+// document.querySelector('.side-count').innerText = `${membersCount} users in room`;
+// document.querySelector('.members-count-media').innerText = `${membersCount} users in room`;
 
 boardID.on('close', event => {
   console.log('Connection was closed', event);
