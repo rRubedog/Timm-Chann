@@ -17,8 +17,8 @@
   }
   
   .conways-life td {
-  /*     border: 1px solid black; */
-  /*     border-radius: 3px; */
+      border: none;
+      border-radius: none;
       width: 10px;
       height: 10px;
   }
