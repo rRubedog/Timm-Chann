@@ -35,8 +35,8 @@
   
   .conways-life .controls{
     position: relative;
-    top: 10px;
-    left: 10px;
+    /* top: 10px;
+    left: 10px; */
   }
   
   .conways-life td.dead {
