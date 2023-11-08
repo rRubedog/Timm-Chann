@@ -1,0 +1,92 @@
+canvas {
+background-color: lightgray;
+border: 1px solid;
+}
+
+canvas:hover{
+cursor: crosshair;
+}
+
+.resize{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+}
+
+.resize div{
+padding-right: 30px;
+}
+
+.main-content{
+/*   padding-right: -10px; */
+width: auto;
+border: 10px dashed black;
+border-radius: 10px;
+display: grid;
+grid-template-columns: 1fr 3fr 1fr;
+height: 220px;
+padding-top: 10px;
+}
+
+.right-controls{
+overflow-y: auto;
+overflow-x: hidden;
+margin-left: -60px;
+} 
+
+#color-picker {
+width: 50px;
+height: 50px;
+/*  position: absolute;
+top: 10px;
+left: 10px; */
+}
+#download {
+display: block;
+/*   margin: 10px auto;
+padding: 10px; */
+background-color: black;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+label, input, button {
+display: block;
+margin: 10px 0;
+}
+
+label {
+font-weight: bold;
+}
+
+input[type="number"] {
+width: 50px;
+}
+
+button {
+padding: 10px;
+background-color: black;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+#eraser, #fill {
+display: none;
+}
+#eraser + label:before, #fill + label:before {
+content: "";
+display: inline-block;
+width: 20px;
+height: 20px;
+background-color: white;
+border: 1px solid black;
+margin-right: 5px;
+}
+#eraser:checked + label:before, #fill:checked + label:before {
+background-color: black;
+}
