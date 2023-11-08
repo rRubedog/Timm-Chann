@@ -114,3 +114,9 @@ margin-right: 5px;
 #eraser:checked + label:before, #fill:checked + label:before {
 background-color: black;
 }
+
+.art-made .images img{
+    padding: 10px;
+    height: 200px;
+    width: auto;
+}
