@@ -1,5 +1,5 @@
 @media only screen and (max-width: 630px) {
-    *{
+    .container{
         display: none;
     }
     .too-small{
@@ -7,6 +7,10 @@
         font-size: 200%;
     }
     
+}
+
+.too-small{
+    display: none;
 }
 
 canvas {
