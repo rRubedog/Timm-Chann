@@ -27,49 +27,47 @@
 
         <nav class="site-nav">
           <div class="group">
-            <a href="https://timmweb.netlify.app/">TimmWeb</a>
-            <a target="_blank" href="https://codepen.io/rrubedog/full/eYxvZrz">Pixel Art App</a>
+            <a href="../index.html">Home</a>
             
           </div>
         </nav>
       </header>
 
       <div class="content-area group">
-        <div class="main-area">
-            <div class="main-content">
-                <div class="left-controls">
-                  <input type="color" id="color-picker">
-          
-                  <input type="checkbox" id="eraser">
-                  <label for="eraser">Eraser</label>
-          
-                  <input type="checkbox" id="fill">
-                  <label for="fill">Fill</label>
+        <div class="main-content">
+            <div class="left-controls">
+              <input type="color" id="color-picker">
+      
+              <input type="checkbox" id="eraser">
+              <label for="eraser">Eraser</label>
+      
+              <input type="checkbox" id="fill">
+              <label for="fill">Fill</label>
+            </div>
+            <canvas id="canvas"></canvas>
+            <div class="right-controls">
+      
+              <div class="resize">
+                <div>
+                  <label for="width">Width:</label>
+                  <input type="number" id="width" value="320">
                 </div>
-                <canvas id="canvas"></canvas>
-                <div class="right-controls">
-          
-                  <div class="resize">
-                    <div>
-                      <label for="width">Width:</label>
-                      <input type="number" id="width" value="320">
-                    </div>
-                    <div>
-                      <label for="height">Height:</label>
-                      <input type="number" id="height" value="200">
-                    </div>
-                  </div>
-                  <hr>
-                  <button id="resize">Resize/Reset</button>
-                  <hr>
-                  Import Image:
-                  <input type="file" id="image-input">
-                  <hr>
-                  <button id="download">Download</button>
+                <div>
+                  <label for="height">Height:</label>
+                  <input type="number" id="height" value="200">
                 </div>
               </div>
-              <script src="script.js"></script>
-        </div>
+              <hr>
+              <button id="resize">Resize/Reset</button>
+              <hr>
+              Import Image:
+              <input type="file" id="image-input">
+              <hr>
+              <button id="download">Download</button>
+            </div>
+          </div>
+          <script src="script.js"></script>
+    
       </div>
 
       <footer>
