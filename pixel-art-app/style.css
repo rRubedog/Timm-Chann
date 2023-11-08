@@ -1,3 +1,14 @@
+@media only screen and (max-width: 630px) {
+    *{
+        display: none;
+    }
+    .too-small{
+        display: block;
+        font-size: 200%;
+    }
+    
+}
+
 canvas {
 background-color: lightgray;
 border: 1px solid;
