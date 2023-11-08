@@ -5,6 +5,7 @@
     .too-small{
         display: block;
         font-size: 200%;
+        color: red;
     }
     
 }
