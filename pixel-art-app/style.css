@@ -9,9 +9,17 @@
     
 }
 
-.too-small{
-    display: none;
+@media only screen and (min-width: 631px) {
+    .too-small{
+        display: none;
+    }
+    .container{
+        display: auto;
+    }
+
 }
+
+
 
 canvas {
 background-color: lightgray;
