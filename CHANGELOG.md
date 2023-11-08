@@ -1,3 +1,15 @@
+## 0.6.6 (20203-11-8)
+
+### Added (2 change)
+
+- Added the Pixel Art App page
+- Added styling that made everything display: none instead of warning text to get onto a bigger screen
+
+### Fixed (2 change)
+
+- Made .too-small text red
+- Changed size that .too-small shows up
+
 ## 0.6.4 (2023-11-1)
 
 ### Overall (18 changes)
