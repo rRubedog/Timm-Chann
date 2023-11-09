@@ -34,31 +34,22 @@ drone.on('open', error => {
     const color = '#0000ff';
     // member element
     const pastMember = document.createElement('div');
-    pastMember.appendChild(document.createTextNode(name));
+    const pastImg = document.createElement('img');
+    pastImg.src = hdata;
+    pastMember.appendChild(pastImg);
     pastMember.className = 'member';
     pastMember.style.color = color;
     // message text element
     const pastMessageData = document.createTextNode(hdata);
-    const pastMessage = document.createElement('div');
-
-    let imgInput =  document.querySelector('.image-form__input').value;
-    let txtInput = document.querySelector('.message-form__input').value;
-    if(imgInput != '' && txtInput === ''){
-      const pastImg = document.createElement('img');
-      pastImg.src = hdata;
-      // full message element
+    
       
-      pastMessage.appendChild(pastMember);
-      pastMessage.appendChild(pastImg);
-      // pastMessage.appendChild(pastMessageData);
-      pastMessage.className = 'message';
-    }else{
-      pastMessage.appendChild(pastMember);
-      // pastMessage.appendChild(pastImg);
-      pastMessage.appendChild(pastMessageData);
-      pastMessage.className = 'message';
-    }
-  
+    // full message element  
+    const pastMessage = document.createElement('div');
+    pastMessage.appendChild(pastMember);
+    pastMessage.appendChild(pastImg);
+    // pastMessage.appendChild(pastMessageData);
+    pastMessage.className = 'message';
+
     // append
     const wasTop = le.scrollTop === le.scrollHeight - le.clientHeight;
     le.appendChild(pastMessage);
