@@ -156,7 +156,7 @@ function createMemberElement(member) {
     pastImg.src = imgValue;
     el.appendChild(document.createTextNode(name));
     el.appendChild(pastImg);
-    // el.style.color = color;
+    el.style.color = color;
     return el;
   }else{
     const { name, color } = member.clientData;
