@@ -123,13 +123,24 @@ function sendMessage() {
   const value = DOM.input.value;
   if (value === '' && imgValue === '') {
     return;
+  }else if(value === '' && imgValue != ''){
+    DOM.input.value = '';
+    DOM.image.value = '';
+    drone.publish({
+      room: 'observable-b',
+      message: imgValue,
+      // image: imgValue,
+    });
+  }else{
+    DOM.input.value = '';
+    DOM.image.value = '';
+    drone.publish({
+      room: 'observable-b',
+      message: value,
+      // image: imgValue,
+    });
   }
-  DOM.input.value = '';
-  drone.publish({
-    room: 'observable-b',
-    message: value,
-    // image: imgValue,
-  });
+  
 }
 
 function createMemberElement(member) {
