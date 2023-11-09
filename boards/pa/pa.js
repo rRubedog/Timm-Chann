@@ -31,7 +31,7 @@ drone.on('open', error => {
     const hdata = message.data;
     
     const name = 'Anonymous';
-    const color = '#0000ff';
+    const color = '#617140';
     // member element
     const pastMember = document.createElement('div');
     pastMember.appendChild(document.createTextNode(name));
