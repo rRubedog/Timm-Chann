@@ -178,6 +178,8 @@ boardID.on('open', error => {
 
   // Members
 
+  // boards
+  
   b.on('members', m => {
     members = m;
     membersCount += members.length;
@@ -208,6 +210,8 @@ boardID.on('open', error => {
     document.querySelector('.side-count').innerText = membersCount + ' users in online';
     
   });
+
+  // blogs
 
   one.on('members', m => {
     members = m;
