@@ -148,6 +148,12 @@ function sendMessage() {
 function createMemberElement(member) {
   const { name, color } = member.clientData;
   const el = document.createElement('div');
+  const imgValue = DOM.image.value;
+	const pastImg = document.createElement('img');
+	pastImg.id = "img";
+  let srcSelect = document.querySelector("#img").src;
+  pastImg.src = srcSelect;
+  el.appendChild(pastImg);
 
   el.appendChild(document.createTextNode(name));
   
