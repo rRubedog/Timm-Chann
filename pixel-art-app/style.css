@@ -119,4 +119,5 @@ background-color: black;
     padding: 10px;
     height: 200px;
     width: auto;
+    border: lightgray solid 2px;
 }
