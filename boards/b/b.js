@@ -46,7 +46,7 @@ drone.on('open', error => {
     // full message element  
     const pastMessage = document.createElement('div');
     pastMessage.appendChild(pastMember);
-    pastMessage.appendChild(pastImg);
+    // pastMessage.appendChild(pastImg);
     // pastMessage.appendChild(pastMessageData);
     pastMessage.className = 'message';
 
