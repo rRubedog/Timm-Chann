@@ -39,6 +39,7 @@ drone.on('open', error => {
     pastMember.style.color = color;
     // message text element
     const pastMessageData = document.createTextNode(hdata);
+    const pastMessage = document.createElement('div');
 
     let imgInput =  document.querySelector('.image-form__input').value;
     let txtInput = document.querySelector('.message-form__input').value;
@@ -46,7 +47,7 @@ drone.on('open', error => {
       const pastImg = document.createElement('img');
       pastImg.src = hdata;
       // full message element
-      const pastMessage = document.createElement('div');
+      
       pastMessage.appendChild(pastMember);
       pastMessage.appendChild(pastImg);
       // pastMessage.appendChild(pastMessageData);
