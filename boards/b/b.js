@@ -29,6 +29,7 @@ drone.on('open', error => {
   function addHistory(message){
     const le = DOM.messages;
     const hdata = message.data;
+    const imgdata = message.image;
     const name = 'Anonymous';
     const color = '#0000ff';
     // member element
@@ -38,11 +39,16 @@ drone.on('open', error => {
     pastMember.style.color = color;
     // message text element
     const pastMessageData = document.createTextNode(hdata);
+    
+    const pastImg = document.createElement('img');
+    pastImg.src = imgdata;
     // full message element
     const pastMessage = document.createElement('div');
     pastMessage.appendChild(pastMember);
+    pastMessage.appendChild(pastImg);
     pastMessage.appendChild(pastMessageData);
     pastMessage.className = 'message';
+
     // append
     const wasTop = le.scrollTop === le.scrollHeight - le.clientHeight;
     le.appendChild(pastMessage);
@@ -112,15 +118,16 @@ const DOM = {
 DOM.form.addEventListener('submit', sendMessage);
 
 function sendMessage() {
-  const imgValue = DOM.image;
+  const imgValue = DOM.image.value;
   const value = DOM.input.value;
-  if (value === '') {
+  if (value === '' && imgValue === '') {
     return;
   }
   DOM.input.value = '';
   drone.publish({
     room: 'observable-b',
     message: value,
+    image: imgValue,
   });
 }
 
