@@ -146,11 +146,21 @@ function sendMessage() {
 }
 
 function createMemberElement(member) {
-  const { name, color } = member.clientData;
-  const el = document.createElement('div');
-  el.appendChild(document.createTextNode(name));
-  el.className = 'member';
-  el.style.color = color;
+  const imgValue = DOM.image.value;
+  if(imgValue != ''){
+    const { name, color } = member.clientData;
+    const el = document.createElement('img');
+    el.src = imgValue;
+    el.className = 'member';
+    // el.style.color = color;
+  }else{
+    const { name, color } = member.clientData;
+    const el = document.createElement('div');
+    el.appendChild(document.createTextNode(name));
+    el.className = 'member';
+    el.style.color = color;
+  }
+  
   return el;
 }
 
