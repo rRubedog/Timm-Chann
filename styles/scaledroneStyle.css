@@ -56,13 +56,13 @@ body {
 
     .member img{
         float: right;
-        height: 20px;
-        transition: all ease .5s;
+        height: 100px;
+        /* transition: all ease .5s; */
     }
 
-    .member img:hover{
+    /* .member img:hover{
         height: 100px;
-    }
+    } */
     
     .message-form {
     display: flex;
