@@ -107,8 +107,14 @@
                 document.querySelector("#b64").textContent = evt.target.result;
               }); 
               FR.readAsDataURL(this.files[0]);
+              copyText();
             }
             document.querySelector("#inp").addEventListener("change", readFile);
+
+            function copyText() {
+              /* Copy text into clipboard */ 
+              navigator.clipboard.writeText(document.querySelector('.b64').innerText); 
+            }
           </script>
         </div>
       </div>
