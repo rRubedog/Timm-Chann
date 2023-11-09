@@ -128,7 +128,7 @@ function sendMessage() {
   drone.publish({
     room: 'observable-b',
     message: value,
-    image: imgValue,
+    // image: imgValue,
   });
 }
 
