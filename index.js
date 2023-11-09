@@ -65,7 +65,7 @@ boardID.on('open', error => {
     const pa = boardID.subscribe('observable-pa', {
       historyCount: 5
     });
-    mu.on('open', error => {
+    pa.on('open', error => {
       if (error) {
         return console.error(error);
       }
