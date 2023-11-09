@@ -61,6 +61,20 @@ boardID.on('open', error => {
   const ml = document.querySelector('.m-chats');
   m.on('history_message', message => addHistory(message, ml, m, '008080'));
 
+    // /pa/
+    const pa = boardID.subscribe('observable-pa', {
+      historyCount: 5
+    });
+    mu.on('open', error => {
+      if (error) {
+        return console.error(error);
+      }
+      console.log('Successfully joined /pa/');
+    });
+    const pal = document.querySelector('.pa-chats');
+    pa.on('history_message', message => addHistory(message, pal, pa, '617140'));
+  
+
   // BLOG POSTS START------------------
   // one
   const one = boardID.subscribe('observable-/blog/posts/one', {
