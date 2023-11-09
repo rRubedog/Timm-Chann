@@ -146,12 +146,9 @@ function sendMessage() {
 }
 
 function createMemberElement(member) {
-  const imgValue = DOM.image.value;
   const { name, color } = member.clientData;
   const el = document.createElement('div');
-  const pastImg = document.createElement('img');
-  pastImg.src = imgValue;
-  el.appendChild(pastImg);
+
   el.appendChild(document.createTextNode(name));
   
   el.style.color = color;
@@ -163,8 +160,13 @@ function updateMembersDOM() {
 }
 
 function createMessageElement(text, member) {
+  const imgValue = DOM.image.value;
   const el = document.createElement('div');
+  const pastImg = document.createElement('img');
+  pastImg.src = imgValue;
+  
   el.appendChild(createMemberElement(member));
+  el.appendChild(pastImg);
   el.appendChild(document.createTextNode(text));
   el.className = 'message';
   return el;
