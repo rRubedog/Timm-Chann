@@ -37,7 +37,13 @@ body {
     font-family: 'M PLUS 1p', sans-serif;
     border: 2px solid lightgray;
     margin: 5px 0px;
+    word-wrap: break-word;
+    overflow-x: auto;
+    overflow-y: hidden;
+    min-height: 24px;
+    max-height: 100px;
     }
+
     .message .member {
     display: inline-block;
     font-family: sans-serif;
