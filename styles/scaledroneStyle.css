@@ -54,7 +54,7 @@ body {
     position: relative;
     }
 
-    .member img{
+    .message img{
         float: right;
         max-height: 100px;
         /* transition: all ease .5s; */
