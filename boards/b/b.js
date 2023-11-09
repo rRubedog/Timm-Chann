@@ -123,7 +123,7 @@ function sendMessage() {
   const value = DOM.input.value;
   if (value === '' && imgValue === '') {
     return;
-  }else if(value === '' && imgValue != ''){
+  }else if(imgValue != ''){
     DOM.input.value = '';
     DOM.image.value = '';
     drone.publish({
