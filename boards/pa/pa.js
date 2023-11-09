@@ -130,7 +130,6 @@ function sendMessage() {
       room: 'observable-pa',
       message: imgValue,
       name: imgValue,
-      data: '',
       
       // image: imgValue,
     });
