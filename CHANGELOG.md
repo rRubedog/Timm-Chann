@@ -1,3 +1,7 @@
+|IDEA|
+- Add /pa/ board for pixel art
+- Add images to board messages using base64 data
+
 ## 0.6.6 (20203-11-8)
 
 ### Added (2 change)
