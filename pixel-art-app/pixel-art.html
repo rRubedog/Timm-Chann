@@ -107,15 +107,15 @@
                 document.querySelector("#b64").textContent = evt.target.result;
               }); 
               FR.readAsDataURL(this.files[0]);
-              copyText();
+              // copyText();
             }
             document.querySelector("#inp").addEventListener("change", readFile);
 
-            function copyText() {
-              var b64 = document.querySelector('#b64').innerText;
-              navigator.clipboard.writeText(b64); 
-              document.getElementById('img-stf').value = b64; 
-            }
+            // function copyText() {
+            //   var b64 = document.querySelector('#b64').innerText;
+            //   navigator.clipboard.writeText(b64); 
+            //   document.getElementById('img-stf').value = b64; 
+            // }
           </script>
         </div>
       </div>
