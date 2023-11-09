@@ -151,8 +151,9 @@ function createMemberElement(member) {
   const el = document.createElement('div');
   const pastImg = document.createElement('img');
   pastImg.src = imgValue;
-  el.appendChild(document.createTextNode(name));
   el.appendChild(pastImg);
+  el.appendChild(document.createTextNode(name));
+  
   el.style.color = color;
   return el;
 }
