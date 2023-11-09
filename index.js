@@ -135,9 +135,14 @@ boardID.on('open', error => {
     const color = "#" + boardC;
     // member element 
     const pastMember = document.createElement('div');
+    const pastImg = document.createElement('img');
+    pastImg.src = data;
     pastMember.appendChild(document.createTextNode(name));
+    pastMember.appendChild(pastImg);
     pastMember.className = 'member';
     pastMember.style.color = color;
+    // message text element
+    const pastMessageData = document.createTextNode(data);
     // message text element
     const pastMessageData = document.createTextNode(data);
     // full message element
