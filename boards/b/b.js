@@ -40,7 +40,7 @@ drone.on('open', error => {
     // message text element
     const pastMessageData = document.createTextNode(hdata);
 
-    let imgInput =  document.querySelector('.image-forum__input').value;
+    let imgInput =  document.querySelector('.image-form__input').value;
     let txtInput = document.querySelector('.message-form__input').value;
     if(imgInput != '' && txtInput === ''){
       const pastImg = document.createElement('img');
