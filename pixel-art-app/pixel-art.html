@@ -91,7 +91,7 @@
             Email:<br>
             <input type="email" name="email"><br>
             Title of Image and base64:<br>
-            <textarea id="img-stf b64" name="message" rows="5" cols="30"></textarea><br>
+            <textarea id="b64" name="message" rows="5" cols="30"></textarea><br>
             Insert image here and copy the code that shows up below
             <input id="inp" type="file">
             <p style="word-wrap: break-word; width: 600px;" id="b64"></p>
@@ -103,7 +103,7 @@
               if (!this.files || !this.files[0]) return;
               const FR = new FileReader();
               FR.addEventListener("load", function(evt) {
-                document.querySelector("#img").src         = evt.target.result;
+                document.querySelector("#img").src = evt.target.result;
                 document.querySelector("#b64").textContent = evt.target.result;
               }); 
               FR.readAsDataURL(this.files[0]);
