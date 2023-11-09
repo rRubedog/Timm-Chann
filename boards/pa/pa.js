@@ -15,7 +15,7 @@ drone.on('open', error => {
   }
   console.log('Successfully connected to /pa/');
  
-  const room = drone.subscribe('observable-pa', {
+  const room = drone.subscribe('observable-test', {
     historyCount: 100
   }); 
   room.on('open', error => {
@@ -129,15 +129,15 @@ function sendMessage() {
     drone.publish({
       room: 'observable-pa',
       message: imgValue,
-      // name: imgValue,
+      /* name: imgValue,
       
-      // image: imgValue,
+      // image: imgValue, */
     });
   }else{
     DOM.input.value = '';
     DOM.image.value = '';
     drone.publish({
-      room: 'observable-pa',
+      room: 'observable-test',
       message: value,
       // image: imgValue,
     });
