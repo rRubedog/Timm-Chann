@@ -35,19 +35,17 @@ drone.on('open', error => {
     // member element
     const pastMember = document.createElement('div');
     pastMember.appendChild(document.createTextNode(name));
+    const pastImg = document.createElement('img');
+    pastImg.src = hdata;
+    pastMember.appendChild(pastImg);
     
     pastMember.className = 'member';
     pastMember.style.color = color;
     // message text element
     const pastMessageData = document.createTextNode(hdata);
-    
-      
     // full message element  
     const pastMessage = document.createElement('div');
     pastMessage.appendChild(pastMember);
-    const pastImg = document.createElement('img');
-    pastImg.src = hdata;
-    pastMessage.appendChild(pastImg);
     pastMessage.appendChild(pastMessageData);
     
     pastMessage.className = 'message';
