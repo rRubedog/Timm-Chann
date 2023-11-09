@@ -105,12 +105,14 @@ const DOM = {
   membersList: document.querySelector('.members-list'),
   messages: document.querySelector('.messages'),
   input: document.querySelector('.message-form__input'),
+  image: document.querySelector('.image-forum__input'),
   form: document.querySelector('.message-form'),
 };
 
 DOM.form.addEventListener('submit', sendMessage);
 
 function sendMessage() {
+  const imgValue = DOM.image;
   const value = DOM.input.value;
   if (value === '') {
     return;

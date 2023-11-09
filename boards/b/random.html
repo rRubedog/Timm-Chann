@@ -65,9 +65,25 @@
             <!-- <div class="members-list">-</div> -->
             <div class="messages"></div>
             <form class="message-form" onsubmit="return false;">
-              <input class="message-form__input" placeholder="Type a message.." type="text"/>
+              <input class="message-form__input" placeholder="Type a message.." type="text"/> <br>
+              Image Input: <br>
+              <input type="file" id="inp" class="image-form__input"> <br>
+              <textarea id="b64" name="base64Data" rows="1" cols="30"></textarea> <br>
+              <img id="img" style="height: 80px; width: auto; border: lightgray 2px dotted;"> <br>
               <input class="message-form__button" value="Send" type="submit"/>
             </form>
+            <script>
+              function readFile() {
+                if (!this.files || !this.files[0]) return;
+                const FR = new FileReader();
+                FR.addEventListener("load", function(evt) {
+                  document.querySelector("#img").src = evt.target.result;
+                  document.querySelector("#b64").textContent = evt.target.result;
+                }); 
+                FR.readAsDataURL(this.files[0]);
+              }
+              document.querySelector("#inp").addEventListener("change", readFile);
+            </script>
             <script src="b.js"></script>
           </div>
       </div>
