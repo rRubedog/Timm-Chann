@@ -149,24 +149,14 @@ function sendMessage() {
 
 function createMemberElement(member) {
   const imgValue = DOM.image.value;
-  if(imgValue != ''){
-    const { name, color } = member.clientData;
-    const el = document.createElement('div');
-    const pastImg = document.createElement('img');
-    pastImg.src = imgValue;
-    el.appendChild(document.createTextNode(name));
-    el.appendChild(pastImg);
-    el.style.color = color;
-    return el;
-  }else{
-    const { name, color } = member.clientData;
-    const el = document.createElement('div');
-    el.appendChild(document.createTextNode(name));
-    el.className = 'member';
-    el.style.color = color;
-    return el;
-  }
-  
+  const { name, color } = member.clientData;
+  const el = document.createElement('div');
+  const pastImg = document.createElement('img');
+  pastImg.src = imgValue;
+  el.appendChild(document.createTextNode(name));
+  el.appendChild(pastImg);
+  el.style.color = color;
+  return el;
 }
 
 function updateMembersDOM() {
