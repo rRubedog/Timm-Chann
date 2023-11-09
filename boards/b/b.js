@@ -29,7 +29,7 @@ drone.on('open', error => {
   function addHistory(message){
     const le = DOM.messages;
     const hdata = message.data;
-    const imgdata = message.image;
+    
     const name = 'Anonymous';
     const color = '#0000ff';
     // member element
@@ -39,16 +39,27 @@ drone.on('open', error => {
     pastMember.style.color = color;
     // message text element
     const pastMessageData = document.createTextNode(hdata);
-    
-    const pastImg = document.createElement('img');
-    pastImg.src = imgdata;
-    // full message element
-    const pastMessage = document.createElement('div');
-    pastMessage.appendChild(pastMember);
-    pastMessage.appendChild(pastImg);
-    pastMessage.appendChild(pastMessageData);
-    pastMessage.className = 'message';
 
+    let imgInput =  document.querySelector('.image-forum__input');
+    let txtInput = document.querySelector('.message-form__input');
+    if(imgInput.value != '' && txtInput.value === ''){
+      const imgdata = message.data;
+      const pastImg = document.createElement('img');
+      pastImg.src = imgdata;
+      // full message element
+      const pastMessage = document.createElement('div');
+      pastMessage.appendChild(pastMember);
+      pastMessage.appendChild(pastImg);
+      // pastMessage.appendChild(pastMessageData);
+      pastMessage.className = 'message';
+    }else{
+      const pastMessage = document.createElement('div');
+      pastMessage.appendChild(pastMember);
+      pastMessage.appendChild(pastImg);
+      pastMessage.appendChild(pastMessageData);
+      // pastMessage.className = 'message';
+    }
+  
     // append
     const wasTop = le.scrollTop === le.scrollHeight - le.clientHeight;
     le.appendChild(pastMessage);
