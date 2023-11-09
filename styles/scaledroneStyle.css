@@ -35,6 +35,8 @@ body {
     .message {
     padding: 5px 0;
     font-family: 'M PLUS 1p', sans-serif;
+    border: 2px solid lightgray;
+    margin: 5px 0px;
     }
     .message .member {
     display: inline-block;
@@ -44,6 +46,10 @@ body {
     .member {
     padding-right: 10px;
     position: relative;
+    }
+
+    .member img{
+        float: right;
     }
     
     .message-form {

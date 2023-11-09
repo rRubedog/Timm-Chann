@@ -29,21 +29,28 @@ drone.on('open', error => {
   function addHistory(message){
     const le = DOM.messages;
     const hdata = message.data;
+    
     const name = 'Anonymous';
-    const color = '#800080';
-    // #295523
+    const color = '#0000ff';
     // member element
     const pastMember = document.createElement('div');
+    const pastImg = document.createElement('img');
+    pastImg.src = hdata;
     pastMember.appendChild(document.createTextNode(name));
+    pastMember.appendChild(pastImg);
     pastMember.className = 'member';
     pastMember.style.color = color;
     // message text element
     const pastMessageData = document.createTextNode(hdata);
-    // full message element
+    
+      
+    // full message element  
     const pastMessage = document.createElement('div');
     pastMessage.appendChild(pastMember);
+    // pastMessage.appendChild(pastImg);
     pastMessage.appendChild(pastMessageData);
     pastMessage.className = 'message';
+
     // append
     const wasTop = le.scrollTop === le.scrollHeight - le.clientHeight;
     le.appendChild(pastMessage);
@@ -94,7 +101,7 @@ function getName() {
 }
 
 function getColor() {
-  return '#800080';
+  return '#0000ff';
 }
 // #295523
 //------------- DOM STUFF
@@ -106,35 +113,62 @@ const DOM = {
   membersList: document.querySelector('.members-list'),
   messages: document.querySelector('.messages'),
   input: document.querySelector('.message-form__input'),
+  image: document.querySelector('.image-form__input'),
   form: document.querySelector('.message-form'),
 };
 
 DOM.form.addEventListener('submit', sendMessage);
 
 function sendMessage() {
+  const imgValue = DOM.image.value;
   const value = DOM.input.value;
-  if (value === '') {
+  if (value === '' && imgValue === '') {
     return;
+  }else if(imgValue != ''){
+    DOM.input.value = '';
+    DOM.image.value = '';
+    drone.publish({
+      room: 'observable-mu',
+      message: imgValue,
+      name: imgValue,
+      data: '',
+      
+      // image: imgValue,
+    });
+  }else{
+    DOM.input.value = '';
+    DOM.image.value = '';
+    drone.publish({
+      room: 'observable-mu',
+      message: value,
+      // image: imgValue,
+    });
   }
-  DOM.input.value = '';
-  drone.publish({
-    room: 'observable-mu',
-    message: value,
-  });
+  
 }
 
 function createMemberElement(member) {
-  const { name, color } = member.clientData;
-  const el = document.createElement('div');
-  el.appendChild(document.createTextNode(name));
-  el.className = 'member';
-  el.style.color = color;
-  return el;
+  const imgValue = DOM.image.value;
+  if(imgValue != ''){
+    // const { name, color } = member.clientData;
+    const el = document.createElement('img');
+    el.src = imgValue;
+    el.className = 'member';
+    // el.style.color = color;
+    return el;
+  }else{
+    const { name, color } = member.clientData;
+    const el = document.createElement('div');
+    el.appendChild(document.createTextNode(name));
+    el.className = 'member';
+    el.style.color = color;
+    return el;
+  }
+  
 }
 
 function updateMembersDOM() {
   document.querySelector('.side-count').innerText = `${members.length} users in room`;
-  document.querySelector('.members-count-media').innerText = `${members.length} users in room`;
 }
 
 function createMessageElement(text, member) {
