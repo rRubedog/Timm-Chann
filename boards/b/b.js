@@ -112,7 +112,7 @@ const DOM = {
   membersList: document.querySelector('.members-list'),
   messages: document.querySelector('.messages'),
   input: document.querySelector('.message-form__input'),
-  image: document.querySelector('.image-forum__input'),
+  image: document.querySelector('.image-form__input'),
   form: document.querySelector('.message-form'),
 };
 
