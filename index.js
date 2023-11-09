@@ -143,8 +143,6 @@ boardID.on('open', error => {
     pastMember.style.color = color;
     // message text element
     const pastMessageData = document.createTextNode(data);
-    // message text element
-    const pastMessageData = document.createTextNode(data);
     // full message element
     const pastMessage = document.createElement('div');
     pastMessage.appendChild(pastMember);
