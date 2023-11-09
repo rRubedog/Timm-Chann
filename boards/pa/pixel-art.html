@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>/b/ Random | TimmBoard</title>
+  <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@500&display=swap" rel="stylesheet">
+  
+  <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
+  <!--<script type='text/javascript' src='http://0.0.0.0:8080/scaledrone.js'></script>-->
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="../../styles/style.css">
+  <link rel="stylesheet" href="../../styles/scaledroneStyle.css">
+  <link rel="stylesheet" href="b.css">
+  <link rel="stylesheet" href="../../styles/dropdown.css">
+  <link rel="stylesheet" href="../../styles/mediaQueries.css">
+  <style>
+    .main-area{
+      width: auto;
+      padding-right: 0px;
+      float: none;
+    }
+  </style>
+</head>
+  <body>
+
+    <div class="container">
+      <header>
+        <div class="members-count-media side-count">-</div>
+        <h1 class="board b">/pa/</h1>
+        <p class="title b">Pixel Art</p>
+
+        <!-- boards link dropdown START -->
+        <!-- <div style="float: right; top: -40px;"  class="dropdown">
+          <button style="color: white;">Boards</button>
+          <div id="list"  class="dropdown-options" style="min-width: 118px;text-align: center;">
+            <a href="random.html" class="b">/b/ Random</a>
+            <a href="../c/code.html" class="c">/c/ Code</a>
+            <a href="../m/meta.html" class="m">/m/ Meta</a>
+            <a href="../mu/music.html" class="mu">/mu/ Music</a>
+          </div>
+        </div> -->
+        <!-- boards link dropdown END -->
+
+        <nav class="site-nav">
+          <div class="group">
+            <a href="https://timmweb.netlify.app/">TimmWeb</a>
+            <a href="../../index.html">Home</a>
+            <a class="b small-link" href="../b/random.html">/b/</a>
+            <a class="c small-link" href="../c/code.html">/c/</a>
+            <a class="mu small-link" href="../mu/music.html">/mu/</a>
+            <a class="m small-link" href="../m/meta.html">/m/</a>
+            
+              
+          </div>
+        </nav>
+      </header>
+
+      <div class="content-area group">
+          <div class="main-area">
+            <!-- <div class="members-count">-</div> -->
+            <!-- <div class="members-list">-</div> -->
+            <div class="messages"></div>
+            <form class="message-form" onsubmit="return false;">
+            <div>
+              <input class="message-form__input" placeholder="Type a message.." type="text"/> 
+              <input class="message-form__button" value="Send" type="submit"/>
+            </div>
+            <div>
+              Image Input: <br>
+              <input type="file" id="inp" > <br>
+            </div>
+            <div>
+              <textarea id="b64" class="image-form__input" name="base64Data" rows="1" cols="30"></textarea>
+              <img id="img" style="height: 80px; width: auto; border: lightgray 2px dotted;"> <br>
+            </div>
+            </form>
+            <script>
+              function readFile() {
+                if (!this.files || !this.files[0]) return;
+                const FR = new FileReader();
+                FR.addEventListener("load", function(evt) {
+                  document.querySelector("#img").src = evt.target.result;
+                  document.querySelector("#b64").textContent = evt.target.result;
+                }); 
+                FR.readAsDataURL(this.files[0]);
+              }
+              document.querySelector("#inp").addEventListener("change", readFile);
+            </script>
+            <script src="b.js"></script>
+          </div>
+      </div>
+
+      <footer>
+          <p>&copy; 2023 - Timm in cooperation with Scaledrone</p>
+      </footer>
+    </div>
+  </body>
+</html>
