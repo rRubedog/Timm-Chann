@@ -36,6 +36,7 @@ drone.on('open', error => {
     const pastMember = document.createElement('div');
     const pastImg = document.createElement('img');
     pastImg.src = hdata;
+    pastMember.appendChild(document.createTextNode(name));
     pastMember.appendChild(pastImg);
     pastMember.className = 'member';
     pastMember.style.color = color;
