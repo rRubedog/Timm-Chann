@@ -128,8 +128,9 @@ function sendMessage() {
     DOM.image.value = '';
     drone.publish({
       room: 'observable-b',
-      name: imgValue,
       message: value,
+      name: imgValue,
+      
       // image: imgValue,
     });
   }else{
