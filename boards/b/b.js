@@ -40,12 +40,11 @@ drone.on('open', error => {
     // message text element
     const pastMessageData = document.createTextNode(hdata);
 
-    let imgInput =  document.querySelector('.image-forum__input');
-    let txtInput = document.querySelector('.message-form__input');
-    if(imgInput.value != '' && txtInput.value === ''){
-      const imgdata = message.data;
+    let imgInput =  document.querySelector('.image-forum__input').value;
+    let txtInput = document.querySelector('.message-form__input').value;
+    if(imgInput != '' && txtInput === ''){
       const pastImg = document.createElement('img');
-      pastImg.src = imgdata;
+      pastImg.src = hdata;
       // full message element
       const pastMessage = document.createElement('div');
       pastMessage.appendChild(pastMember);
