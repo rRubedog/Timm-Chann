@@ -57,6 +57,7 @@ body {
     .message img{
         float: right;
         max-height: 100px;
+        border: solid lightgray 2px;
         /* transition: all ease .5s; */
     }
 
