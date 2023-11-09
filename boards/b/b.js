@@ -148,7 +148,7 @@ function sendMessage() {
 function createMemberElement(member) {
   const imgValue = DOM.image.value;
   if(imgValue != ''){
-    const { name, color } = member.clientData;
+    // const { name, color } = member.clientData;
     const el = document.createElement('img');
     el.src = imgValue;
     el.className = 'member';
