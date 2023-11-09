@@ -202,6 +202,12 @@ boardID.on('open', error => {
     document.querySelector('.side-count').innerText = membersCount + ' users in online';
     
   });
+  pa.on('members', m => {
+    members = m;
+    membersCount += members.length;
+    document.querySelector('.side-count').innerText = membersCount + ' users in online';
+    
+  });
 
   one.on('members', m => {
     members = m;
