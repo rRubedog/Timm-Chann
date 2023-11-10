@@ -61,6 +61,10 @@ body {
         /* transition: all ease .5s; */
     }
 
+    .message #img{
+        float: none;
+    }
+
     /* .member img:hover{
         height: 100px;
     } */
