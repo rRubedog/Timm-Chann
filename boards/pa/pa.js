@@ -153,6 +153,7 @@ function createMemberElement(member) {
   let srcSelect = document.querySelector("#img");
 
   pastImg.src = srcSelect.src;
+  pastImg.id = "img";
   srcSelect.src = "null";
   
   el.appendChild(document.createTextNode(name));
@@ -171,6 +172,7 @@ function createMessageElement(text, member) {
   const el = document.createElement('div');
   const pastImg = document.createElement('img');
   pastImg.src = imgValue;
+  pastImg.id = "img";
   
   el.appendChild(createMemberElement(member));
   el.appendChild(pastImg);
