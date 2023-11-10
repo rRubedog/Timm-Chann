@@ -150,12 +150,13 @@ function createMemberElement(member) {
   const el = document.createElement('div');
   const imgValue = DOM.image.value;
 	const pastImg = document.createElement('img');
-	pastImg.id = "img";
-  let srcSelect = document.querySelector("#img").src;
-  pastImg.src = srcSelect;
-  el.appendChild(pastImg);
+  let srcSelect = document.querySelector("#img");
 
+  pastImg.src = srcSelect.src;
+  srcSelect.src = "null";
+  
   el.appendChild(document.createTextNode(name));
+  el.appendChild(pastImg);
   
   el.style.color = color;
   return el;

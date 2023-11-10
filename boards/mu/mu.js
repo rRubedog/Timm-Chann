@@ -147,13 +147,18 @@ function sendMessage() {
 }
 
 function createMemberElement(member) {
-  const imgValue = DOM.image.value;
   const { name, color } = member.clientData;
   const el = document.createElement('div');
-  const pastImg = document.createElement('img');
-  pastImg.src = imgValue;
+  const imgValue = DOM.image.value;
+	const pastImg = document.createElement('img');
+  let srcSelect = document.querySelector("#img");
+
+  pastImg.src = srcSelect.src;
+  srcSelect.src = "null";
+  
   el.appendChild(document.createTextNode(name));
   el.appendChild(pastImg);
+  
   el.style.color = color;
   return el;
 }
