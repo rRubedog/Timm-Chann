@@ -154,7 +154,7 @@ function createMemberElement(member) {
 
   pastImg.src = srcSelect.src;
   pastImg.id = "img";
-  srcSelect.src = "null";
+  srcSelect.src = "../../pixel-art-app/images/noimage.png";
   
   el.appendChild(document.createTextNode(name));
   el.appendChild(pastImg);
