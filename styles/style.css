@@ -2,6 +2,10 @@
     display: none;
 }
 
+*{
+    user-select: none; 
+}
+
 /* *{
     padding: 0px;
     margin: 0px;
