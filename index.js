@@ -224,6 +224,13 @@ boardID.on('open', error => {
     
   });
 
+  kol.on('members', m => {
+    members = m;
+    membersCount += members.length;
+    document.querySelector('.side-count').innerText = membersCount + ' users in online';
+    
+  });
+
   // blogs
 
   one.on('members', m => {
