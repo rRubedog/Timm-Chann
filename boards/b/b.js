@@ -112,7 +112,7 @@ function getName() {
   return (
     username
   );
-  updateMembersDOM();
+  // updateMembersDOM();
 }
 
 DOM.form.addEventListener('submit', sendMessage);
