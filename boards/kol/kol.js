@@ -35,9 +35,6 @@ drone.on('open', error => {
     // member element
     const pastMember = document.createElement('div');
     pastMember.appendChild(document.createTextNode(name));
-    const pastImg = document.createElement('img');
-    pastImg.src = hdata;
-    pastMember.appendChild(pastImg);
     
     pastMember.className = 'member';
     pastMember.style.color = color;
@@ -112,35 +109,21 @@ const DOM = {
   membersList: document.querySelector('.members-list'),
   messages: document.querySelector('.messages'),
   input: document.querySelector('.message-form__input'),
-  image: document.querySelector('.image-form__input'),
   form: document.querySelector('.message-form'),
 };
 
 DOM.form.addEventListener('submit', sendMessage);
 
 function sendMessage() {
-  const imgValue = DOM.image.value;
   const value = DOM.input.value;
-  if (value === '' && imgValue === '') {
+  if (value === '') {
     return;
-  }else if(imgValue != ''){
-    DOM.input.value = '';
-    DOM.image.value = '';
-    drone.publish({
-      room: 'observable-kol',
-      message: imgValue,
-      name: imgValue,
-      data: '',
-      
-      // image: imgValue,
-    });
   }else{
     DOM.input.value = '';
     DOM.image.value = '';
     drone.publish({
       room: 'observable-kol',
       message: value,
-      // image: imgValue,
     });
   }
   
@@ -149,16 +132,8 @@ function sendMessage() {
 function createMemberElement(member) {
   const { name, color } = member.clientData;
   const el = document.createElement('div');
-  const imgValue = DOM.image.value;
-	const pastImg = document.createElement('img');
-  let srcSelect = document.querySelector("#img");
-
-  pastImg.src = srcSelect.src;
-  pastImg.id = "img";
-  srcSelect.src = "../../pixel-art-app/images/noimage.png";
   
   el.appendChild(document.createTextNode(name));
-  el.appendChild(pastImg);
   
   el.style.color = color;
   return el;
@@ -169,14 +144,9 @@ function updateMembersDOM() {
 }
 
 function createMessageElement(text, member) {
-  const imgValue = DOM.image.value;
   const el = document.createElement('div');
-  const pastImg = document.createElement('img');
-  pastImg.src = imgValue;
-  pastImg.id = "img";
   
   el.appendChild(createMemberElement(member));
-  el.appendChild(pastImg);
   el.appendChild(document.createTextNode(text));
   el.className = 'message';
   return el;
