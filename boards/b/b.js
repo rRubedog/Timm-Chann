@@ -108,7 +108,7 @@ const DOM = {
 };
 
 function getName() {
-  let username = DOM.name.value;
+  let username = document.querySelector('.username-form__input').value;
   return (
     username
   );
