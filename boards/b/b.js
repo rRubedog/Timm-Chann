@@ -30,14 +30,11 @@ drone.on('open', error => {
     const le = DOM.messages;
     const hdata = message.data;
     
-    const name = 'Anonymous';
+    const name = message.name;
     const color = '#0000ff';
     // member element
     const pastMember = document.createElement('div');
     pastMember.appendChild(document.createTextNode(name));
-    const pastImg = document.createElement('img');
-    pastImg.src = hdata;
-    pastMember.appendChild(pastImg);
     
     pastMember.className = 'member';
     pastMember.style.color = color;
