@@ -88,13 +88,7 @@ drone.on('error', error => {
   console.error(error);
 });
 
-function getName() {
-  const username = 'Anonymous'
-  return (
-    username
-  );
-  updateMembersDOM();
-}
+
 
 function getColor() {
   return '#0000ff';
@@ -113,10 +107,18 @@ const DOM = {
   form: document.querySelector('.message-form'),
 };
 
+function getName() {
+  let username = DOM.name.value;
+  return (
+    username
+  );
+  updateMembersDOM();
+}
+
 DOM.form.addEventListener('submit', sendMessage);
 
 function sendMessage() {
-  const nameValue = DOM.name.value;
+  let nameValue = DOM.name.value;
   const value = DOM.input.value;
   if (value === '' && nameValue === '') {
     return;
