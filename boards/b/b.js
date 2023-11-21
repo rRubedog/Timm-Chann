@@ -112,35 +112,23 @@ const DOM = {
   membersList: document.querySelector('.members-list'),
   messages: document.querySelector('.messages'),
   input: document.querySelector('.message-form__input'),
-  image: document.querySelector('.image-form__input'),
+  name: document.querySelector('.name-form__input'),
   form: document.querySelector('.message-form'),
 };
 
 DOM.form.addEventListener('submit', sendMessage);
 
 function sendMessage() {
-  const imgValue = DOM.image.value;
+  const nameValue = DOM.name.value;
   const value = DOM.input.value;
-  if (value === '' && imgValue === '') {
+  if (value === '' && nameValue === '') {
     return;
-  }else if(imgValue != ''){
-    DOM.input.value = '';
-    DOM.image.value = '';
-    drone.publish({
-      room: 'observable-b',
-      message: imgValue,
-      name: imgValue,
-      data: '',
-      
-      // image: imgValue,
-    });
   }else{
     DOM.input.value = '';
-    DOM.image.value = '';
     drone.publish({
       room: 'observable-b',
       message: value,
-      // image: imgValue,
+      name: nameValue,
     });
   }
   
@@ -149,16 +137,8 @@ function sendMessage() {
 function createMemberElement(member) {
   const { name, color } = member.clientData;
   const el = document.createElement('div');
-  const imgValue = DOM.image.value;
-	const pastImg = document.createElement('img');
-  let srcSelect = document.querySelector("#img");
-
-  pastImg.src = srcSelect.src;
-  pastImg.id = "img";
-  srcSelect.src = "../../pixel-art-app/images/noimage.png";
   
   el.appendChild(document.createTextNode(name));
-  el.appendChild(pastImg);
   
   el.style.color = color;
   return el;
@@ -169,14 +149,9 @@ function updateMembersDOM() {
 }
 
 function createMessageElement(text, member) {
-  const imgValue = DOM.image.value;
   const el = document.createElement('div');
-  const pastImg = document.createElement('img');
-  pastImg.src = imgValue;
-  pastImg.id = "img";
   
   el.appendChild(createMemberElement(member));
-  el.appendChild(pastImg);
   el.appendChild(document.createTextNode(text));
   el.className = 'message';
   return el;
