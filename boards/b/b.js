@@ -109,7 +109,7 @@ const DOM = {
   membersList: document.querySelector('.members-list'),
   messages: document.querySelector('.messages'),
   input: document.querySelector('.message-form__input'),
-  name: document.querySelector('.name-form__input'),
+  name: document.querySelector('.username-form__input'),
   form: document.querySelector('.message-form'),
 };
 
