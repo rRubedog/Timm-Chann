@@ -73,6 +73,19 @@ boardID.on('open', error => {
     });
     const pal = document.querySelector('.pa-chats');
     pa.on('history_message', message => addHistory(message, pal, pa, '617140'));
+
+    // /kol/
+  const kol = boardID.subscribe('observable-kol', {
+    historyCount: 5
+  });
+  kol.on('open', error => {
+    if (error) {
+      return console.error(error);
+    }
+    console.log('Successfully joined /kol/');
+  });
+  const koll = document.querySelector('.kol-chats');
+  kol.on('history_message', message => addHistory(message, koll, kol, '617140'));
   
 
   // BLOG POSTS START------------------
