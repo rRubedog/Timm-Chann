@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>/mu/ Music | TimmBoard</title>
+  <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@500&display=swap" rel="stylesheet">
+
+  <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
+  <!--<script type='text/javascript' src='http://0.0.0.0:8080/scaledrone.js'></script>-->
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="../../styles/style.css">
+  <link rel="stylesheet" href="../../styles/scaledroneStyle.css">
+  <link rel="stylesheet" href="mu.css">
+  <link rel="stylesheet" href="../../styles/dropdown.css">
+  <link rel="stylesheet" href="../../styles/mediaQueries.css">
+  <link rel="stylesheet" href="styles/sidebar.css">
+  <style>
+    .main-area{
+      width: 66%;
+    }
+  </style>
+</head>
+  <body>
+
+    <div class="container">
+      <header>
+        <div class="members-count-media side-count">-</div>
+        <h1 class="board mu">/mu/</h1>
+        <p class="title mu">Music</p>
+
+        <!-- boards link dropdown START -->
+        <!-- <div style="float: right; top: -40px;"  class="dropdown">
+          <button style="color: white;">Boards</button>
+          <div id="list"  class="dropdown-options" style="min-width: 118px;text-align: center;">
+            <a href="../b/random.html" class="b">/b/ Random</a>
+            <a href="../c/code.html" class="c">/c/ Code</a>
+            <a href="../m/meta.html" class="m">/m/ Meta</a>
+            <a href="music.html" class="mu">/mu/ Music</a>
+
+          </div>
+        </div> -->
+        <!-- boards link dropdown END -->
+
+        <nav class="site-nav">
+          <div class="group">
+            <a href="https://timmweb.netlify.app/">TimmWeb</a>
+            <a href="../../index.html">Home</a>
+            <a class="b small-link" href="../b/random.html">/b/</a>
+            <a class="c small-link" href="../c/code.html">/c/</a>
+            <a class="m small-link" href="../m/meta.html">/m/</a>
+            <a class="pa small-link" href="../pa/pixel-art.html">/pa/</a>
+              
+          </div>
+        </nav>
+      </header>
+
+      <div class="content-area group">
+          <div class="main-area">
+            <div class="messages"></div>
+            <form class="message-form" onsubmit="return false;">
+              <div>
+                <input class="message-form__input" placeholder="Type a message.." type="text"/> 
+                <input class="message-form__button" value="Send" type="submit"/>
+              </div>
+              Image Input: <br>
+              <input type="file" id="inp" > <br>
+              <textarea id="b64" class="image-form__input" name="base64Data" rows="1" cols="30"></textarea> <br>
+              <img id="img" style="height: 80px; width: auto; border: lightgray 2px dotted;"> <br>
+              
+            </form>
+            <script>
+              function readFile() {
+                if (!this.files || !this.files[0]) return;
+                const FR = new FileReader();
+                FR.addEventListener("load", function(evt) {
+                  document.querySelector("#img").src = evt.target.result;
+                  document.querySelector("#b64").textContent = evt.target.result;
+                }); 
+                FR.readAsDataURL(this.files[0]);
+              }
+              document.querySelector("#inp").addEventListener("change", readFile);
+            </script>
+            <script src="mu.js"></script>
+          </div>
+
+          
+            
+            <div class="radio" style="padding-bottom: 10px; font-size: 80%;">
+                <h2 style="padding: 10px; padding-top: 0px; margin: 0px">/mu/ Radio</h2>
+
+                <audio style="padding-top: 10px; padding-bottom: 10px; width: 278px; height: 30px;" id="audio" controls="controls" controlsList="nodownload noplaybackrate" loop>
+                  <source id="audioSource" src=""></source>
+                  Your browser does not support the audio format.
+                </audio>
+
+              <div class="dropdown">
+                <button style="color: white;">Songs</button>
+                <div id="list"  class="dropdown-options" style="min-width: 110px; text-align: center;">
+                  <p style="border-bottom: white 1px solid;">Not by me:</p>
+                  <a href="#" data-value="music-files/chiptune/not-by-me/communism.mp3">
+                    Communism
+                  </a>
+                  <a href="#" data-value="music-files/chiptune/not-by-me/happy-2021.mp3">
+                    Happy New Year 2021
+                  </a>
+                  <a href="#" data-value="music-files/chiptune/not-by-me/happy-2022.mp3">
+                    Happy New Year 2022
+                  </a>
+                  <a href="#" data-value="music-files/chiptune/not-by-me/jacket-the-cat.mp3">
+                    Jacket The Cat
+                  </a>
+                  <a href="#" data-value="music-files/chiptune/not-by-me/kill-it.mp3">
+                    Kill It!
+                  </a>
+                  <a href="#" data-value="music-files/chiptune/not-by-me/party-chips.mp3">
+                    Party Chips
+                  </a>
+                  <a href="#" data-value="music-files/chiptune/not-by-me/breakout.mp3">
+                    Breakout
+                  </a>
+                  <a href="#" data-value="music-files/chiptune/not-by-me/pixel-rain.mp3">
+                    Pixel Rain
+                  </a>
+                  <p style="border-bottom: white 1px solid;">
+                    Songs by me:
+                  </p>
+                  <a href="#" data-value="music-files/chiptune/by-me/jovi.mp3">
+                    Jovi
+                  </a>
+                </div>
+              </div>
+              <script src="radio.js"></script>
+            </div>
+
+            <!-- <div class="changelog">
+              <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+              <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
+              <h2>RADIO.MD</h2>
+
+              <zero-md id="radio-md" src="radio/RADIO.md"></zero-md>
+            </div> -->
+      </div>
+
+      <footer>
+          <p>&copy; 2023 - Timm in cooperation with Scaledrone</p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loki S.2 Ep.3 | Blog | TimmBoard</title>
+  <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@500&display=swap" rel="stylesheet">
+
+  <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="../../styles/style.css">
+  <link rel="stylesheet" href="../../styles/scaledroneStyle.css">
+  <link rel="stylesheet" href="../posts.css">
+  <link rel="stylesheet" href="../../styles/mediaQueries.css">
+  <style>
+    .banner-discription {
+      text-align: justify;
+    }
+
+    #victorT{
+      height: 374px;
+      width: auto;
+      float: left;
+    }
+
+    #victorT:hover{
+      cursor:pointer;
+    }
+  </style>
+</head>
+  <body>
+
+    <div class="container">
+      <header>
+          <h1>Updates/Plans</h1>
+          <p class="title">TimmBlog</p>
+
+          <nav class="site-nav">
+            <div class="group">
+              <a href="https://timmweb.netlify.app/">TimmWeb</a></li>
+              <a href="../../index.html">Home</a></li>
+              <div class="members-count-media side-count">-</div>
+            </div>
+          </nav>
+      </header>
+
+      <div class="content-area group">
+          <div class="main-area">
+            <div class="image-banner">
+              
+              <div class="banner-description">
+                  <p>
+                    <img id="victorT" src="../../images/blogs/victor-timely.jpeg">
+
+                    <script>
+                      let victorLink = document.getElementById('victorT');
+                      victorLink.addEventListener("click", function(){
+                        window.open("https://en.wikipedia.org/wiki/Victor_Timely");
+                      });
+                    </script>
+
+                    <p style="color:red">!Warning: SPOILERS!</p> <br>
+                    Loki Season 2 Episode 3 came out at 9PM MDT and it was so good!
+                    I watched the episode at least 3 times within the next 2 days because I could 
+                    not get enough of Victor Timely and the new role that he plays in the kang dinasty 
+                    and the TVA. <br>
+                    Victor Timely plays a way diffrent roll in the comics, he is a variant of kang who
+                    goes back to the 1800s and essentialy sets up his future power.  He does this by 
+                    giving the people robot assistants and implementing some of his futuristic tech 
+                    but as he does this he puts an exploit that only he knows about in every peice of 
+                    tech that he gives them that he ultimately uses far in the future to create the most 
+                    powerfull varient of himself. <br>
+                    Victor in the show and in the comics are both super cool nonetheless. <br>
+                    I cannot wait for the fourth episode so we can see what secret both oroboris and 
+                    Ms. Minutes have!
+                  </p>
+              </div>
+            </div>
+            <h2>Comments:</h2>
+            <div class="messages"></div>
+            <form class="message-form" onsubmit="return false;">
+              <input class="message-form__input" placeholder="Type a comment.." type="text"/>
+              <input class="message-form__button" value="Send" type="submit"/>
+            </form>
+            <script src="../posts.js"></script>
+          </div>
+      </div>
+
+      <footer>
+          <p>&copy; 2023 - Timm in cooperation with Scaledrone</p>
+      </footer>
+    </div>
+  </body>
+</html>
