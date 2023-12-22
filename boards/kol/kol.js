@@ -30,8 +30,8 @@ drone.on('open', error => {
     const le = DOM.messages;
     const hdata = message.data;
     
-    const name = 'Anonymous';
-    const color = '#617140';
+    const name = 'Anonymouse';
+    const color = '#0000ff';
     // member element
     const pastMember = document.createElement('div');
     pastMember.appendChild(document.createTextNode(name));
@@ -96,8 +96,10 @@ function getName() {
   updateMembersDOM();
 }
 
+
+
 function getColor() {
-  return '#617140';
+  return '#0000ff';
 }
 // #295523
 //------------- DOM STUFF
@@ -112,6 +114,8 @@ const DOM = {
   form: document.querySelector('.message-form'),
 };
 
+
+
 DOM.form.addEventListener('submit', sendMessage);
 
 function sendMessage() {
@@ -120,7 +124,6 @@ function sendMessage() {
     return;
   }else{
     DOM.input.value = '';
-    DOM.image.value = '';
     drone.publish({
       room: 'observable-kol',
       message: value,

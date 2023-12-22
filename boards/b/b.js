@@ -120,7 +120,7 @@ DOM.form.addEventListener('submit', sendMessage);
 
 function sendMessage() {
   const value = DOM.input.value;
-  if (value === '' && nameValue === '') {
+  if (value === '') {
     return;
   }else{
     DOM.input.value = '';
