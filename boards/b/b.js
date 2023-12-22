@@ -2,7 +2,7 @@ const CLIENT_ID = 'RKfsdDmmQWAB060u';
 
 const drone = new ScaleDrone(CLIENT_ID, {
   data: { // Will be sent out as clientData via events
-    // name: getName(),
+    name: getName(),
     color: getColor(),
   },
 });
@@ -30,7 +30,7 @@ drone.on('open', error => {
     const le = DOM.messages;
     const hdata = message.data;
     
-    const name = message.member.clientData.name;
+    const name = 'Anonymouse';
     const color = '#0000ff';
     // member element
     const pastMember = document.createElement('div');
@@ -131,6 +131,10 @@ function sendMessage() {
     });
   }
   
+}
+
+function getName(){
+  return 'Anonymouse';
 }
 
 function createMemberElement(member) {
