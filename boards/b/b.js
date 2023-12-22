@@ -88,6 +88,14 @@ drone.on('error', error => {
   console.error(error);
 });
 
+function getName() {
+  const username = 'Anonymous'
+  return (
+    username
+  );
+  updateMembersDOM();
+}
+
 
 
 function getColor() {
@@ -103,22 +111,14 @@ const DOM = {
   membersList: document.querySelector('.members-list'),
   messages: document.querySelector('.messages'),
   input: document.querySelector('.message-form__input'),
-  name: document.querySelector('.username-form__input'),
   form: document.querySelector('.message-form'),
 };
 
-function getName() {
-  let username = document.querySelector('.username-form__input').value;
-  return (
-    username
-  );
-  // updateMembersDOM();
-}
+
 
 DOM.form.addEventListener('submit', sendMessage);
 
 function sendMessage() {
-  let nameValue = DOM.name.value;
   const value = DOM.input.value;
   if (value === '' && nameValue === '') {
     return;
@@ -127,14 +127,9 @@ function sendMessage() {
     drone.publish({
       room: 'observable-b',
       message: value,
-      name: nameValue,
     });
   }
   
-}
-
-function getName(){
-  return 'Anonymouse';
 }
 
 function createMemberElement(member) {
